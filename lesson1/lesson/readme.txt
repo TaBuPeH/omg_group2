@@ -8,7 +8,7 @@
 
 4
 
-5
+5 vase,ne kazvam che she padnate,ama go kazvam.
 
 6 tova e texta na zdravkopora
 
