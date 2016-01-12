@@ -12,4 +12,4 @@
 
 6 tova e texta na zdravkopora
 
-7
+7 valeria
