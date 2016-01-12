@@ -10,6 +10,6 @@
 
 5
 
-6
+6 tova e texta na zdravkopora
 
 7
