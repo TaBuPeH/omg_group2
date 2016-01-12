@@ -1,6 +1,6 @@
 :):)
 
-1
+1Nikoi da ne bara 4etvorkata na Vaseto
 
 2 baba meca 6efa na boreca
 
