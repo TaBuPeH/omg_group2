@@ -4,7 +4,7 @@
 
 2 baba meca 6efa na boreca
 
-3
+3 valya
 
 4
 
