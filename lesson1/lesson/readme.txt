@@ -1,15 +1,15 @@
 :):)
 
-1
+1Nikoi da ne bara 4etvorkata na Vaseto
 
-2
+2 baba meca 6efa na boreca
 
-3
+3 valya
 
-4
+4 atanas e 5233232323243
 
-5
+5 vase,ne kazvam che she padnate,ama go kazvam.
 
-6
+6 tova e texta na zdravkopora
 
-7
+7 valeria
