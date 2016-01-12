@@ -2,7 +2,7 @@
 
 1
 
-2
+2 baba meca 6efa na boreca
 
 3
 
