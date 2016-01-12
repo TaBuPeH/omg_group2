@@ -4,12 +4,12 @@
 
 2 baba meca 6efa na boreca
 
-3
+3 valya
 
 4 atanas e 5233232323243
 
-5
+5 vase,ne kazvam che she padnate,ama go kazvam.
 
 6 tova e texta na zdravkopora
 
-7
+7 valeria
