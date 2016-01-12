@@ -1,1 +1,1 @@
-mamamia
+Az se kazvam Genadi
