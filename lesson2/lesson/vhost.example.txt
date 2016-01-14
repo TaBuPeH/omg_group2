@@ -2,10 +2,10 @@
 <VirtualHost *:80>
     
    
-    ServerName domain.name.goes.here
+    ServerName rusev.local
     
-	DocumentRoot "d:\some_folder_to_be_loaded\"
-	<Directory "d:\some_folder_to_be_loaded\">
+	DocumentRoot "C:\Users\gogo__000\Desktop\stanga\omg_group2\lesson2\lesson\Georgy"
+	<Directory "C:\Users\gogo__000\Desktop\stanga\omg_group2\lesson2\lesson\Georgy">
    
 		Options Indexes FollowSymLinks Includes ExecCGI
 		AllowOverride All
