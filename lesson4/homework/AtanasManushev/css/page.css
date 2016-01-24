@@ -1,0 +1,33 @@
+.maindiv
+{
+	width:70%;
+	margin:0px 15% 0px 15%;
+	background-color:red;
+	float:left;
+}
+.childdiv
+{
+	float:left;
+	width:18%;
+	margin:1%;
+	position:relative;
+	margin-top:40px;
+	
+}
+
+.picdiv
+{
+	width:100%
+}
+
+.picdiv img
+{
+	width:100%;
+}
+.spclOffer
+{
+	position:absolute;
+	top:-30px;
+	left:-30px;
+	overflow:visible;
+}
