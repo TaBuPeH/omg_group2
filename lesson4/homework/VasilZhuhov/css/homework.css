@@ -1,0 +1,45 @@
+
+.image
+{
+    width: 100%;
+    float:left;
+}
+
+.image img
+{
+    width: 100%;
+}
+
+.box
+{
+    width: 70%;
+    background-color: black;
+    margin: 15%;
+    float:left;
+    border: solid red 5px;
+    border-radius: 6%;
+}
+
+.lbox
+{
+    width: 31.3%;
+    float: left;
+    margin:  1%;
+    position: relative;
+}
+.text{
+    color:white;
+    position: absolute;
+    left: 100px;
+    font-size: 30px; 
+}
+.special{
+    position:absolute;
+}
+.special img{
+    bottom: 30px;
+    right: 20px;
+    width: 120%;
+    position: relative;
+    z-index: 1000;
+}
