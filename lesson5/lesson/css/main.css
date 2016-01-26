@@ -1,0 +1,164 @@
+
+ul 
+{
+	/*  UL - padding/margin */
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+input
+{
+	display: block;
+}
+input:after
+{
+	  position: relative;
+	 bottom: 0px;
+	 right: 0px;
+	 background-color: #000000;     
+     display: block;
+     content: " adsasd ads ";
+     color: #fff;
+	
+}
+
+ul li:nth-of-type(2n+1)
+{
+	background-color: #800080;
+}
+ul li:first-of-type 
+{
+	background-color: #4979D6;	
+}
+ul li:last-of-type
+{
+	background-color:#FFFF00;
+}
+
+
+
+ul li:hover
+{
+	background-color: #BE0B0B;
+}
+
+
+
+ul li:active
+{
+	background-color: #0000FF;
+}
+
+
+.secondDiv h1:nth-of-type(2)
+{
+	background-color: #BE0B0B;
+}
+
+.secondDiv :nth-child(2)
+{
+	background-color: #0000FF;
+}
+
+
+body div:nth-of-type(1) ul:nth-of-type(2) li:last-of-type:hover
+{
+	background-color: pink;
+}
+
+ul li:hover div
+{
+	display: block;
+}
+
+
+.somePositioning{
+	position:relative;
+}
+
+div.secondDiv:before {
+     position: absolute;
+	 bottom: 0px;
+	 right: 0px;
+	 background-color: #000000;     
+     display: block;
+     content: " adsasd ads ";
+     color: #fff;
+     }
+     
+     
+     table tr:nth-of-type(2n) td
+     {
+     	
+     }
+/*
+
+ul li:nth-of-type(2n+1)
+{
+	background-color: #800080;
+}
+
+ul li:first-of-type 
+{
+	background-color: #4979D6;	
+}
+
+ul li:last-of-type
+{
+	background-color:#FFFF00;
+}
+
+
+
+
+
+ul li:hover
+{
+	background-color: #BE0B0B;
+}
+
+
+ul li:active
+{
+	background-color: #0000FF;
+}
+
+input:focus
+{
+	background-color: #00FF00;
+}
+
+
+
+.secondDiv h1:nth-child(4)
+{
+	background-color: #0000FF;
+}
+
+
+
+.secondDiv h1:nth-of-type(3)
+{
+	background-color: #BE0B0B;
+}
+
+body div:nth-of-type(1) ul:nth-of-type(2) li:last-of-type:hover
+{
+	background-color: pink;
+}
+.somePositioning
+{
+	position: relative;
+}
+
+div.secondDiv:before {
+     position: absolute;
+	
+	 background-color: #000000;     
+     display: block;
+     content: " adsasd ads ";
+     color: #fff;
+     }
+*/
