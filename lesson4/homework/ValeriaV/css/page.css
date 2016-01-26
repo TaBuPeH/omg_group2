@@ -54,23 +54,23 @@ body {
 	padding: 0;
 	width: 100%;
 	font-size: 10px;
-	background-image: url(img/cartier.png);
+	background-image: url(../img/bg2.jpg);
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: 50% 80%;
+	background-position: 20% 80%;
 }
 
 .content
 {
-	width: 70%;
-	background-color: #b30000;
-	margin: 0 15% 0 15%;
+	width: 50%;
+	margin: 8% 25% 8% 25%;
 	float:left;
+	border: 1px solid #A88043;
 }
 
 .item
 {
-	width: 21%;
+	width: 29%;
 	float: left;
 	margin:  2%;
 	position: relative;
@@ -97,15 +97,58 @@ body {
 {
 	z-index: 1000;
 	position: absolute;
-	top: -15px;
-    left: -15px;
-    width:35%;
+	top: -20px;
+	left: -25px;
+	width: 35%;
 }
 
 div.text 
 {
     text-align: center;
     font-size: 1.5vw;
+	color: #A88043;
+}
+
+
+
+
+
+.topMenu
+{
+	width: 15%;
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
+	top:10%;
+
+}
+
+.topMenu li
+{
+	width: 100%;
+	float: left;
+	color: #A88043;
+	text-align: center;
+	margin: 10% 0;
+}
+
+
+.topMenu li a
+{
+	color: #A88043;
+	font-size: 20px;
+	text-decoration:none;
+}
+
+.topMenu li div
+{
+
+	display: none;
+}
+
+.topMenu li:hover div
+{
+	display: block;
 }
 
 @media screen and (max-width: 1024px)   {
