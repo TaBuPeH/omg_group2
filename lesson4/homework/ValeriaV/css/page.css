@@ -156,7 +156,7 @@ div.text
 	width: 15%;
 	padding: 0px;
 	margin: 0px;
-	position: fixed;
+	position: absolute;
 	top: 25vw;
 
 }
