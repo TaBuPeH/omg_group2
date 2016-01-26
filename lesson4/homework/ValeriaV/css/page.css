@@ -62,9 +62,9 @@ body {
 
 .content
 {
-	width: 50%;
-	margin: 8% 25% 8% 25%;
-	float:left;
+	width: 60%;
+	margin: 10vw 20%;
+	float: left;
 	border: 1px solid #A88043;
 }
 
@@ -97,9 +97,27 @@ body {
 {
 	z-index: 1000;
 	position: absolute;
-	top: -20px;
-	left: -25px;
-	width: 35%;
+	top: -5vw;
+	left: -5vw;
+	width: 70%;
+	transform: rotate(-25deg);
+}
+
+.specialOffer#leftRibbon img
+{
+	top: 16vw;
+	left: 13vw;
+	width: 70%;
+	transform: rotate(-25deg)
+}
+
+.santa img
+{
+	z-index: 1000;
+	position: absolute;
+	top: -10vw;
+	right: 2vw;
+	width: 72%;
 }
 
 div.text 
@@ -110,43 +128,63 @@ div.text
 }
 
 
-
-
-
 .topMenu
+{
+	width: 100%;
+	padding:0px;
+	margin:0px;
+}
+
+.topMenu li
+{
+	width:23%;
+	float:left;
+	color: #A88043;
+	text-align:center;	
+	margin: 10% 5vw 5%;
+}
+
+.topMenu li a
+{
+	color: #A88043;
+	font-size: 2vw;
+}
+
+
+.topMenu2
 {
 	width: 15%;
 	padding: 0px;
 	margin: 0px;
 	position: fixed;
-	top:10%;
+	top: 25vw;
 
 }
 
-.topMenu li
+.topMenu2 li
 {
 	width: 100%;
 	float: left;
 	color: #A88043;
 	text-align: center;
-	margin: 10% 0;
+	margin: 15% 0;
 }
 
 
-.topMenu li a
+.topMenu2 li a
 {
 	color: #A88043;
-	font-size: 20px;
+	font-size: 2vw;
 	text-decoration:none;
 }
 
-.topMenu li div
+.topMenu2 li div
 {
 
 	display: none;
 }
 
-.topMenu li:hover div
+.topMenu2 li:hover div
 {
 	display: block;
 }
