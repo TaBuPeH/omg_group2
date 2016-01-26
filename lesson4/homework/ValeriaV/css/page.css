@@ -191,6 +191,7 @@ div.text
 	display: block;
 }
 
+
 @media screen and (max-width: 1024px)   {
     
     .content
@@ -218,9 +219,23 @@ div.text
 	
 	.specialOffer img
     {
-	top: -20px;
-    left: -20px;
+		top: -6vw;
+    	left: -8vw;
+    	width: 50%;
     }
+    
+    .santa img
+    {
+    	top:-15vw;
+    	right:20vw;
+    	width:60%;
+    }
+    
+    #leftRibbon.specialOffer img {
+    	top: 32vw;
+    	left: 24vw;
+    	width: 50%;
+	}
 }
 
 
@@ -245,7 +260,23 @@ div.text
 	
 	.specialOffer img
     {
-	top: -30px;
-    left: -30px;
+		top: -6vw;
+		left: -8vw;
+		width: 20%;
     }
+    
+    #leftRibbon.specialOffer img 
+    {
+    	top: 85vw;
+    	left: 70vw;
+    	width: 20%;
+    }
+    
+    .santa img
+    {
+    	top: -103vw;
+    	right: 31vw;
+    	width: 30%;
+	}
+    
 }
