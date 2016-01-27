@@ -1,4 +1,10 @@
-
+body
+{
+    background-image: url("../Arsenal3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
 .image
 {
     width: 100%;
