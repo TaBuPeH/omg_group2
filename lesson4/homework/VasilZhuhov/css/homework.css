@@ -43,3 +43,85 @@
     position: relative;
     z-index: 1000;
 }
+
+@media screen and (max-width: 1024px) {
+    
+    .box {
+            margin: 0 10%;
+            width: 80%;
+        }
+    
+    .lbox
+    {
+        width: 48%;
+    }
+    
+    
+    .lbox .text
+    {
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 800px) {
+ .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        width: 96%;
+    }
+    
+    .lbox .text
+    {
+        font-size: 5vw;
+        
+    }
+}
+}
+
+
+@media screen and (max-width: 640px) {
+    
+    .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        width: 96%;
+    }
+    
+    .lbox .text
+    {
+        font-size: 5vw;
+        
+    }
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+    
+    .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        display:none;
+    }
+    
+    .box:before
+    {
+        display: block;
+        content: "Are stiga si si igral";
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+    }
