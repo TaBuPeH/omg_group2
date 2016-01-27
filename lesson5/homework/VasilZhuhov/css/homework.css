@@ -1,0 +1,127 @@
+
+.image
+{
+    width: 100%;
+    float:left;
+}
+
+.image img
+{
+    width: 100%;
+}
+
+.box
+{
+    width: 70%;
+    background-color: black;
+    margin: 15%;
+    float:left;
+    border: solid red 5px;
+    border-radius: 6%;
+}
+
+.lbox
+{
+    width: 31.3%;
+    float: left;
+    margin:  1%;
+    position: relative;
+}
+.text{
+    color:white;
+    position: absolute;
+    left: 100px;
+    font-size: 30px; 
+}
+.special{
+    position:absolute;
+}
+.special img{
+    bottom: 30px;
+    right: 20px;
+    width: 120%;
+    position: relative;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .box {
+            margin: 0 10%;
+            width: 80%;
+        }
+    
+    .lbox
+    {
+        width: 48%;
+    }
+    
+    
+    .lbox .text
+    {
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 800px) {
+ .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        width: 96%;
+    }
+    
+    .lbox .text
+    {
+        font-size: 5vw;
+        
+    }
+}
+}
+
+
+@media screen and (max-width: 640px) {
+    
+    .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        width: 96%;
+    }
+    
+    .lbox .text
+    {
+        font-size: 5vw;
+        
+    }
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+    
+    .box {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .lbox
+    {
+        display:none;
+    }
+    
+    .box:before
+    {
+        display: block;
+        content: "Are stiga si si igral";
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+    }
