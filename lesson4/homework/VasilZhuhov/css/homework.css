@@ -43,6 +43,10 @@
     position: relative;
     z-index: 1000;
 }
+.text:hoover{
+    color:red;
+}
+
 
 @media screen and (max-width: 1024px) {
     
@@ -80,8 +84,6 @@
     }
 }
 }
-
-
 @media screen and (max-width: 640px) {
     
     .box {
@@ -100,10 +102,6 @@
         
     }
 }
-
-
-
-
 @media screen and (max-width: 320px) {
     
     .box {
@@ -125,3 +123,4 @@
         text-align: center;
         color: white;
     }
+
