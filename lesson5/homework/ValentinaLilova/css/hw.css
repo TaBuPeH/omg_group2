@@ -1,0 +1,140 @@
+body,
+html
+{
+	background-image: url("../wallpaper_winter.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+h1
+{
+	text-align: center;
+	text-decoration: underline;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+footer
+{
+	text-align: center;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+.content
+{
+	width: 70%;
+	background-color: skyblue;
+	margin: 0px 15% 0px 15%;
+	float: left;
+}
+
+.item
+{
+	width: 23%;
+	margin: 1%;
+	float: left;
+	position: relative;
+	overflow: visible;
+}
+
+.image
+{
+	width: 100%;
+}
+
+.image img
+{
+	width: 100%;	
+}
+
+.Sticker
+{
+	right: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 500;
+}
+
+.Sticker img
+{
+	top: -6px;
+    left: -6px;
+    width: 30%;
+	position: relative;
+}
+
+.text
+{
+	position: absolute;
+}
+
+/*
+
+{*/
+
+@media screen and (max-width: 1024px) 
+{
+    
+    .content 
+	{
+	    margin: 0 8%;
+		padding: 2%;
+	    width: 80%;
+	}
+    
+    .item
+    {
+    	width: 48%;
+		margin-bottom: 4%;
+    }
+    
+	.item .name
+	{
+		font-size: 2.6vw;
+	}
+}
+
+@media screen and (max-width: 640px) 
+{
+    
+    .content 
+	{
+		margin: 0 10%;
+		padding: 8%;
+	    width: 64%;
+	}
+    
+    .item
+    {
+    	width: 98%;
+    }
+    
+    .item .name
+	{
+		font-size: 5vw;
+	}
+}
+
+@media screen and (max-width: 320px) 
+{
+    
+    .content 
+	{
+		margin: 0 5%;
+		idth: 90%;
+	}
+    
+    .item
+    {
+    	display:none;
+    }
+    
+    .content:before
+    {
+    	display: block;
+    	content: "Buy a new phone";
+    	width: 100%;
+    	margin-top: 20px;
+    	text-align: center;
+    }
+}
