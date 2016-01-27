@@ -1,0 +1,98 @@
+.maindiv
+{
+	width:70%;
+	margin:0px 15% 0px 15%;
+	background-color:red;
+	float:left;
+}
+.childdiv
+{
+	float:left;
+	width:18%;
+	margin:1%;
+	position:relative;
+	margin-top:4%;
+	
+}
+
+.picdiv
+{
+	width:100%
+}
+
+.picdiv img
+{
+	width:100%;
+}
+.spclOffer
+{
+	position:absolute;
+	top:-30px;
+	left:-30px;
+	overflow:visible;
+}
+.name{
+	text-align:center;
+}
+
+.name:hover{
+	border-radius:20px;
+	background-color:green;
+	text-align:center;
+	
+	
+}
+
+@media screen and (max-width: 1024px) {
+	
+	.maindiv{
+		width:85%;
+		margin: 0 7.5%;
+	}
+	
+	.childdiv{
+		width:31%;
+		margin:1%;
+		margin-top:4%;
+	}
+	
+	.name{
+		font-size:3 vw;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	
+	.maindiv{
+		width:90%;
+		margin: 0 5%;
+	}
+	
+	.childdiv{
+		width:48%;
+		margin:1%;
+		margin-top:10%;
+	}
+	
+	.name{
+		font-size:4 vw;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	
+	.maindiv{
+		width:95%;
+		margin: 0 2.5%;
+	}
+	
+	.childdiv{
+		width:98%;
+		margin:1%;
+		margin-top:14%;
+	}
+	
+	.name{
+		font-size:6 vw;
+	}
+}
