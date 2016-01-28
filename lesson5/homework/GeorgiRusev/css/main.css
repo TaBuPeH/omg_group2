@@ -1,0 +1,48 @@
+
+.image
+{
+    width: 100%;
+    float:left;
+}
+
+.image img
+{
+    width: 100%;
+}
+
+.container
+{
+    width: 70%;
+    background-color: gray;
+    margin: 15%;
+    float:left;
+    border: solid black 10px;
+}
+
+.item
+{
+    width: 31.3%;
+    float: left;
+    margin:  1%;
+    position: relative;
+}
+.text
+{
+    color:red;
+    position: absolute;
+    left: 100px;
+    top:35px;
+    font-size: 40px; 
+}
+.offer
+{
+    position:absolute;
+}
+.offer img
+{
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+    width: 120%;
+    z-index: 1000;
+}
