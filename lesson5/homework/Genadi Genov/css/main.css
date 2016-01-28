@@ -1,0 +1,115 @@
+body
+{
+    background-image: url("../IMG_20151120_171950.jpg");
+    background-attachment: fixed;
+    background-size: cover ;
+    
+}
+.image
+{
+    width: 100%;
+    float:left;
+}
+
+.image img
+{
+    width: 100%;
+}
+
+.container
+{
+    width: 70%;
+    background-color: blue;
+    margin: 15%;
+    float:left;
+    border: solid yellow 10px;
+}
+
+.item
+{
+    width: 31.3%;
+    float: left;
+    margin:  1%;
+    position: relative;
+}
+.text
+{
+    color:red;
+    position: absolute;
+    width:100%;
+    text-align: center;
+    top:8%;
+    font-size: 40px; 
+}
+.offer
+{
+    position:absolute;
+}
+.offer img
+{
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+    width: 120%;
+    z-index: 1000;
+}
+@media screen and (max-width: 1024px) {
+    
+    .container {
+            margin: 0 10%;
+            width: 80%;
+        }
+    
+    .item
+    {
+        width: 48%;
+    }
+    
+    
+    .item .text
+    {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .container {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .item
+    {
+        width: 96%;
+    }
+    
+    .item .text
+    {
+        font-size: 5vw;
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    .container {
+            margin: 0 5%;
+            width: 90%;
+        }
+    
+    .item
+    {
+        display:none;
+    }
+    
+    .container:before
+    {
+        display: block;
+        background-color: #3D3528; 
+        content: "Sorry... Your phone is too old  :-(";
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        color: white;
+    }
