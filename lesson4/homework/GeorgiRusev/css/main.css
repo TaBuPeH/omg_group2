@@ -1,0 +1,124 @@
+body,
+html{
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	
+	background-image: url("../img1.gif");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 80%;
+}
+.image
+{
+    width: 100%;
+    float:left;
+}
+
+.image img
+{
+    width: 100%;
+}
+
+.container
+{
+    width: 70%;
+    background-color: gray;
+    margin: 15%;
+    float:left;
+    border: solid black 10px;
+}
+
+.item
+{
+    width: 31.3%;
+    float: left;
+    margin:  1%;
+    position: relative;
+}
+.text
+{
+    color:red;
+    position: absolute;
+    left: 100px;
+    top:35px;
+    font-size: 40px; 
+}
+.offer
+{
+    position:absolute;
+}
+.offer img
+{
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+    width: 94%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1024px) {
+	.container
+{
+    width: 80%;
+    margin: 10%;
+}
+.offer img
+{
+    bottom: 25px;
+    right: 15px;
+    width: 89%;
+}
+.item
+{
+    width: 48%;
+    margin:  1%;
+}
+    
+}
+
+
+@media screen and (max-width: 640px) {
+	.container
+{
+    width: 90%;
+    margin: 5%;
+}
+.offer img
+{
+    bottom: 15px;
+    right: 10px;
+    width: 99%;
+}
+
+.item
+{
+    width: 98%;
+    margin:  1%;
+}
+    
+}
+
+
+@media screen and (max-width: 320px) {
+	
+.container
+{
+    width: 99%;
+    background-color: blue;
+    margin: 0.5%;
+    float:left;
+    border: solid red 10px;
+}
+.offer img
+{
+    display:none;
+}
+
+.item
+{
+    width: 10.5%;
+    margin:  1%;
+}
+	
+}
