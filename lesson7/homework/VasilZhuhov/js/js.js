@@ -22,3 +22,17 @@ function MyFunction()
     alert("Mnogo e gadno kato ne mozhesh da chetesh");
     }
 }
+
+function Toto()
+{
+  var chisla = Array();
+while(chisla.length < 6)     
+{                 
+  var nomer = parseInt(Math.random()*42) + 1; 
+  if(chisla.indexOf(number) == -1)   
+   {
+    chisla[chisla.length] = nomer; 
+   }
+}
+alert(chisla)
+}
