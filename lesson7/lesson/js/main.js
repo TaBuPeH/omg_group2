@@ -113,12 +113,8 @@ while(iztegleni.length < 6)      // iztegleni.length = 0;
 {								 // iztegleni.length = 1;
 								 // iztegleni.length = 2;
 	// изтегли произволно число от 1-49
-	var number = parseInt(Math.random()*49) + 1; // 44
-												 // 9
-												 // 44
-												 // 44
-												 // 35
-	// провери дали indeOf изтегленото число съществува в масива
+	var number = parseInt(Math.random()*49) + 1;
+	console.log(number)
 	if(iztegleni.indexOf(number) == -1)   // indexOf(44) = 0;
 	{
 		// ако не съществува (връща -1)
