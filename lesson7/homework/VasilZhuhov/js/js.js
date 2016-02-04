@@ -29,7 +29,7 @@ function Toto()
 while(chisla.length < 6)     
 {                 
   var nomer = parseInt(Math.random()*42) + 1; 
-  if(chisla.indexOf(number) == -1)   
+  if(chisla.indexOf(nomer) == -1)   
    {
     chisla[chisla.length] = nomer; 
    }
