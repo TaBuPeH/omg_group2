@@ -26,20 +26,21 @@ function getRandoomNumbers()
 		}
 	}
 	
-	
+	/*
 	iztegleni.sort(function(a, b){return a-b});
 	while (iztegleni.length < 6) 
 	{
 		console.log(i);
 	}
+	*/
 	
-	/*
-	var tmp, i, j;
+	var tmp;
 	for (i = 0; i < 6; i++)
 	{		
 		for (j = 0 ; j < 6 ; j++)
 		{
-			if (iztegleni[j] < iztegleni[i]) 
+			
+			if (iztegleni[j] > iztegleni[i]) 
 			{
 				tmp = iztegleni[j];
 				iztegleni[j] = iztegleni[i];
@@ -47,7 +48,7 @@ function getRandoomNumbers()
 			}
 		}
 	}
-	*/
+	
 	
 	alert(iztegleni);
 }
