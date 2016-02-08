@@ -1,0 +1,51 @@
+<html>
+	
+	<head>
+	
+		<meta charset="utf-8">
+		<title>lottary 6/49</title>
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/main.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<h1> Lottery 6/49 </h1>
+	
+		<p> Choose 6 numbers between 1 and 49. </p>
+		
+		<p class="inputs">
+		
+			<input type="number" class="izbrani">
+			<input type="number" class="izbrani">
+			<input type="number" class="izbrani">
+			<input type="number" class="izbrani">
+			<input type="number" class="izbrani">
+			<input type="number" class="izbrani">
+			
+		</p>
+		
+		
+		
+		<p class="outputs">
+		
+			<img src="img/lottery_balls.gif" id="lotteryBalls">
+			
+			<div id="num0" class="iztegleni"></div>
+			<div id="num1" class="iztegleni"></div>
+			<div id="num2" class="iztegleni"></div>
+			<div id="num3" class="iztegleni"></div>
+			<div id="num4" class="iztegleni"></div>
+			<div id="num5" class="iztegleni"></div>
+			
+			<br>
+			<button onclick='getRandoomNumbers()'> See if you were right. </button>
+			
+			<div class="brGuessed"></div>
+			
+		</p>
+		
+	</body>
+	
+</html>
