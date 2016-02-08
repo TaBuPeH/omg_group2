@@ -1,9 +1,5 @@
-/*
-	on mouse over the button the gif should start repeating itself
-*/
-
 function getRandoomNumbers()
-{
+{	
 	var iztegleni = new Array();
 
 	while(iztegleni.length < 6)
@@ -27,7 +23,6 @@ function getRandoomNumbers()
 	
 	
 	
-	
 	var izbrani = document.querySelectorAll('body p input');
 	var br = 0;
 	
@@ -39,10 +34,24 @@ function getRandoomNumbers()
 		}
 	}
 	
-	document.getElementById("brGuessed").innerHTML = "You have guessed " + br + " numbers.";
+	document.getElementById("brGuessed").innerHTML = ("You have guessed " + br + " numbers.");
 	
-	/*
-	alert("You have guessed " + br + " numbers.")
+}
+
+document.addEventListener("DOMContentLoaded", function(event) 
+{ 
+	theButton = document.getElementById('button');
+	theImage = document.getElementById('lotteryBalls');
 	
-	*/
+	theButton.addEventListener("mouseover",function(){
+		theImage.src = "img/lottery_balls.gif";
+	});
+	
+	theButton.addEventListener("mouseout",function(){
+		theImage.src = "img/lottery_balls.png";
+	});
+	
+	theButton.addEventListener("click",function(){
+		getRandoomNumbers();
+	});
 }

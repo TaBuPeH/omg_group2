@@ -3,6 +3,11 @@ body
     background-color: lightblue;
 }
 
+div#initialDiv
+{
+	width: 100%;
+}
+
 h1
 {
 	width: 40%;
@@ -11,45 +16,62 @@ h1
 	text-align: center;
 }
 
-
-p.inputs
-{
-	width: 60%;
-	margin: 5%;
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-input.izbrani
-{
-	width: 15%;
-}
-
-
-p.outputs
-{
-	float: left;
-	width: 60%;
-	margin: 5%;
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
 img#lotteryBalls
 {
-	float: right;
-	width: 20%;
+	position: absolute;
+	width: 10%;
+	right: 10px;
+    top:10px;
 }
 
-div.izbrani
+
+p#inputs
 {
-	float: left;
+	width: 60%;
+	margin: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+p#inputs input.izbrani
+{
 	width: 15%;
 }
 
-div.brGuessed
+
+p#outputs
 {
-	width: 50%;
+	width: 60%;
+	margin: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
+	float: left;
+}
+
+p#outputs div.izbrani
+{
+	width: 15%;
+	background-color: white;
+	float: left;
+}
+
+
+div#result
+{
+	width: 90%;
+	margin-left: 10%;
+	margin-right: 10%;
+	float: left;
+}
+
+div#result button
+{
+	float: left;
+}
+
+div#result div#brGuessed
+{
+	float: right;
 	margin-left: 25%;
 	margin-right: 25%;
 }
