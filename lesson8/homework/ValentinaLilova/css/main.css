@@ -25,33 +25,34 @@ img#lotteryBalls
 }
 
 
-p#inputs
+div#inputs
 {
 	width: 60%;
-	margin: 5%;
+	margin: 2%;
 	margin-left: 20%;
 	margin-right: 20%;
 }
 
-p#inputs input.izbrani
+div#inputs input.izbrani
 {
 	width: 15%;
 }
 
 
-p#outputs
+div#outputs
 {
 	width: 60%;
-	margin: 5%;
+	margin: 2%;
 	margin-left: 20%;
 	margin-right: 20%;
 	float: left;
 }
 
-p#outputs div.izbrani
+div.iztegleni
 {
-	width: 15%;
 	background-color: white;
+	width: 14%;
+	margin: 0.7%;
 	float: left;
 }
 
