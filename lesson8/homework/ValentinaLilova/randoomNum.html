@@ -11,11 +11,16 @@
 	
 	<body>
 		
-		<h1> Lottery 6/49 </h1>
-	
+		<div id="initialDiv">
+		
+			<h1> Lottery 6/49 </h1>
+			<img src="img/lottery_balls.png" id="lotteryBalls">
+			
+		</div>
+		
 		<p> Choose 6 numbers between 1 and 49. </p>
 		
-		<p class="inputs">
+		<p id="inputs">
 		
 			<input type="number" class="izbrani">
 			<input type="number" class="izbrani">
@@ -28,9 +33,7 @@
 		
 		
 		
-		<p class="outputs">
-		
-			<img src="img/lottery_balls.gif" id="lotteryBalls">
+		<p id="outputs">
 			
 			<div id="num0" class="iztegleni"></div>
 			<div id="num1" class="iztegleni"></div>
@@ -38,13 +41,15 @@
 			<div id="num3" class="iztegleni"></div>
 			<div id="num4" class="iztegleni"></div>
 			<div id="num5" class="iztegleni"></div>
-			
-			<br>
-			<button onclick='getRandoomNumbers()'> See if you were right. </button>
-			
-			<div class="brGuessed"></div>
-			
+
 		</p>
+		
+		<div id="result">
+			
+			<button id="button"'> See if you were right. </button>
+			<div id="brGuessed"></div>
+			
+		</div>
 		
 	</body>
 	
