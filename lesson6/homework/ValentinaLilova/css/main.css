@@ -49,6 +49,7 @@ table {
 
 
 
+/* topline */
 .carouselImage
 {
 	width: 100%;
@@ -75,15 +76,37 @@ table {
 	margin-top: 0.2%;
 	margin-bottom: 1.05%;
 }
+
 .logo img
 {
 	width: 61%;
 }
 
+
 nav
 {
 	float: left;
 	width: 57.266%;
+}
+
+.topLine nav a 
+{
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    float: left;
+    font-family: Verdana;
+    font-size: 1.1vw;
+    padding: 4.2% 1%;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #444;
+    text-transform: uppercase;
+    margin: 0px 1%;
+}
+
+nav a:hover
+{
+	border-bottom: 1px solid #f8e1b4;
 }
 
 .loginButtons
@@ -99,26 +122,7 @@ nav
 	margin-left: 12%;
 }
 
-.topLine nav a {
-    box-sizing: border-box;
-    color: #fff;
-    display: block;
-    float: left;
-    font-family: Verdana;
-    font-size: 1.1vw;
-    padding: 3.9% 1%;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #444;
-    text-transform: uppercase;
-    margin: 0px 1%;
-}
-
-
-nav a:hover
-{
-	border-bottom: 1px solid #f8e1b4;
-}
-
+/* sections */
 section
 {
 	width: 100%;
@@ -158,6 +162,7 @@ section p
 	line-height: 150%;
 }
 
+/* section 2 */
 .topColImage
 {
 	width: 100%;
@@ -213,6 +218,7 @@ section p
 	font-size: 2.8vw;
 }
 
+/* section 3 */
 .imgFameous 
 {
 	float: left;
@@ -222,23 +228,67 @@ section p
 .imgFameous img
 {
 	width: 100%;
+	border-bottom: 3px solid #91c5a9;
 }
 
-.buttons
+
+#section3 .columns .column h4
+{
+	
+	text-transform: uppercase;
+	font-size: 100%;
+	padding:2%;
+	margin:3%;
+	border-bottom: 4px solid #91c5a9;
+	color: #91c5a9;
+}
+#section3 .columns .column p.text
+{
+	width: 90%;
+	height: 80px; /* !!! */
+	font-size: 90%;
+	margin: 5%;
+}
+
+
+div.buttons
 {
 	width:100%;
     float: left;
     
 }
 
-.buttons button
+div.buttons button
 {
-	background-color: #4CAF50; /* Green */
 	border: none;
 	float: left;
 	width: 50%;
+	height: 60px; /* !!! */
 }
 
+div.buttons button.facebook
+{
+	background-color: #3b5998;
+}
+div.buttons button.googlePlus
+{
+	background-color: #d14333;
+}
+div.buttons button.anotherMedia
+{
+	background-color: #ea4c88;
+}
+div.buttons button.twitter
+{
+	background-color: #00aced;
+}
+div.buttons button.youTube
+{
+	background-color: #c70c0c;
+}
+
+
+/* responsive */
 
 @media screen and (max-width: 640px)
 {
