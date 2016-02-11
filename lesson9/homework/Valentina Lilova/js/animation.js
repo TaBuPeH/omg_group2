@@ -56,53 +56,55 @@ $(document).ready(function(){
 		// if the site is not currently animating
 		if(isAnimating == false)
 		{
-			isAnimating = true;
-			
-			if ($('.gallery img:visible').index()  <  $(this).index())
+			if ($('.gallery img:visible').index()  !=  $(this).index())
 			{
-				// move the visible element off the screen
-				$('.gallery img:visible').animate( {left:"-100%"} , 1000, function(){ 
-					// move the element to the right of others
-					$(this).css( {left: "100%", display:"none"} );
+					isAnimating = true;
+				
+				if ($('.gallery img:visible').index()  <  $(this).index())
+				{
+					// move the visible element off the screen
+					$('.gallery img:visible').animate( {left:"-100%"} , 1000, function(){ 
+						// move the element to the right of others
+						$(this).css( {left: "100%", display:"none"} );
+						// set animation is done
+						isAnimating = false;
+						
+					} );
+					
+					var currentNumber = $(this).index();
+					// get the image corresponding to this index
+					var nextImage = $('.gallery img').eq(currentNumber);
+					// set the image to be visible
+					nextImage.css('display','block');
+					// animate the image to the proper place
+					nextImage.animate({left:"0%"}, 1000);
+				}
+				
+				else
+				{
+					// move the visible element off the screen
+					 $('.gallery img:visible').animate( {/* ? right:-100 */left:"100%"} , 1000, function(){ 
+					// move the element to the right /*why not to the left?*/ of others
+					$(this).css( {/*why isn't it -100%?*/ left:"100%", display:"none"} );
 					// set animation is done
 					isAnimating = false;
+					} );
 					
-				} );
-				
-				var currentNumber = $(this).index();
-				// get the image corresponding to this index
-				var nextImage = $('.gallery img').eq(currentNumber);
-				// set the image to be visible
-				nextImage.css('display','block');
-				// animate the image to the proper place
-				nextImage.animate({left:"0%"}, 1000);
+					// get the currently clicked element - its index 
+					var currentNumber = $(this).index();
+					// get the image corresponding to this index
+					var nextImage = $('.gallery img').eq(currentNumber);
+					
+					//
+					nextImage.css('left','-100%');
+					
+					// set the image to be visible
+					nextImage.css('display','block');
+					// animate the image to the proper place
+					nextImage.animate({left:"0%"}, 1000);
+					
+				}
 			}
-			
-			else
-			{
-				// move the visible element off the screen
-				 $('.gallery img:visible').animate( {/* ? right:-100 */left:"100%"} , 1000, function(){ 
-				// move the element to the right /*why not to the left?*/ of others
-				$(this).css( {/*why isn't it -100%?*/ left:"100%", display:"none"} );
-				// set animation is done
-				isAnimating = false;
-				} );
-				
-				// get the currently clicked element - its index 
-				var currentNumber = $(this).index();
-				// get the image corresponding to this index
-				var nextImage = $('.gallery img').eq(currentNumber);
-				
-				//
-				nextImage.css('left','-100%');
-				
-				// set the image to be visible
-				nextImage.css('display','block');
-				// animate the image to the proper place
-				nextImage.animate({left:"0%"}, 1000);
-				
-			}
-
 		}
 		
 		
