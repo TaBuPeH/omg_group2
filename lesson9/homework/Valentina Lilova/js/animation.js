@@ -64,6 +64,7 @@ $(document).ready(function(){
 				$('.gallery img:visible').animate( {left:"-100%"} , 1000, function(){ 
 					// move the element to the right of others
 					$(this).css( {left: "100%", display:"none"} );
+					
 					// set animation is done
 					isAnimating = false;
 					
@@ -77,7 +78,6 @@ $(document).ready(function(){
 				// animate the image to the proper place
 				nextImage.animate({left:"0%"}, 1000);
 			}
-			
 			else
 			{
 				// move the visible element off the screen
