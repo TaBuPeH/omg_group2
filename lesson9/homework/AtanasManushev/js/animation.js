@@ -65,9 +65,8 @@ $(document).ready(function(){
 			
 			
 			if($('.gallery img:visible').index()   <  $(this).index())
-		
-			
 			{ 	
+				
 				$('.gallery img:visible').animate( {left:"-100%"} , 1000, function(){ 
 					
 					$(this).css( {left: "100%",display:"none"} );
