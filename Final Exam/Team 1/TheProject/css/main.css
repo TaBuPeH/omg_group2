@@ -83,7 +83,7 @@ button{
 	border-color: #4CAF50;
 	width: 16%;
 	font-family: Comic Sans Ms;
-	border-radius: 15%;
+	border:none;
 	color: white;
 }
  
