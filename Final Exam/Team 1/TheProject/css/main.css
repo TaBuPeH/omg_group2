@@ -78,6 +78,14 @@ input:hover{
 input:focus{
 	border-color:#0080FF;
 }
+button{
+	background-color: #4CAF50;
+	border-color: #4CAF50;
+	width: 16%;
+	font-family: Comic Sans Ms;
+	border-radius: 15%;
+	color: white;
+}
  
         .jssorb05 {
             position: absolute;
@@ -113,4 +121,4 @@ input:focus{
         .jssora12l:hover { background-position: -136px -37px; }
         .jssora12r:hover { background-position: -195px -37px; }
         .jssora12l.jssora12ldn { background-position: -256px -37px; }
-        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }}
