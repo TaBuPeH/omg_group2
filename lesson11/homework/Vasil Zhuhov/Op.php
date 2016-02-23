@@ -23,14 +23,14 @@
         )
    );
  $anaboli[2]['description']['firm'] = 'Fit spo';
-    $anaboli[2]['description']['item'] = '';
-    $anaboli[2]['description']['weight'] = '';
+    $anaboli[2]['description']['item'] = 'Protein';
+    $anaboli[2]['description']['weight'] = '1kg';
     $anaboli[2]['pieces'] = 2;
     $anaboli[2]['price'] = 30;
     
     $anaboli[3]['description']['firm'] = 'Anabol';
-    $anaboli[3]['description']['item'] = '';
-    $anaboli[3]['description']['weight'] = '';
+    $anaboli[3]['description']['item'] = 'Creatin';
+    $anaboli[3]['description']['weight'] = '500g';
     $anaboli[3]['pieces'] = 1;
     $anaboli[3]['price'] = 16;
     print_r($anaboli);
