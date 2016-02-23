@@ -11,7 +11,6 @@
             "price" => 30
         ),
         
-        
         1=> Array(
             "description" => Array(
                 'firm'=>'Anabol',
@@ -21,8 +20,9 @@
             "pieces" =>1,
             "price" =>16
         )
+		
    );
- $anaboli[2]['description']['firm'] = 'Fit spo';
+ 	$anaboli[2]['description']['firm'] = 'Fit spo';
     $anaboli[2]['description']['item'] = 'Protein';
     $anaboli[2]['description']['weight'] = '1kg';
     $anaboli[2]['pieces'] = 2;
@@ -33,5 +33,7 @@
     $anaboli[3]['description']['weight'] = '500g';
     $anaboli[3]['pieces'] = 1;
     $anaboli[3]['price'] = 16;
+	
+	echo "<pre>";
     print_r($anaboli);
  ?>
