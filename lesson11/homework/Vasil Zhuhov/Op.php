@@ -22,13 +22,13 @@
             "price" =>16
         )
    );
- $anaboli[2]['description']['frim'] = 'Aleko';
+ $anaboli[2]['description']['firm'] = 'Fit spo';
     $anaboli[2]['description']['item'] = '';
     $anaboli[2]['description']['weight'] = '';
     $anaboli[2]['pieces'] = 2;
     $anaboli[2]['price'] = 30;
     
-    $anaboli[3]['description']['firm'] = 'Aleko';
+    $anaboli[3]['description']['firm'] = 'Anabol';
     $anaboli[3]['description']['item'] = '';
     $anaboli[3]['description']['weight'] = '';
     $anaboli[3]['pieces'] = 1;
