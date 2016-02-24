@@ -8,8 +8,8 @@
 			"freshness" => Array(
 				'received' =>'18.02.16',
 				'expirationDate'=>'23.02.16',
-				'eatable'=>'yes'
-			)
+				'eatable'=>'yes',
+			),
 		),
 		
 		'coconuts'=> Array(
@@ -18,8 +18,8 @@
 			"freshness" => Array(
 				'received' =>'15.02.16',
 				'expirationDate'=>'25.02.16',
-				'eatable'=>'yes'
-			)
+				'eatable'=>'yes',
+			),
 		),
   
 		'oranges'=> Array(
@@ -28,8 +28,8 @@
 			"freshness" => Array(
 				'received' =>'11.02.16',
 				'expirationDate'=>'17.02.16',
-				'eatable'=>'no'
-			)
+				'eatable'=>'no',
+			),
 		),
 		
 		'apples'=> Array(
@@ -38,8 +38,8 @@
 			"freshness" => Array(
 				'received' =>'12.02.16',
 				'expirationDate'=>'22.02.16',
-				'eatable'=>'yes'
-			)
+				'eatable'=>'yes',
+			),
 		),
 		
 		'mangos'=> Array(
@@ -48,8 +48,8 @@
 			"freshness" => Array(
 				'received' =>'16.02.16',
 				'expirationDate'=>'22.02.16',
-				'eatable'=>'yes'
-			)
+				'eatable'=>'yes',
+			),
 		)
    );
   
@@ -58,7 +58,7 @@
    		if ($value['freshness']['eatable']=='yes') {
 			echo 'The '.$key.' are '.$value['price'].' $ and are eatable until '.$value['freshness']['expirationDate']."<br>";
 		}
-   };
+   }
    
 	echo "<pre>";
 	print_r($fruits);
