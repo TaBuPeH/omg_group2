@@ -1,6 +1,5 @@
 <?php
 
-<?php
 
 require_once "car.class.php";
 require_once "truck.class.php";

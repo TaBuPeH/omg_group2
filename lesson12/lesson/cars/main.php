@@ -20,6 +20,7 @@
 	
 			   // fuel, color, number , perKm, startingMoney, seats
 	$taxi = new Taxi(30, 'Black & Yellow','6665', '0.65', 0 , 4);
+	$taxi2 = new Taxi(20, 'Black & Yellow','6155', '0.75', 0 , 4);
 	echo "<pre>";
 	print_r($taxi);
 	

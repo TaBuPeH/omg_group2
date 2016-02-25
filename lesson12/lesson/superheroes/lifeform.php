@@ -34,6 +34,11 @@ class lifeform
 		
 	function setStat($statX,$value)
 	{
+		//$statX =  strength
+		//$statX->strength = 50;
+		//$this->$statX 
+		//$this->"strength" // no {}
+		//$this->strength
 		$this->{$statX} = $value;
 	}
 	
@@ -135,7 +140,7 @@ class lifeform
 		$this->isAttacker = $isAttacker;
 	}
 	
-	function getIsAttacker($isAttacker)
+	function getIsAttacker()
 	{
 		return $this->isAttacker;
 	}

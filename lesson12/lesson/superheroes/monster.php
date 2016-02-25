@@ -30,13 +30,13 @@ class monster extends lifeform
 	function isPresent($a)
 	{
 		if ($a == true)
-	{
-		echo ("The mighty Kraken comes for your lives!");
-	}
+		{
+			echo ("The mighty Kraken comes for your lives!");
+		}
 		if ($a == false)
-	{
-		echo ("The mighty Kraken is having sex with Jenna Jameson, do not disturb!");
-	}
+		{
+			echo ("The mighty Kraken is having sex with Jenna Jameson, do not disturb!");
+		}
 	}
 } 
 /*

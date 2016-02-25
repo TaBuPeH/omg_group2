@@ -23,17 +23,17 @@ class Car extends Vehicle
         }
 
     }
-  /*  public function unload($passengers)
+    public function unload($passengers)
     {
         while ( $this->seats<=5) {
             $this->seats= $this->seats+$passengers;
         }
          
-    }*/
-     public function unload($passengers)
+    }
+    /* public function unload($passengers)
     {
             $this->seats= $this->seats+$passengers;
          
-    }
+    }*/
 }
 ?>

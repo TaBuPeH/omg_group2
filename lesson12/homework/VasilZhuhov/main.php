@@ -99,7 +99,10 @@ print_r($vehicle);
 print_r($plane);
 
 
-
+if($plane->seats >= 200)
+	{
+		echo "No Seats Available";
+	}
 
 
 
