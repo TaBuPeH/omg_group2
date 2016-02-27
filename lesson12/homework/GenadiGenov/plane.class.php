@@ -9,7 +9,7 @@ class Plane extends Vehicle
 	public $destination;
 	public function __construct($a, $b, $s, $d, $dest)
 	{
-		$this->destination = $de;
+		$this->destination = $dest;
 		$this->seats = $s;
 		$this->distance = $d;
 		parent::__construct($a, $b);

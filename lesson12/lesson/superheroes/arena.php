@@ -54,7 +54,7 @@ class Arena
 			}
 			$rounds++;
 		}
-			
+		return $rounds;	
 	}	
 
 	function sortFastest()

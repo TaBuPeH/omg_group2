@@ -6,7 +6,7 @@ require_once('arena.php');
 
 $kraken = new monster();
 $kraken->setStats(100+rand(50,1000),rand(200,400),30,100); 
-$kraken->isPresent(false);
+$kraken->isPresent(true);
 
   
 $superMincho = new kryptonian();
@@ -22,9 +22,8 @@ print_r ($superMincho);
 $arena = new Arena($kraken,$superMincho);
 
 
-$arena->doBattle();
+$rounds  = $arena->doBattle();
 
-$rounds = 0;
 
 
 echo "The battle is over in $rounds";
