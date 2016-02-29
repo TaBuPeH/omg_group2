@@ -122,7 +122,7 @@ $batman->setUtilityDamage(1.2);
 $batman->setBatarangsDamage(4);
 $batman->setCritChance(10);
 
-$superman = new kryptonian(300,10,3); 
+$superman = new kryptonian(200,10,3); 
 $superman->setHeatRay(18);
 $superman->setCritChance(20);
 do{
@@ -136,10 +136,10 @@ if($batman->speed > $superman->speed)
 }
 elseif($batman->speed == $superman->speed)
 {
-	do{
+	 do{
 				$batman = rand(0,100);
 				$superman = rand(0,100);
-			}
+		}
 			while($batman == $superman);
 	
 			if($batman > $superman)
@@ -163,10 +163,7 @@ elseif($batman->speed == $superman->speed)
 
 					
 			}
-	}
 }
-while($batman->getHP() && $superman->getHP() >0 );
-
 
 else{
 	$superman->attack($batman);
@@ -174,8 +171,10 @@ else{
 	$superman->useHeatRay($batman);
 	$batman->useBelt();
 	$batman->useBatarangs();
+	}
+  }
+while(($batman->getHP() >0) && ($superman->getHP() >0) );
 
-}
 
 
 
