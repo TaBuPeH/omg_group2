@@ -172,15 +172,26 @@ else{
 	$batman->useBelt();
 	$batman->useBatarangs();
 	}
+	echo "<pre>";
+print_r($batman);
+print_r($superman);
   }
 while(($batman->getHP() >0) && ($superman->getHP() >0) );
+if($batman->getHP()<0)
+{
+	echo "Superman win";
+}
+else{
+	echo "Batman win";
+}
 
 
 
 
 
-
+/*
 echo "<pre>";
 print_r($batman);
 print_r($superman);
+*/
 exit;
