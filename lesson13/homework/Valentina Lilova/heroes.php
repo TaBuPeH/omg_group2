@@ -26,6 +26,7 @@ do
 		
 		if (($superman->getHP()<=0)&&($batman->getHP()>0)) $winner = 'Batman';
 		if (($batman->getHP()<=0)&&($superman->getHP()>0)) $winner = 'Superman';
+		if (($batman->getHP()<=0)&&($superman->getHP()<=0)) break;
 		
 	}
 	else
@@ -35,6 +36,7 @@ do
 		
 		if (($superman->getHP()<=0)&&($batman->getHP()>0)) $winner = 'Batman';
 		if (($batman->getHP()<=0)&&($superman->getHP()>0)) $winner = 'Superman';
+		if (($batman->getHP()<=0)&&($superman->getHP()<=0)) break;
 		
 	}
 	

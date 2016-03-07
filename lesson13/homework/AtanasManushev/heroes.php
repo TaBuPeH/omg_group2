@@ -182,7 +182,7 @@ while ($achilleas->getHP() && $superman->getHP() > 0)
 	
 }
 
-while(($achilleas->getHP() >0) && ($superman->getHP() >0) );
+
 if($achilleas->getHP()<0)
 {
 	echo "Superman wins";

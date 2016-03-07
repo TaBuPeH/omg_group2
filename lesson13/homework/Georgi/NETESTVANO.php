@@ -97,7 +97,7 @@ class kryptonian extends lifeform
 		$target->setHP($remaining);		
 	}
 }
-/*
+
 
 $batman = new human(100,10);
 $batman->setUtilityDamage(1.2);
@@ -106,7 +106,7 @@ $batman->setCritChance(10);
 $superman = new kryptonian(100,10); 
 $superman->setHeatRay(18);
 $superman->setCritChance(20);
-
+/*
 $batman->attack($superman);
 $superman->attack($batman);
 
@@ -137,7 +137,7 @@ while ($alive == 1) {
 	
 	$a = $batman->getHP() * $superman->getHP();
 	if ($a <= 0) {
-		$alive = 5;
+		$alive = 0;
 	}
 	}
 

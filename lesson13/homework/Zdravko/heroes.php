@@ -150,6 +150,8 @@ $secondAttacker->secondAttackerSA($firstAttacker);
 }
 
 
+$numOfAttack++;
+
 
 
 

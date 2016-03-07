@@ -164,7 +164,7 @@ elseif($batman->speed == $superman->speed)
 while($batman->getHP() && $superman->getHP() >0 );
 
 
-else{
+if(1){
 
 	$batman->attack($superman);
 	$superman->attack($batman);
