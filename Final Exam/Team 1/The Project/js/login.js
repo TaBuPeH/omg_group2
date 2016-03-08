@@ -1,5 +1,12 @@
 $(document).ready(function(){
-    $(".loginButtons").click(function(){
-       $(".hidden").css('display', 'inline');
-    });
-     });
+	
+	if($( "#logShow" ).hide()){
+		$( "#log" ).click(function() {
+			$( "#logShow" ).show();
+		});
+	}
+	
+		$( "#exitLog" ).click(function() {
+			$( "#logShow" ).hide();
+		});
+});
