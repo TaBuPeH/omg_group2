@@ -17,6 +17,7 @@
 }
 .log{
 	position:fixed;
+	z-index: 26;
 }
 
 
