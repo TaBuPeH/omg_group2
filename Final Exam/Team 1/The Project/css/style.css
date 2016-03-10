@@ -45,5 +45,44 @@ input:focus {
 	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); 
 }
 
+.row img{
+	
+	border-width:7px;
+	border-style:solid;
+	border-color: #ca1c1c;
+	border-radius:15%;
+}
+
+.rowFloat{
+	width:50%;
+	float:left;
+	
+}
+
+.rowText {
+	font-size:3vw;
+	text-align:center;
+}
+.header1{
+	font-size:3vw;
+	text-align:center;
+}
 
 
+@media screen and (max-width: 1200px){
+	.rowFloat{
+	width:100%;
+	float:left;
+	text-align:center;
+}
+	.rowText{
+	font-size:3vw;
+	text-align:center;
+}
+}
+@media screen and (max-width: 600px){
+.row img{
+	
+	width:80%;
+}
+}
