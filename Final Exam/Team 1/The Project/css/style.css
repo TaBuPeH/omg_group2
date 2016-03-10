@@ -54,10 +54,16 @@ input:focus {
 }
 
 .rowFloat{
-	width:50%;
+	width:45%;
 	float:left;
 	text-align:center;
 }
+.rowFloata{
+	width:45%;
+	float:right;
+	text-align:center;
+}
+
 
 .rowText {
 	font-size:2.3vw;
@@ -75,6 +81,11 @@ input:focus {
 	float:left;
 	text-align:center;
 }
+.rowFloata{
+	width:100%;
+	float:left;
+	text-align:center;
+}
 	.rowText{
 	font-size:3vw;
 	text-align:center;
@@ -83,6 +94,6 @@ input:focus {
 @media screen and (max-width: 600px){
 .row img{
 	
-	width:70%;
+	width:50%;
 }
 }
