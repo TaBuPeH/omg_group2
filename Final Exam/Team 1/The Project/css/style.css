@@ -107,6 +107,15 @@ input:focus {
 	font-size:3vw;
 	text-align:center;
 }
+.login{
+  float:right;
+  list-style-type:none;
+  margin-top:1.7%; 
+}
+.log,.sign{
+	position:fixed;
+	z-index: 26;
+}
 
 
 @media screen and (max-width: 1200px){

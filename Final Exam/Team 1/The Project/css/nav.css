@@ -10,15 +10,7 @@
     color: #555555;
 }
 
-.login{
-  float:right;
-  list-style-type:none;
-  margin-top:1.7%; 
-}
-.log{
-	position:fixed;
-	z-index: 26;
-}
+
 
 
   li {  
