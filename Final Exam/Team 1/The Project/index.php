@@ -42,7 +42,8 @@
                 <a class="navbar-brand navbar-brand-default" href="index.html">Football Simulator 16</a>
             </div>
             <div class='loginButtons'>
-                   <img id="log" src="img/login.png" >
+                        <button id="log">LOG IN</button>
+                        <button id="sign">SIGN IN</button>                   
 					</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -159,19 +160,46 @@
 
     </div>
     <div id="logShow">
-    <div class="overlay" id="exitLog">
+        <div class="overlay" id="exitLog">
     </div>
-    <div>
-        <div class="log">
+        <div>
+            <div class="log">
     
-            <form method="post" >
-                <h1>Login</h1>
-                <input type="text" name="u" placeholder="Username" required="required" />
-                <input type="password" name="p" placeholder="Password" required="required" />
-                <button type="button" class="btn btn-danger btn-block">Login</button>
-            </form>
+                <form method="post" >
+                    <h1>Login</h1>
+                    <input type="text" name="username_log" placeholder="Username" required="required" />
+                    <input type="password" name="password_log" placeholder="Password" required="required" />
+                    <button type="button" class="btn btn-danger btn-block">Login</button>
+                </form>
+            </div>
+        </div>
     </div>
-    </div>
+
+    <div id="signShow">
+      <div class="overlay" id="exitSign">
+        </div>  
+        <div>
+            <div class="sign">
+                <form method="post" >
+                    <h1>SiGN IN</h1>
+                    <input type="text" name="username_sign" placeholder="Username" required="required" />
+                    <input type="password" name="password_sign" placeholder="Password" required="required" />
+                    <input type="password" name="password_2" placeholder="Repeat Password" required="required" />
+                    <input type="email" name="email" placeholder="email" required="required" />
+                    <input type="text" name="first_name" placeholder="First name" required="required" />
+                    <input type="text" name="second_name" placeholder="Last name" required="required" />
+                    <select  name="team" >
+                    <option value="0" selected>Arsenal</option>
+                    <option value="1" >Liverpool</option>
+                    <option value="2" >Barca</option>
+                    <option value="3" >Real Madrid</option>
+                    <option value="3" >Milan</option>
+                    <option value="3" >Juve</option>
+                </select>
+                    <button type="button" class="btn btn-danger btn-block">Sign in</button>
+                </form>
+            </div>
+        </div>
     </div>
 	
     <!-- /.container -->
