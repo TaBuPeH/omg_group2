@@ -27,6 +27,11 @@
 </head>
 
 <body>
+	<script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar  navbar-fixed-top navbar-default" role="navigation" >
@@ -42,8 +47,8 @@
                 <a class="navbar-brand navbar-brand-default" href="index.html">Football Simulator 16</a>
             </div>
             <div class='loginButtons'>
-                        <button id="log">LOG IN</button>
-                        <button id="sign">SIGN IN</button>                   
+                        <img class="loginButtons" src="img/edit-icon.png" id="sign">  
+						<img class="loginButtons" src="img/login.png" id="log">						
 					</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -170,6 +175,7 @@
                     <input type="text" name="username_log" placeholder="Username" required="required" />
                     <input type="password" name="password_log" placeholder="Password" required="required" />
                     <button type="button" class="btn btn-danger btn-block">Login</button>
+					<p class="toggleRegForm" id="openReg">or Register now?</p>
                 </form>
             </div>
         </div>
@@ -181,7 +187,7 @@
         <div>
             <div class="sign">
                 <form method="post" >
-                    <h1>SiGN IN</h1>
+                    <h1>Sign in</h1>
                     <input type="text" name="username_sign" placeholder="Username" required="required" />
                     <input type="password" name="password_sign" placeholder="Password" required="required" />
                     <input type="password" name="password_2" placeholder="Repeat Password" required="required" />
@@ -191,10 +197,8 @@
                     <select  name="team" >
                     <option value="0" selected>Arsenal</option>
                     <option value="1" >Liverpool</option>
-                    <option value="2" >Barca</option>
-                    <option value="3" >Real Madrid</option>
-                    <option value="3" >Milan</option>
-                    <option value="3" >Juve</option>
+                    <option value="2" >Man City</option>
+                    <option value="3" >Chelsea</option>
                 </select>
                     <button type="button" class="btn btn-danger btn-block">Sign in</button>
                 </form>
@@ -202,15 +206,6 @@
         </div>
     </div>
 	
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
-
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

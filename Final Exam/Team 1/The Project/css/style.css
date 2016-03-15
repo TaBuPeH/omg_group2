@@ -17,7 +17,7 @@ html {
 }
 .sign { 
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 50%;
 	margin: -12.5% 0 0 -12.5%;
 	width:25%;
@@ -98,7 +98,11 @@ input:focus {
 	float:right;
 	text-align:center;
 }
-
+.toggleRegForm{
+	text-align: center;
+	color:white;
+	margin-top:3%;
+}
 
 .rowText {
 	font-size:2.3vw;
