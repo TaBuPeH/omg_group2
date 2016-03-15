@@ -9,4 +9,14 @@ $(document).ready(function(){
 		$( "#exitLog" ).click(function() {
 			$( "#logShow" ).hide();
 		});
+
+		if($( "#signShow" ).hide()){
+		$( "#sign" ).click(function() {
+			$( "#signShow" ).show();
+		});
+	}
+	
+		$( "#exitSign" ).click(function() {
+			$( "#signShow" ).hide();
+		});
 });

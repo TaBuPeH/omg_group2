@@ -27,6 +27,11 @@
 </head>
 
 <body>
+	<script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar  navbar-fixed-top navbar-default" role="navigation" >
@@ -39,10 +44,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-brand-default" href="index.html">Football</a>
+                <a class="navbar-brand navbar-brand-default" href="index.html">Football Simulator 16</a>
             </div>
             <div class='loginButtons'>
-                   <img id="log" src="img/login.png" >
+                        <img class="loginButtons" src="img/edit-icon.png" id="sign">  
+						<img class="loginButtons" src="img/login.png" id="log">						
 					</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -77,24 +83,30 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
 
     <!-- Wrapper for slides -->
+	<!-- snimkite gi nqma,mnogo sa golemi -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="img/slide_img1.jpg" >
+        <img src="img/project_1a.jpg" >
       </div>
 
       <div class="item">
-        <img src="img/slide_img2.jpg" >
+        <img src="img/project_51.jpg" >
       </div>
     
       <div class="item">
-        <img src="img/slide_img31.jpg" >
+        <img src="img/project_5.jpg" >
       </div>
 
       <div class="item">
-        <img src="img/slide_img4.jpg" >
+        <img src="img/project_4.jpg" >
+      </div>
+	  
+	  <div class="item">
+        <img src="img/project_3.jpg" >
       </div>
     </div>
 
@@ -115,11 +127,27 @@
     <!-- Page Content -->
 	<br><br>
     <div class="container">
-
+		<br>
+		<h1 class="header1">Football Simulator 16</h1>
+		<br><br>
         <div class="row">
             <div class="col-lg-12">
-                <h1>Ne mi haresva kak stoqt tiq poleta...</h1>
-                <p>This is some random information about our cool game just to see how it will look like.This is some random information about our cool game just to see how it will look like.This is some random information about our cool game just to see how it will look like.This is some random information about our cool game just to see how it will look like.This is some random information about our cool game just to see how it will look like.</p>
+				<div class="rowFloat"><img src="img/BPL_1.png"></div>
+                <div class="rowFloat rowText"><br><p>Welcome to Football Simulator 16! Pick your favourite team from one of the best Football leagues-Barclays Premier League.</p></div>
+            </div>
+        </div>
+		<br><br>
+        <div class="row">
+            <div class="col-lg-12">
+			<div class="rowFloata" ><img src="img/teams_2.png"></div>
+                <div class="rowFloata rowText"><br><p>Chose between few football clubs and simulate the match. The shown results will not dissapoint you!</p></div>
+            </div>
+        </div>
+		<br><br>
+        <div class="row">
+            <div class="col-lg-12">
+				<div class="rowFloat"><img src="img/manager_32.png"></div>
+                <div class="rowFloat rowText"><br><p>Try to beat few world class managers and prove yourself on the world scene.</p></div>
             </div>
         </div>
 
@@ -137,30 +165,47 @@
 
     </div>
     <div id="logShow">
-    <div class="overlay" id="exitLog">
+        <div class="overlay" id="exitLog">
     </div>
-    <div>
-        <div class="log">
+        <div>
+            <div class="log">
     
-            <form method="post" >
-                <h1>Login</h1>
-                <input type="text" name="u" placeholder="Username" required="required" />
-                <input type="password" name="p" placeholder="Password" required="required" />
-                <button type="button" class="btn btn-danger btn-block">Login</button>
-            </form>
+                <form method="post" >
+                    <h1>Login</h1>
+                    <input type="text" name="username_log" placeholder="Username" required="required" />
+                    <input type="password" name="password_log" placeholder="Password" required="required" />
+                    <button type="button" class="btn btn-danger btn-block">Login</button>
+					<p class="toggleRegForm" id="openReg">or Register now?</p>
+                </form>
+            </div>
+        </div>
     </div>
-    </div>
+
+    <div id="signShow">
+      <div class="overlay" id="exitSign">
+        </div>  
+        <div>
+            <div class="sign">
+                <form method="post" >
+                    <h1>Sign in</h1>
+                    <input type="text" name="username_sign" placeholder="Username" required="required" />
+                    <input type="password" name="password_sign" placeholder="Password" required="required" />
+                    <input type="password" name="password_2" placeholder="Repeat Password" required="required" />
+                    <input type="email" name="email" placeholder="email" required="required" />
+                    <input type="text" name="first_name" placeholder="First name" required="required" />
+                    <input type="text" name="second_name" placeholder="Last name" required="required" />
+                    <select  name="team" >
+                    <option value="0" selected>Arsenal</option>
+                    <option value="1" >Liverpool</option>
+                    <option value="2" >Man City</option>
+                    <option value="3" >Chelsea</option>
+                </select>
+                    <button type="button" class="btn btn-danger btn-block">Sign in</button>
+                </form>
+            </div>
+        </div>
     </div>
 	
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/login.js"></script>
-
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
