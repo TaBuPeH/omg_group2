@@ -1,0 +1,147 @@
+
+html { 
+	width: 100%; 
+	height:100%; 
+	
+}
+
+
+
+.log { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -12.5% 0 0 -12.5%;
+	width:25%;
+	height:25%;
+}
+.sign { 
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	margin: -12.5% 0 0 -12.5%;
+	width:25%;
+	height:25%;
+	z-index: 26;
+}
+.log h1 
+{ 
+	color: #d91d1d; 
+	text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+	letter-spacing:1px; 
+	text-align:center; 
+}
+
+.sign h1 
+{ 
+	color: #d91d1d; 
+	text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+	letter-spacing:1px; 
+	text-align:center; 
+}
+
+input { 
+	width: 100%; 
+	margin-bottom: 2%; 
+	border: none;
+	outline: none;
+	padding: 3%;
+	font-size: 13px;
+	color: #d91d1d;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid #d91d1d;
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+} 
+select{
+	width: 100%; 
+	margin-bottom: 2%; 
+	border: none;
+	outline: none;
+	padding: 3%;
+	font-size: 13px;
+	color: #d91d1d;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid #d91d1d;
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+input:focus { 
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); 
+}
+
+.row img{
+	
+	border-width:7px;
+	border-style:solid;
+	border-color: #ca1c1c;
+	border-radius:15%;
+}
+
+.rowFloat{
+	width:45%;
+	float:left;
+	text-align:center;
+}
+.rowFloata{
+	width:45%;
+	float:right;
+	text-align:center;
+}
+.toggleRegForm{
+	text-align: center;
+	color:white;
+	margin-top:3%;
+}
+
+.rowText {
+	font-size:2.3vw;
+	text-align:center;
+}
+.header1{
+	font-size:3vw;
+	text-align:center;
+}
+.login{
+  float:right;
+  list-style-type:none;
+  margin-top:1.7%; 
+}
+.log,.sign{
+	position:fixed;
+	z-index: 26;
+}
+
+
+@media screen and (max-width: 1200px){
+	.rowFloat{
+	width:100%;
+	float:left;
+	text-align:center;
+}
+.rowFloata{
+	width:100%;
+	float:left;
+	text-align:center;
+}
+	.rowText{
+	font-size:3vw;
+	text-align:center;
+}
+}
+@media screen and (max-width: 600px){
+.row img{
+	
+	width:50%;
+}
+}

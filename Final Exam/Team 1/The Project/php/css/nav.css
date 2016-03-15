@@ -1,0 +1,81 @@
+.navbar-default {
+    background-color: rgba(217,29,29,0.7);
+    border-color: #d91d1d;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #ffffff;
+    color: #555555;
+}
+
+<<<<<<< HEAD
+.login{
+  float:right;
+  list-style-type:none;
+  margin-top:1.7%; 
+}
+.log{
+	position:fixed;
+	z-index: 26;
+}
+.sign{
+	position:fixed;
+	z-index: 26;
+}
+
+  li {  
+        color:#000;
+        transition: background 0.4s linear;
+}
+li:hover { 
+  background-color: #ca1c1c; 
+  color:#fff;  
+}
+li:focus{
+  background-color: #ca1c1c; 
+  color:#fff;  
+}
+.loginButtons{
+  position: initial;
+  padding-top:0.7%;
+  float:right;
+  width: 16%;
+}
+
+.loginButtons > img {
+  margin-left:10%;
+  margin-right:5%
+  }
+
+.loginButtons > button {
+background-color:none;
+border-style:none;
+background-color:green;
+
+}
+
+@media screen and (max-width: 1024px) {
+   
+.loginButtons{
+  position: initial;
+  margin-top:0.7%;
+  width: 20%;
+  float:right;
+  
+
+}
+}
+@media screen and (max-width: 767px) {
+.navbar-toggle{
+}
+.loginButtons{
+  position: initial;
+  top:0.8%;
+  width:25%;
+  float:right;
+  
+
+}
+}

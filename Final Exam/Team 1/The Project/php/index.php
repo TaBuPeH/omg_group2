@@ -169,15 +169,14 @@
     </div>
         <div>
             <div class="log">
-            <!--
-                <form method="post" action="login_db.php" >
+    
+                <form method="post" action="login_db.php">
                     <h1>Login</h1>
                     <input type="text" name="username_log" placeholder="Username" required="required" />
                     <input type="password" name="password_log" placeholder="Password" required="required" />
                     <input type="submit" value="Login now!">
 					<p class="toggleRegForm" id="openReg">or Register now?</p>
                 </form>
-            -->
             </div>
         </div>
     </div>
