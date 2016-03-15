@@ -22,6 +22,7 @@ html {
 	margin: -12.5% 0 0 -12.5%;
 	width:25%;
 	height:25%;
+	z-index: 26;
 }
 .log h1 
 { 
