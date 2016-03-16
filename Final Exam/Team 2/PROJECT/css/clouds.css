@@ -6,41 +6,42 @@ body
   background: #aedfe5 url("../img/sky-background1.png") 0 0 repeat-x;
 }
 
-img 
+/*img 
 {
-  /*max-width: 100%;
-  height: auto;*/
-}
+  max-width: 100%;
+  height: auto;
+}*/
 
+/*#background
+{
+	width: 100%;
+    height: 100%;
+}*/
 .stage 
 {
-    top: 0%;
-    left: 0; /* removes the scrollbar */
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     z-index: 100;
+	
+	/*height: 80%;*/
 }
-.clouds
-{
-	top: -8%;
-}
+
 
 #far-clouds 
 {
-    background: transparent url("../img/far-clouds.png") 305px 105px repeat-x;
+    background: transparent url("../img/far-clouds.png") 0 6% repeat-x;
 }
 #near-clouds 
 {
-    background: transparent url("../img/near-clouds.png") 305px 165px repeat-x;
+    background: transparent url("../img/near-clouds.png") 0 24% repeat-x;
 }
 #ground 
 {
 	background: transparent url("../img/grass1.png") 0px 100% repeat-x;
-	width: 100%;
 	bottom: 0;
-	left: 0;
 }
 
 .hero
@@ -48,6 +49,32 @@ img
 	position: absolute;
 	z-index: 200;
 	
+}
+
+
+@media screen and (max-width: 1024px) 
+{
+    .clouds
+	{
+		
+	}
+	#ground
+	{
+		
+	}
+
+}
+
+@media screen and (max-width: 640px) 
+{   
+	.clouds
+	{
+		
+	}
+	#ground
+	{
+		
+	}
 }
 
 /*  */
