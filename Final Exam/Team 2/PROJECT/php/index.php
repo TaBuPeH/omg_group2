@@ -33,17 +33,19 @@ if(!isset($_SESSION['logged_user']))
 	
 	<header>
 		
-		<div class='topLine'>
-			<div class='mainContainer'>
+		<div class="topLine">
+		
+		
+			<div class="links">
 			
 				<nav>
-					<a href='#'>Profile</a>
-					<a href='#'>Create</a>
-					<a href='#'>Hero</a>
-					<a href='#'>Login</a>
+					<a href="#">Profile</a>
+					<a href="heroes.php">Create Hero</a>
+					<a href="login.php">Login</a>
 				</nav>
 				
 			</div>
+			
 		</div>
 	
         <div id="far-clouds" class="stage clouds"></div>
@@ -51,10 +53,10 @@ if(!isset($_SESSION['logged_user']))
 		<div id="ground" class="stage"></div>
 		
 
-        <div class="content">
+        <div class="battle">
 			
 			<?php
-			echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			?>
 			
 			<div class="hero"></div>
