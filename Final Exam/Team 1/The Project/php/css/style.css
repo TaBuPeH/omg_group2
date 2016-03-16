@@ -4,12 +4,8 @@ html {
 	height:100%; 
 	
 }
-body {
-		background-image: url("../img/background1.png");
-    background-repeat: repeat;
-    font-family:Fertigo;
-    
-}
+
+
 
 .log { 
 	position: absolute;
@@ -86,9 +82,9 @@ input:focus {
 
 .row img{
 	
-	border-width:4px;
+	border-width:7px;
 	border-style:solid;
-	border-color: white;
+	border-color: #ca1c1c;
 	border-radius:15%;
 }
 
@@ -111,12 +107,10 @@ input:focus {
 .rowText {
 	font-size:2.3vw;
 	text-align:center;
-	color:white;
 }
 .header1{
 	font-size:3vw;
 	text-align:center;
-	color:white;
 }
 .login{
   float:right;
@@ -126,6 +120,9 @@ input:focus {
 .log,.sign{
 	position:fixed;
 	z-index: 26;
+}
+#pullRight{
+	font-size:200px !important;
 }
 
 
@@ -147,27 +144,9 @@ span.toggleRegister:hover
 	float:left;
 	text-align:center;
 }
-.rowText{
+	.rowText{
 	font-size:3vw;
 	text-align:center;
-	color:white;
-}
-.log { 
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -12.5% 0 0 -12.5%;
-	width:40%;
-	height:25%;
-}
-.sign { 
-	position: absolute;
-	top: 35%;
-	left: 50%;
-	margin: -12.5% 0 0 -12.5%;
-	width:40%;
-	height:25%;
-	z-index: 26;
 }
 }
 @media screen and (max-width: 600px){

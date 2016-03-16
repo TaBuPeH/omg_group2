@@ -27,9 +27,5 @@ $(document).ready(function(){
 		$( "#logShow" ).hide();
 		$( "#signShow" ).show();
 	});
-    $('.carousel').carousel({
-        interval: 4000 //changes the speed
-    })
-   
 
 });
