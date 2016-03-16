@@ -1,4 +1,3 @@
-
 h1
 {
 	display: block;
@@ -36,4 +35,10 @@ label span
 	display: block;
 	width: 30%;
 	float: left;
+}
+#logButton{
+	width:100%;
+}
+#regButton{
+	width:100%;
 }
