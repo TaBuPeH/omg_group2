@@ -1,16 +1,19 @@
 $(document).ready(function(){
 	
-	if($( "#logShow" ).hide()){
+	if($( "#logShow" ).hide())
+	{
 		$( "#log" ).click(function() {
 			$( "#logShow" ).show();
 		});
 	}
 	
-		$( "#exitLog" ).click(function() {
+		$( "#exitLog" ).click(function() 
+		{
 			$( "#logShow" ).hide();
 		});
 
-		if($( "#signShow" ).hide()){
+	if($( "#signShow" ).hide())
+	{
 		$( "#sign" ).click(function() {
 			$( "#signShow" ).show();
 		});
@@ -19,4 +22,6 @@ $(document).ready(function(){
 		$( "#exitSign" ).click(function() {
 			$( "#signShow" ).hide();
 		});
+	
+ 
 });

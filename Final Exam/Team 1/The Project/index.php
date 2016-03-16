@@ -32,7 +32,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
-
     <!-- Navigation -->
     <nav class="navbar  navbar-fixed-top navbar-default" role="navigation" >
         <div class="container">
