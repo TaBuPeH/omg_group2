@@ -16,7 +16,7 @@
 	$hasError = 0;
 	
 	
-	$query = "SELECT * FROM `users` WHERE `username` = '".$data['username_sign']."' ";
+	$query = "SELECT * FROM `users` WHERE `username_sign` = '".$data['username_sign']."' ";
 	
 	$result = $db->fetchArray($query);
 	
@@ -44,6 +44,7 @@
 		unset($data['password_2']);
 		$data['password_sign'] = md5($data['password_sign']);
 		$db->saveArray('users', $data);
+		header('Location: ../index.php');
 	}
 	else
 	{

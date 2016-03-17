@@ -32,11 +32,18 @@
 		{
 			
 			$result = mysqli_query($this->dbHandle,$query);
+			//echo "<pre>";
+			//var_dump($result);
+			//exit;
 			
 			$info = array();
-			while($row = mysqli_fetch_assoc($result))
+
+			if($result)
 			{
-				$info[] = $row;
+				while($row = mysqli_fetch_assoc($result))
+				{
+					$info[] = $row;
+				}	
 			}
 			
 			return $info;

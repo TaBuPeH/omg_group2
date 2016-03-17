@@ -10,15 +10,26 @@ $(document).ready(function(){
 			$( "#logShow" ).hide();
 		});
 
-		if($( "#signShow" ).hide()){
+	if($( "#signShow" ).hide()){
 		$( "#sign" ).click(function() {
 			$( "#signShow" ).show();
 		});
 	}
 	
-		$( "#exitSign" ).click(function() {
-			$( "#signShow" ).hide();
-		});
-		var frmvalidator  = new Validator("register");
+	$( "#exitSign" ).click(function() {
+		$( "#signShow" ).hide();
+	});
+
+	//var frmvalidator  = new Validator("register");
+
+	$('span.toggleRegister').click(function(){
+		
+		$( "#logShow" ).hide();
+		$( "#signShow" ).show();
+	});
+    $('.carousel').carousel({
+        interval: 4000 //changes the speed
+    })
+   
 
 });

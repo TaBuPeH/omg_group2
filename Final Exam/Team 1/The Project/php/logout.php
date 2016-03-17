@@ -2,7 +2,7 @@
 
 session_start();
 
-//unset($_SESSION['logged_user']);
-session_destroy();
+unset($_SESSION['logged_user']);
+//session_destroy();
 
-header('Location: indexa.php');
+header('Location: ../index.php');

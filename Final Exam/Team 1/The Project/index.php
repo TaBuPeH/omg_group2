@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
     <meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -44,29 +45,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-brand-default" href="index.html">Football Simulator 16</a>
+                <a class="navbar-brand navbar-brand-default" href="index.php">Kygen</a>
             </div>
-            <div class='loginButtons'>
-                        <img class="loginButtons" src="img/edit-icon.png" id="sign">  
-						<img class="loginButtons" src="img/login.png" id="log">						
-					</div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                   
-        
-                </ul>
-                 <!--<div class='loginButtons'>
-                    <a href="login.html"><img src="img/login.png"></a>
-                </div>-->
+            <?php
+                if(!isset($_SESSION['logged_user']))
+                {
+                    echo "
+                        <div class='loginButtons'>
+                            <img class='loginButtons' src='img/edit-icon.png' id='sign'>  
+    						<img class='loginButtons' src='img/login.png' id='log'>						
+    					</div>
+                    ";
+                }
+                else
+                {
+                    echo "
                 
-            </div>
+                        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                            <ul class='nav navbar-nav'>
+                                <li>
+                                    <a href='game.php'>The Game</a>
+                                </li>
+                                </ul>
+                                    <span id='hello' href='#'>Hello, ".$_SESSION['logged_user']['username_sign']."</span>
+                                <div class='loginButtons'>
+                                    <a href='php/logout.php'><img class='loginButtons' src='img/logout.png' ></a>
+                                    <img class='loginButtons' src='img/profile.png' >
+                                </div>
+                        </div>
+
+                    ";
+                }
+            ?>
 
             <!-- /.navbar-collapse -->
         </div>
@@ -111,14 +121,7 @@
     </div>
 
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    
   </div>
 </div>
 
@@ -128,7 +131,7 @@
 	<br><br>
     <div class="container">
 		<br>
-		<h1 class="header1">Football Simulator 16</h1>
+		<h1 class="header1">Kygen</h1>
 		<br><br>
         <div class="row">
             <div class="col-lg-12">
@@ -169,15 +172,14 @@
     </div>
         <div>
             <div class="log">
-            <!--
-                <form method="post" action="login_db.php" >
+    
+                <form method="post" action="php/login_db.php">
                     <h1>Login</h1>
                     <input type="text" name="username_log" placeholder="Username" required="required" />
                     <input type="password" name="password_log" placeholder="Password" required="required" />
-                    <input type="submit" value="Login now!">
-					<p class="toggleRegForm" id="openReg">or Register now?</p>
+                    <input class="btn btn-danger" type="submit" value="Login now!">
+					<p class="toggleRegForm" id="openReg">or <span class="toggleRegister">Register now</span>?</p>
                 </form>
-            -->
             </div>
         </div>
     </div>
@@ -187,7 +189,7 @@
         </div>  
         <div>
             <div class="sign">
-                <form method="post" action="register_db.php">
+                <form method="post" action="php/register_db.php">
                     <h1>Sign in</h1>
                     <input type="text" name="username_sign" placeholder="Username" required="required" />
                     <input type="password" name="password_sign" placeholder="Password" required="required" />
@@ -201,19 +203,11 @@
                     <option value="2" >Man City</option>
                     <option value="3" >Chelsea</option>
                 </select>
-                    <input type="submit" value="Login now!">
+                    <input class="btn btn-danger" type="submit" value="Sign now!">
                 </form>
             </div>
         </div>
     </div>
-	
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 4000 //changes the speed
-    })
-    </script>
-
 </body>
 
 </html>

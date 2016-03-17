@@ -121,7 +121,17 @@ input:focus {
 	position:fixed;
 	z-index: 26;
 }
+#pullRight{
+	font-size:200px !important;
+}
 
+
+/*added by Toshko*/
+span.toggleRegister:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
 
 @media screen and (max-width: 1200px){
 	.rowFloat{

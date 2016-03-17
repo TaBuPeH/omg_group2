@@ -6,23 +6,27 @@ $data = $_POST;
 
 echo "<pre>";
 
-$data['username'] = mysqli_real_escape_string($db->dbHandle, $data['username']);
+$data['username_log'] = mysqli_real_escape_string($db->dbHandle, $data['username_log']);
 
-$query = "SELECT * FROM `users` WHERE `username` = '".$data['username']."' ";
+$query = "SELECT * FROM `users` WHERE `username_sign` = '".$data['username_log']."' ";
 
 $result = $db->fetchArray($query);
 
 if(!empty($result))
 {
-	if($result[0]['password'] == md5($data['password']))
+	if($result[0]['password_sign'] == md5($data['password_log']))
 	{
 		// 
 		$_SESSION['logged_user'] = $result[0];
-		header('Location: indexa.php');
+		header('Location: ../index.php');
 	}
-	else
+
+	else //if username exists but password is wrong
 	{
-		echo "NOOOO";	
+		echo "Wrong pass";	
 	}
 }
-
+else //if no user is found
+{
+	echo "NOOOO";	
+}

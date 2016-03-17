@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,29 +45,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-brand-default" href="index.html">Football Simulator 16</a>
+                <a class="navbar-brand navbar-brand-default" href="index.php">Football Simulator 16</a>
             </div>
-            <div class='loginButtons'>
-                        <img class="loginButtons" src="img/edit-icon.png" id="sign">  
-						<img class="loginButtons" src="img/login.png" id="log">						
-					</div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <?php
+                if(!isset($_SESSION['logged_user']))
+                {
+                    echo "
+                        <div class='loginButtons'>
+                            <img class='loginButtons' src='img/edit-icon.png' id='sign'>  
+    						<img class='loginButtons' src='img/login.png' id='log'>						
+    					</div>
+                    ";
+                }
+                else
+                {
+                    echo "
+                       <div class='hello'>
+                            <p>Hello, ".$_SESSION['logged_user']['username_sign']."</p>
+                       </div> 
+                        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                <ul class='nav navbar-nav'>
                     <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                        <a href='game.php'>The Game</a>
                     </li>
                    
         
                 </ul>
-                 <!--<div class='loginButtons'>
-                    <a href="login.html"><img src="img/login.png"></a>
-                </div>-->
-                
             </div>
+                    ";
+                }
+            ?>
 
             <!-- /.navbar-collapse -->
         </div>
@@ -174,8 +182,8 @@
                     <h1>Login</h1>
                     <input type="text" name="username_log" placeholder="Username" required="required" />
                     <input type="password" name="password_log" placeholder="Password" required="required" />
-                    <input type="submit" value="Login now!">
-					<p class="toggleRegForm" id="openReg">or Register now?</p>
+                    <input class="btn btn-danger" type="submit" value="Login now!">
+					<p class="toggleRegForm" id="openReg">or <span class="toggleRegister">Register now</span>?</p>
                 </form>
             </div>
         </div>
@@ -200,7 +208,7 @@
                     <option value="2" >Man City</option>
                     <option value="3" >Chelsea</option>
                 </select>
-                    <input type="submit" value="Login now!">
+                    <input class="btn btn-danger" type="submit" value="Sign now!">
                 </form>
             </div>
         </div>
