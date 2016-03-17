@@ -33,7 +33,7 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 ?>
 <br>
 <a href="logout.php">Logout</a>
-
+<a href="heroes.php">Create Hero</a>
 
 </body>
 
