@@ -11,16 +11,10 @@
 		
 		
 		$HeroData = $_POST;
-		
-		
-		
 		foreach($HeroData as $k=>$v)
 		{
 			$HeroData[$k] = trim($HeroData[$k]);
 		}
-		
-		
-		
 		$db->saveArray('heroes', $HeroData);
 		//header('Location: login.php');
 ?>

@@ -92,10 +92,7 @@ table {
 }
 /* HTML5 display-role reset for older browsers */
 
-.mainContainer
-{
-	width: 65%;
-}
+
 #topLine
 {
 	width: 100%;
@@ -107,7 +104,7 @@ table {
 nav
 {
 	float: left;
-	width: 57.266%;
+	width: 100%;
 }
 #topLine nav a 
 {
@@ -116,19 +113,24 @@ nav
     display: block;
     float: left;
     font-family: Verdana;
-    font-size: 1.1vw;
-    padding: 4.2% 1%;
+    font-size: 1vw;
+    margin: 0.6% 3%;
+	width: 10%;
     text-decoration: none;
     text-shadow: 1px 1px 1px #444;
     text-transform: uppercase;
-    margin: 0px 1%;
-	z-index: 300;
+	z-index: 300; /*  ?  */
 }
 nav a:hover
 {
-	border-bottom: 1px solid #f8e1b4;
+	border-bottom:  1px solid #91c5a9; /*  ?  */
 }
 
+
+.mainContainer
+{
+	width: 65%;
+}
 .heroes
 {
 	position: absolute;
@@ -144,15 +146,26 @@ nav a:hover
 }
 
 
-
 @media screen and (max-width: 1024px) 
 {
-    #topLine
+	#topLine nav a 
+	{
+		font-size: 2vw;
+		margin: 0.5% 3%;
+		width: 15%;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 640px) 
 {
-    
+    #topLine nav a 
+	{
+		font-size: 4vw;
+		width: 33.3%;
+		padding: 1% 0%;
+		margin: 0 0%;
+	}
 }
 
 @media screen and (max-width: 320px) 

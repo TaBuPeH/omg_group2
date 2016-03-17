@@ -16,21 +16,21 @@
 			
 			<label>
 				<span>STR: </span>
-				<input type="text" name="Strenght" >
+				<input type="text" name="STR" >
 			</label>
 			
 			<label>
 				<span>DEX:</span>
-				<input type="text" name="Dexterity" >
+				<input type="text" name="DEX" >
 			</label>
 			
 			<label>
 				<span>VIT: </span>
-				<input type="text" name="Vitality" >
+				<input type="text" name="VIT" >
 			</label>
 			<label>
 				<span>INT: </span>
-				<input type="text" name="Intellect" >
+				<input type="text" name="INT_" >
 			</label>
 			
 				<input id="regButton" type="submit" value="Create HERO">

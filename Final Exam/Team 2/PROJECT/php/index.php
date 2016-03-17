@@ -1,13 +1,10 @@
 <?php 
+	require_once "db.class.php";
 
-require_once "db.class.php";
-
-
-if(!isset($_SESSION['logged_user']))
-{
-	//header("Location: login.php");
-}
-
+	if(!isset($_SESSION['logged_user']))
+	{
+		//header("Location: login.php");
+	}
 ?>
 
 <!doctype html>
@@ -29,22 +26,22 @@ if(!isset($_SESSION['logged_user']))
         <script src="../js/app.js"></script>
 		
     </head>
-	
+
     <body>
 	
-	<header>
-		
-		<div id="topLine" >
-
-			<nav class="mainContainer">
-				<a href="#">Profile</a>
-				<a href="heroes.php">Create Hero</a>
-				<a href="login.php">Login</a>
-			</nav>
+		<header>
 			
-		</div>
-		
-	</header>
+			<div id="topLine" >
+
+				<nav>
+					<a href="#">Profile</a>
+					<a href="heroes.php">Create Hero</a>
+					<a href="login.php">Login</a>
+				</nav>
+				
+			</div>
+			
+		</header>
 	
 		<div class="content">
 		
@@ -57,7 +54,7 @@ if(!isset($_SESSION['logged_user']))
 			</div>
 			
 			
-			<div class="battle mainContainer">
+			<div id="battle" class="mainContainer">
 				
 				<?php
 				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
@@ -73,6 +70,5 @@ if(!isset($_SESSION['logged_user']))
     </body>
 	
 </html>
-
 
 
