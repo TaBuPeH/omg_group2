@@ -36,7 +36,7 @@ body
 }
 #near-clouds 
 {
-    background: transparent url("../img/near-clouds.png") 0 24% repeat-x;
+    background: transparent url("../img/near-clouds.png") 0 15% repeat-x;
 }
 #ground 
 {
@@ -54,27 +54,34 @@ body
 
 @media screen and (max-width: 1024px) 
 {
-    .clouds
+	#far-clouds 
 	{
-		
+		background: transparent url("../img/mini-far-clouds.png") 0 3% repeat-x;
+	}
+    #near-clouds 
+	{
+		background: transparent url("../img/mini-near-clouds.png") 0 11% repeat-x;
 	}
 	#ground
 	{
-		
+		height: 25%;
+		/*background-size: cover;*/  /*  ?  */
 	}
 
 }
 
 @media screen and (max-width: 640px) 
 {   
-	.clouds
+	/*  on rotation?  */
+	#near-clouds 
 	{
-		
+		display: none;
 	}
 	#ground
 	{
-		
+		height: 20%;
+		/*background-size: cover;*/
 	}
 }
 
-/*  */
+/* other sizes? */

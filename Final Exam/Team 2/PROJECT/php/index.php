@@ -1,13 +1,10 @@
 <?php 
+	require_once "db.class.php";
 
-require_once "db.class.php";
-
-
-if(!isset($_SESSION['logged_user']))
-{
-	//header("Location: login.php");
-}
-
+	if(!isset($_SESSION['logged_user']))
+	{
+		//header("Location: login.php");
+	}
 ?>
 
 <!doctype html>
@@ -29,34 +26,22 @@ if(!isset($_SESSION['logged_user']))
         <script src="../js/app.js"></script>
 		
     </head>
-	
-<<<<<<< HEAD
-} 
-</style>
-</head>
-<body>
-<?php
-echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-?>
-<br>
-<a href="logout.php">Logout</a>
-<a href="heroes.php">Create Hero</a>
-=======
+
     <body>
 	
-	<header>
-		
-		<div id="topLine" >
-
-			<nav class="mainContainer">
-				<a href="#">Profile</a>
-				<a href="heroes.php">Create Hero</a>
-				<a href="login.php">Login</a>
-			</nav>
+		<header>
 			
-		</div>
-		
-	</header>
+			<div id="topLine" >
+
+				<nav>
+					<a href="#">Profile</a>
+					<a href="heroes.php">Create Hero</a>
+					<a href="login.php">Login</a>
+				</nav>
+				
+			</div>
+			
+		</header>
 	
 		<div class="content">
 		
@@ -69,7 +54,7 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			</div>
 			
 			
-			<div class="battle mainContainer">
+			<div id="battle" class="mainContainer">
 				
 				<?php
 				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
@@ -85,7 +70,5 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
     </body>
 	
 </html>
-
->>>>>>> 789a44c23ed01d1aeb219f63892af59f817ff6ca
 
 
