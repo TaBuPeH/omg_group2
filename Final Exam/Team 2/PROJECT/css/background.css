@@ -40,7 +40,7 @@ body
 }
 #ground 
 {
-	background: transparent url("../img/grass1.png") 0px 100% repeat-x;
+	background: transparent url("../img/grass3.png") 0px 100% repeat-x;
 	bottom: 0;
 }
 
@@ -48,7 +48,6 @@ body
 {
 	position: absolute;
 	z-index: 200;
-	
 }
 
 
@@ -56,16 +55,16 @@ body
 {
 	#far-clouds 
 	{
-		background: transparent url("../img/mini-far-clouds.png") 0 3% repeat-x;
+		background: transparent url("../img/mini-far-clouds.png") 0 5% repeat-x;
 	}
     #near-clouds 
 	{
-		background: transparent url("../img/mini-near-clouds.png") 0 11% repeat-x;
+		background: transparent url("../img/mini-near-clouds.png") 0 13% repeat-x;
 	}
 	#ground
 	{
 		height: 25%;
-		/*background-size: cover;*/  /*  ?  */
+		background-size: cover;  /*  ...  */
 	}
 
 }
@@ -80,8 +79,8 @@ body
 	#ground
 	{
 		height: 20%;
-		/*background-size: cover;*/
+		background-size: cover; /*  sucks in landscape view  */
 	}
 }
 
-/* other sizes? */
+/*  how to change the properties when the device rotats?  */

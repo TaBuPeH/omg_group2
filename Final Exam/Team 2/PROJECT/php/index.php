@@ -1,5 +1,6 @@
 <?php 
 	require_once "db.class.php";
+	//require_once "login.php";
 
 	if(!isset($_SESSION['logged_user']))
 	{
@@ -17,9 +18,11 @@
         <meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link rel="stylesheet" href="../css/clouds.css" />
+        
         <link rel="stylesheet" href="../css/main.css" />
+		<link rel="stylesheet" href="../css/background.css" />
+        <link rel="stylesheet" href="../css/heroes.css" />
+        <link rel="stylesheet" href="../css/login.css" />
 
         <script src="../js/jquery.min.js"></script>
         <script src="../js/clouds.js"></script>
@@ -54,14 +57,22 @@
 			</div>
 			
 			
-			<div id="battle" class="mainContainer">
+			<div id="battle">
 				
 				<?php
 				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 				?>
 				
-				<div class="heroes"></div>
-				<div class="heroes"></div>
+				<div class="heroes">
+				
+					<img src="../img/hero1.png">
+					
+				</div>
+				<div class="heroes">
+					
+					<img src="../img/hero1.png">
+					
+				</div>
 				
 			</div>
 			
