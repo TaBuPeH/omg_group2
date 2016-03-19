@@ -84,6 +84,10 @@ table {
 	height: 100%;
 }
 
+/*  how to make sth change on rotation?  */
+/*  should I make it responsive with other sizes?  */
+/*  the grass is cropped when in landscape */
+/*  the heroes aren't where they should be  */
 
 @media screen and (max-width: 1024px) 
 {

@@ -71,7 +71,6 @@ body
 
 @media screen and (max-width: 640px) 
 {   
-	/*  on rotation?  */
 	#near-clouds 
 	{
 		display: none;
@@ -82,5 +81,3 @@ body
 		background-size: cover; /*  sucks in landscape view  */
 	}
 }
-
-/*  how to change the properties when the device rotats?  */

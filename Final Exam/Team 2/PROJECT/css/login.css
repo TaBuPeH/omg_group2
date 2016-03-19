@@ -1,60 +1,179 @@
-h1
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#loginForm
+{
+	position: absolute;
+	width: 90%;
+	height: 85%;
+	left: 5%;
+	top: 10%;
+	z-index: 300;
+	background: #404040;
+	opacity: 0.3;
+	border-radius: 10px;
+}
+
+h2
 {
 	display: block;
-	width: 30%;
-	float: left;
-	margin-left: 35%;
+	width: 100%;
+	font-size: 3.5vw;
+	margin: 2%;
+	margin-top: 5%;
 	text-align: center;
 }
 form
 {
 	display: block;
-	width: 30%;
+	width: 100%;
+	margin-left: 0%; /*  it doesn't want to*/
 	float: left;
-	margin-left: 35%;
 }
 label
 {
 	display: block;
-	width: 100%;
+	width: 90%;
+	margin: 2.5%;
 	float: left;
-	margin: 10px 0px;
+}
+label span
+{
+	float: left;
+	font-size: 1.5vw;
+	display: block;
+	width: 35%;
+	text-align: right;
+	margin-right: 3%;
 }
 label input,
 label select
 {
-	display: block;
-	width: 70%;
 	float: left;
+	width: 40%;
+	display: block;
 	border-radius: 2px;
 	font-size: 18px;
-	border: 1px solid #0000FF;
+	border: 1px solid #0099CC;
 }
-label span
+.button
 {
-	display: block;
-	width: 30%;
 	float: left;
+	width: 15%;
+	margin: 2%;
+	position: relative;
+	border-radius: 4px;
+	line-height: 150%;
+	border: 1px solid #e7e7e7;
+	background-color: #e7e7e7;
+	opacity: 0.8;
 }
-#logButton{
-	width:100%;
+.button:hover 
+{
+    /*box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 3px 4px 0 rgba(0,0,0,0.1);*/
+	opacity: 1;
 }
-#regButton{
-	width:100%;
+#logButton
+{
+	margin-left: 37%;
+}
+#regButton
+{
+	margin-left: 4%;
 }
 
 
 @media screen and (max-width: 1024px) 
 {
+	h2
+	{
+		font-size: 5vw;
+		margin-top: 15%;
+		margin-bottom: 7%;
+	}
 	
+	label
+	{
+		margin: 3.5%;
+	}
+	label input,
+	label select
+	{
+		width: 70%;
+	}
+	label span
+	{
+		font-size: 2.5vw;
+		width: 23%;
+	}
+	.button
+	{
+		width: 30%;
+		margin: 5%;
+		margin-left: 17%;
+	}
 	
+	#logButton
+	{
+		margin-left: 40%;
+	}
+	#regButton
+	{
+		margin-left: 40%;
+	}
 	
 }
 
 @media screen and (max-width: 640px) 
 {
-    
-	
+	h2
+	{
+		font-size: 8vw;
+		margin-top: 20%;
+		margin-bottom: 10%;
+	}
+	form
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+	label
+	{
+		width: 100%;
+		margin: 4%; 
+	}
+	label input,
+	label select
+	{
+		float: none;
+		font-size: 18px;
+		margin: 0%;
+		margin-left: 10%;
+	}
+	label span
+	{
+		visibility: hidden;
+		width: 0;
+	}
+	.button
+	{
+		width: 70%;
+		margin: 5%;
+		margin-left: 17%;
+		
+	}
+	#logButton
+	{
+		margin-left: 14%;
+	}
+	#regButton
+	{
+		margin-left: 14%;
+	}
+		
 	
 }
 

@@ -16,6 +16,7 @@ div .battle
 {
 	position: absolute;
 	z-index: 200;
+	bottom: 5%;
 }
 .heroes img
 {
@@ -25,13 +26,35 @@ div .battle
 .heroes:first-of-type 
 {
 	left: 10%;
-    bottom: 5%;
 }
 .heroes:last-of-type
 {
 	right: 10%;
+}
+/*
+.heroes
+{
+	position: absolute;
+	width:50%;
+	z-index: 200;
+	float: left;
+}
+.heroes img
+{
+	width: 35%;
+	height: auto;
+}
+.heroes img:first-of-type 
+{
+	left: 10%;
     bottom: 5%;
 }
+.heroes img:last-of-type
+{
+	right: 10%;
+    bottom: 5%;
+}
+*/
 
 
 @media screen and (max-width: 1024px) 
