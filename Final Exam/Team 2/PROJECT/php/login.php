@@ -6,6 +6,11 @@
 	<body>
 		
 		<div id="loginForm">
+		
+		<!--
+			<img src="../img/closeButton.png" id="closeButton"> 
+		should be a button here -->
+		
 			<h2> Login Here </h2>
 			
 			<form method="post" action="login_db.php">
@@ -34,6 +39,7 @@
 				</form>
 				
 			</form>
+			
 			
 			
 		</div>
