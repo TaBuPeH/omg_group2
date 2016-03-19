@@ -64,6 +64,7 @@
                     echo "
                 
                         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                            <a class='navbar-brand navbar-brand-default' href='index.php'>Kygen</a>
                             <ul class='nav navbar-nav'>
                                 <li>
                                     <a href='game.php'>The Game</a>
@@ -74,6 +75,7 @@
                                     <a href='php/logout.php'><img class='loginButtons' src='img/logout.png' ></a>
                                     <img class='loginButtons' src='img/profile.png' >
                                 </div>
+                                
                         </div>
 
                     ";
@@ -94,21 +96,28 @@
 
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="img/project_4.jpg">
+                <img src="img/project_1a.jpg">
                 <div class="carousel-caption">
-                Some 
                 </div>
             </div>
             <div class="item">
-             <img src="img/project_4.jpg">
+             <img src="img/project_5.jpg">
                 <div class="carousel-caption">
-                Random
                 </div>
             </div>
             <div class="item">
             <img src="img/project_4.jpg">
-                <div class="carousel-caption">
-                Text                    
+                <div class="carousel-caption">                   
+            </div>
+            </div>
+             <div class="item">
+            <img src="img/project_51.jpg">
+                <div class="carousel-caption">                   
+            </div>
+            </div>
+             <div class="item">
+            <img src="img/project_3.jpg">
+                <div class="carousel-caption">                   
             </div>
             </div>
         </div>
