@@ -1,0 +1,77 @@
+
+div .battle
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	/*
+	width: 65%;
+	height: 50%;
+	left: 17,5%;
+	top: 37%;
+	*/
+}
+.heroes
+{
+	position: absolute;
+	z-index: 200;
+}
+.heroes img
+{
+	width: 70%;
+	height: auto;
+}
+.heroes:first-of-type 
+{
+	left: 10%;
+    bottom: 5%;
+}
+.heroes:last-of-type
+{
+	right: 10%;
+    bottom: 5%;
+}
+
+
+@media screen and (max-width: 1024px) 
+{
+	.heroes img
+	{
+		width: 70%;
+		height: auto;
+	}
+	.heroes:first-of-type 
+	{
+		left: 2%;
+		bottom: 6%;
+	}
+	.heroes:last-of-type
+	{
+		right: 2%;
+		bottom: 6%;
+	}
+	
+}
+
+@media screen and (max-width: 640px) 
+{
+    .heroes img
+	{
+		width: 45%;
+		height: auto;
+	}
+	.heroes:first-of-type 
+	{
+		left: 3%;
+		bottom: 6%;
+	}
+	.heroes:last-of-type
+	{
+		right: 3%;
+		bottom: 6%;
+	}
+	
+	/*  why aren't they there?  */
+	
+}
