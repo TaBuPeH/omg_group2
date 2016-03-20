@@ -7,9 +7,9 @@
 		
 		<div id="loginForm">
 		
-		<!--
+		<!-- 
 			<img src="../img/closeButton.png" id="closeButton"> 
-		should be a button here -->
+		-->
 		
 			<h2> Login Here </h2>
 			

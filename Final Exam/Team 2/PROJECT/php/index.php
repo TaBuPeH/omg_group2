@@ -27,6 +27,7 @@
         <script src="../js/jquery.min.js"></script>
         <script src="../js/clouds.js"></script>
         <script src="../js/app.js"></script>
+        <script src="../js/atack.js"></script>
 		
     </head>
 
@@ -39,7 +40,7 @@
 				<nav>
 					<a href="#">Profile</a>
 					<a href="heroes.php">Create Hero</a>
-					<a href="login.php">Login</a>
+					<a href="login.php">Login</a> <!-- should change to logout on logging -->
 				</nav>
 				
 			</div>
@@ -63,7 +64,7 @@
 				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 				?>
 				
-				<div class="heroes">
+				<div class="heroes" id="faster">
 				
 					<img src="../img/hero1.png">
 					

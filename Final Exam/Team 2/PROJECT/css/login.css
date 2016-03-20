@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-#loginForm
+/*div*/ #loginForm
 {
 	position: absolute;
 	width: 90%;
@@ -15,10 +15,12 @@ body {
 	background: #404040;
 	opacity: 0.3;
 	border-radius: 10px;
+	
+	/*display: none;*/
 }
-/*img 
+/* img#closeButton
 {
-	width: 3%;
+	width: 1.7%;
 	position: absolute;
 	right: -0.7%;
 	top: -0.7%;
