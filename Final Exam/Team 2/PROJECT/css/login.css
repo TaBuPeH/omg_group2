@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-/*div*/ #loginForm
+div#loginForm
 {
 	position: absolute;
 	width: 90%;
@@ -12,11 +12,11 @@ body {
 	left: 5%;
 	top: 10%;
 	z-index: 300;
-	background: #404040;
-	opacity: 0.3;
-	border-radius: 10px;
+	background: rgba(0,0,0,0.3);
 	
-	/*display: none;*/
+	border-radius: 10px;
+
+	/*  display: none;   */
 }
 /* img#closeButton
 {
@@ -39,7 +39,6 @@ form
 {
 	display: block;
 	width: 100%;
-	margin-left: 0%; /*  it doesn't want to*/
 	float: left;
 }
 label
@@ -85,17 +84,17 @@ label select
     /*box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 3px 4px 0 rgba(0,0,0,0.1);*/
 	opacity: 1;
 }
-#logButton
+#loggingButton
 {
 	margin-left: 37%;
 }
-#regButton
+#registratingButton
 {
 	margin-left: 4%;
 }
 
 
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 1024px) and (orientation : portrait)
 {
 	h2
 	{
@@ -120,23 +119,60 @@ label select
 	}
 	.button
 	{
-		width: 30%;
-		margin: 5%;
+		width: 35%;
+		margin: 3%;
 		margin-left: 17%;
 	}
 	
-	#logButton
+	#loggingButton
 	{
 		margin-left: 40%;
 	}
-	#regButton
+	#registratingButton
 	{
 		margin-left: 40%;
 	}
-	
 }
 
-@media screen and (max-width: 640px) 
+@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	h2
+	{
+		font-size: 6vw;
+		margin-bottom: 6%;
+	}
+	label
+	{
+		
+	}
+	label input,
+	label select
+	{
+		width: 60%;
+	}
+	label span
+	{
+		font-size: 2vw;
+		width: 23%;
+	}
+	.button
+	{
+		width: 20%;
+		margin: 2%;
+		line-height: 175%;
+	}
+	#loggingButton
+	{
+		margin-left: 30%;
+	}
+	#registratingButton
+	{
+		margin-left: 4%;
+	}
+
+}
+
+@media screen and (max-width: 640px) and (orientation : portrait)
 {
 	h2
 	{
@@ -170,19 +206,35 @@ label select
 	.button
 	{
 		width: 70%;
-		margin: 5%;
 		margin-left: 17%;
 		
 	}
-	#logButton
+	#loggingButton
 	{
 		margin-left: 14%;
 	}
-	#regButton
+	#registratingButton
 	{
 		margin-left: 14%;
 	}
-		
-	
+}
+	@media screen and (max-width: 640px) and (orientation : landscape)
+{
+	label span
+	{
+		font-size: 3vw;
+	}
+	.button
+	{
+		width: 24%;
+	}
+	#loggingButton
+	{
+		margin-left: 26%;
+	}
+	#registratingButton
+	{
+		margin-left: 4%;
+	}
 }
 

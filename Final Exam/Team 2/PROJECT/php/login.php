@@ -1,7 +1,4 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="../css/main.css" />
-	</head>
 
 	<body>
 		
@@ -30,11 +27,11 @@
 				</label>
 		
 				
-				<input class="button" id="logButton" type="submit" value="Login now!">
+				<input class="button" id="loggingButton" type="submit" value="Login now!">
 				
 				<form action="register.php" >
 			
-					<input class="button" id="regButton" type="submit" value="Or REGISTER Here" name="Submit" />
+					<input class="button" id="registratingButton" type="submit" value="Or REGISTER Here" name="Submit" />
 					
 				</form>
 				

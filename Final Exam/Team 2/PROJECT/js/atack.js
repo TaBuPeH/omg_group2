@@ -1,27 +1,25 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-	
-	
-	
-	
-	
-	
-	document.getElementById("hero").click(function()
+
+$(document).ready( function()
 	{
-		var elementToAnimate = document.getElementById("faster");
-		var pos = 0;
-		var id = setInterval(frame, 5);
-		function frame() 
+		hero1 = $('.heroes img') /* :first-of-type  */
+		hero2 = $('.heroes img') /* :last-of-type  */
+		
+		$('.heroes img').click(function()
 		{
-			if (pos == 175) 
+			if (hero1.hasClass('atack'))
+			{	
+				moveFromLeft($(this));
+			}
+			if (hero2.hasClass('atack'))
 			{
-				clearInterval(id);
-			} 
-			else 
-			{
-				pos++; 
-				elem.style.left = pos + 'px'; 
+				moveFromRight($(this));
 			}
 		}
+
 	});
 	
-};
+	
+	
+	
+	
+	

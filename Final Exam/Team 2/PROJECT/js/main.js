@@ -1,27 +1,11 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
 	
-	var logButton = document.getElementById("logButton");
-	var regButton = document.getElementById("regButton");
+	var logButton = document.getElementById("loggingButton");
+	var regButton = document.getElementById("registratingButton");
 	
-	logButton.addEventListener( "click" , function()
-	{
-		
-		
-	});
-	
-	logButton.addEventListener( "click" , function()
-	{
-		
-		
-	});
-	
-	ourButton.addEventListener("click", login );
-	ourButton2.addEventListener("click", registrate);	
-	
-
 	function login()
 	{
-		
+		document.getElementById("loginForm").style.display = "block";
 		
 	} 
 	
@@ -31,7 +15,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 	} 
 
+	logButton.addEventListener("click", login );
+	regButton.addEventListener("click", registrate );
+
+	
+
+
 });
+
 
 
 
