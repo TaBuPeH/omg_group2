@@ -16,7 +16,7 @@ div#loginForm
 	
 	border-radius: 10px;
 
-	/*  display: none;   */
+	visibility: hidden;/*    */
 }
 /* img#closeButton
 {

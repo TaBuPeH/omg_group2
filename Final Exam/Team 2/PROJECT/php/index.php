@@ -47,9 +47,9 @@
 					<a href="login.php">Login</a> 
 					-->
 					
-					<input class="topButtons" id="profButton" value="Profile">
-					<input class="topButtons" id="heroButton" value="Create Hero">
-					<input class="topButtons" id="logButton" value="Login"> <!-- type="submit" -->
+					<input type="submit" class="topButtons" id="profButton" value="Profile">
+					<input type="submit" class="topButtons" id="heroButton" value="Create Hero">
+					<input type="submit" class="topButtons" id="logButton" value="Login"> <!--  -->
 					<!-- should change to "Logout" on logging -->
 				</nav>
 				
@@ -74,7 +74,7 @@
 				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 				?>
 				
-				<div class="heroes" id="faster">
+				<div class="heroes">
 				
 					<img src="../img/hero1.png">
 					

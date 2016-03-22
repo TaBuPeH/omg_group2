@@ -17,19 +17,20 @@ div .battle
 	position: absolute;
 	z-index: 200;
 	bottom: 5%;
+	float: left;
 }
 .heroes img
 {
 	width: 70%;
-	height: auto;
+	height: auto%;
 }
-.heroes:first-of-type 
+.heroes img:first-of-type 
 {
-	left: 10%;
+	float: left;
 }
-.heroes:last-of-type
+.heroes img:last-of-type
 {
-	right: 10%;
+	float: right;
 }
 /*
 .heroes
