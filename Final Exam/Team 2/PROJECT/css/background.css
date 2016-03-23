@@ -57,19 +57,16 @@ body
 	#ground
 	{
 		height: 25%;
-		background-size: cover;  /*  ...  */
-		 /*  ...  */
+		background-size: cover;
+		background-position: center 0%; 
 	}
-
 }
 
 @media screen and (max-width: 640px) 
 {   
 	#ground
 	{
-		height: 20%;
-		background-size: cover; /*  sucks in landscape view  */
-		background-position: center 0%; 
+		height: 20%; 
 	}
 }@media screen and (max-width: 640px) and (orientation : landscape)
 { 
