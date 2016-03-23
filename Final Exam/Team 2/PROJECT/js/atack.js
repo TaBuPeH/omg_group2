@@ -1,8 +1,8 @@
-
+/*
 $(document).ready( function()
 	{
-		hero1 = $('.heroes img') /* :first-of-type  */
-		hero2 = $('.heroes img') /* :last-of-type  */
+		hero1 = $('.heroes img') /* :first-of-type  
+		hero2 = $('.heroes img') /* :last-of-type  
 		
 		$('.heroes img').click(function()
 		{
@@ -17,7 +17,7 @@ $(document).ready( function()
 		}
 
 	});
-	
+	*/
 	
 	
 	

@@ -65,14 +65,20 @@ body
 
 @media screen and (max-width: 640px) 
 {   
-	#near-clouds 
-	{
-		display: none;
-	}
 	#ground
 	{
 		height: 20%;
 		background-size: cover; /*  sucks in landscape view  */
 		background-position: center 0%; 
+	}
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{ 
+	#near-clouds 
+	{
+		display: none;
+	}
+	#far-clouds 
+	{
+		top: 5.5%;
 	}
 }

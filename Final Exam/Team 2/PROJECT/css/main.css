@@ -88,7 +88,7 @@ table {
 
 /*  the heroes aren't where they should be  */
 
-@media screen and (max-width: 1024px) and (orientation : portrait)
+@media screen and (max-width: 1024px)
 {
 	#topLine nav input
 	{
@@ -98,21 +98,36 @@ table {
 	}
 	#topLine nav input:hover
 	{
-		border-bottom: none; 
+		border-bottom: none;
+		background: #5eb5d9;
+		border-radius: 8px;		
+	}
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		margin: 0.3%;
+		font-size: 1.5vw;
+		
 	}
 }
 
-@media screen and (max-width: 640px) and (orientation : portrait)
+@media screen and (max-width: 640px)
 {
 	
 	#topLine nav input
 	{
-		width: 33.3%;
-		margin-left: 0%;
-		margin-right: 0%;
+		width: 30%;
+		margin-left: 1.6%;
+		margin-right: 1.6%;
 		font-size: 4vw;
 	}
-	
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		font-size: 2.5vw;
+	}
 }
 
 @media screen and (max-width: 320px) 
