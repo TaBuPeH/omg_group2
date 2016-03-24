@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-div#loginForm
+div#forms
 {
 	position: absolute;
 	width: 90%;
@@ -14,18 +14,29 @@ div#loginForm
 	z-index: 300;
 	background: rgba(0,0,0,0.3);
 	
-	border-radius: 10px;
+	border-radius: 1px;
 
-	visibility: hidden;/*    */
+	visibility: hidden;
 }
-/* img#closeButton
+img#closeButton
 {
-	width: 1.7%;
+	width: 1.5%;
 	position: absolute;
-	right: -0.7%;
-	top: -0.7%;
+	right: -0.5%;
+	top: -1%;
+}
+#forms #loginForm
+{
+	position: absolute;
+
 	
-}*/
+}
+#forms #registerForm
+{
+	position: absolute;
+	visibility: hidden;
+	
+}
 h2
 {
 	display: block;
@@ -45,7 +56,7 @@ label
 {
 	display: block;
 	width: 90%;
-	margin: 2.5%;
+	margin: 1%;
 	float: left;
 }
 label span
@@ -54,6 +65,7 @@ label span
 	font-size: 1.5vw;
 	display: block;
 	width: 35%;
+	margin: 1%;
 	text-align: right;
 	margin-right: 3%;
 }
@@ -62,6 +74,7 @@ label select
 {
 	float: left;
 	width: 40%;
+	margin: 1%;
 	display: block;
 	border-radius: 2px;
 	font-size: 18px;
@@ -96,6 +109,12 @@ label select
 
 @media screen and (max-width: 1024px) and (orientation : portrait)
 {
+	img#closeButton
+	{
+		width: 2.5%;
+		right: -0.5%;
+		top: -0.5%;
+	}
 	h2
 	{
 		font-size: 5vw;
@@ -105,12 +124,13 @@ label select
 	
 	label
 	{
-		margin: 3.5%;
+		margin: 1.5%;
 	}
 	label input,
 	label select
 	{
 		width: 70%;
+		margin-bottom: 2%;
 	}
 	label span
 	{
@@ -174,6 +194,10 @@ label select
 
 @media screen and (max-width: 640px) and (orientation : portrait)
 {
+	img#closeButton
+	{
+		width: 4%;
+	}
 	h2
 	{
 		font-size: 8vw;
@@ -188,14 +212,16 @@ label select
 	label
 	{
 		width: 100%;
-		margin: 4%; 
+		margin: 4%;
+		margin-top: 1%;
+		margin-bottom: 1%;
 	}
 	label input,
 	label select
 	{
 		float: none;
 		font-size: 18px;
-		margin: 0%;
+		margin: 4%;
 		margin-left: 10%;
 	}
 	label span
@@ -220,9 +246,40 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
+	div#forms
+	{
+		height: 81%;
+		top: 13%;
+	}
+	h2
+	{
+		font-size: 6vw;
+		margin-bottom: 3%;
+	}
+	img#closeButton
+	{
+		width: 3.5%;
+	}
+	label
+	{
+		width: 100%;
+		margin: 4%;
+		margin-top: 0%;
+		margin-bottom: 1%;
+	}
 	label span
 	{
+		width: 20%;
 		font-size: 3vw;
+		line-height: 100%;
+		margin-top: 0;
+	}
+	label input,
+	label select
+	{
+		margin: 0.5%;
+		line-height: 100%;
+		width: 60%
 	}
 	.button
 	{
@@ -230,7 +287,7 @@ label select
 	}
 	#loggingButton
 	{
-		margin-left: 26%;
+		margin-left: 31%;
 	}
 	#registratingButton
 	{

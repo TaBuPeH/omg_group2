@@ -1,4 +1,10 @@
-<html>
+
+<!--  vsichko e v login.php, tova ne go polzvam  -->
+<!--  moje da trqbva da prenasochish neshto v bazata danni  -->
+
+
+
+<html> 
 	<head>
 		<link rel="stylesheet" href="../css/main.css" />
 	</head>

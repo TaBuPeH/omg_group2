@@ -117,10 +117,10 @@ table {
 	
 	#topLine nav input
 	{
-		width: 30%;
-		margin-left: 1.6%;
-		margin-right: 1.6%;
-		font-size: 4vw;
+		width: 33%;
+		margin-left: 0.1%;
+		margin-right: 0.1%;
+		font-size: 3.7vw;
 	}
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
