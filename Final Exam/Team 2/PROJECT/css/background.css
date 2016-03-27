@@ -39,7 +39,7 @@ body
 }
 #ground 
 {
-	background: transparent url("../img/grass3.png") 0px 100% repeat-x;
+	background: transparent url("../img/grass.png") 0px 100% repeat-x;
 	bottom: 0;
 }
 

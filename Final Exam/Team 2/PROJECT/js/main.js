@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 	
-	
 	$("#logButton").click(function()
 	{
 		$(".topButtons").css({
@@ -18,22 +17,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 		
 		$("h2").text("Login Here");
-		$("#forms").css('visibility','visible');
+		$(".forms").css('visibility','visible');
 		$("#loginForm").css('visibility','visible');
-	});
-
-	$("#heroButton").click(function()
-	{
-		
-		
-		
-	});
-	
-	$("#profButton").click(function()
-	{
-		
-		
-		
 	});
 	
 	$("img#closeButton").click(function()
@@ -46,12 +31,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			borderBottom : "2px solid #75c1dd",
 		});*/
 		
-		$("#forms").css('visibility','hidden');
+		$(".forms").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','hidden');
 	});
-
-	/*	*/
 	
 	$("#loginForm #loggingButton").click(function()
 	{
@@ -90,12 +73,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 	});
 	
+	
+	
+	
+
+	$("#heroButton").click(function()
+	{
+		
+		
+		
+	});
+	
+	$("#profButton").click(function()
+	{
+		
+		
+		
+	});
+	
+	/*	*/
+	
 });
 
-
-
-
-
-
-	
-	

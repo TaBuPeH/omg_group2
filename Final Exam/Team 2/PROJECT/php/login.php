@@ -6,13 +6,13 @@
 
 	<body>
 		
-		<div id="forms">
+		<div class="forms">
 	
 			<!-- -->
 			<img src="../img/closeButton.png" id="closeButton"> 
 			
 		
-			<h2> Login Here </h2>
+			<h2> </h2>
 			
 			<form id="loginForm" method="post" action="login_db.php">
 				

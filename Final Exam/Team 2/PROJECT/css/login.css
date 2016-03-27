@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-div#forms
+div.forms
 {
 	position: absolute;
 	width: 90%;
@@ -25,13 +25,13 @@ img#closeButton
 	right: -0.5%;
 	top: -1%;
 }
-#forms #loginForm
+.forms #loginForm
 {
 	position: absolute;
-
+	visibility: hidden;
 	
 }
-#forms #registerForm
+.forms #registerForm
 {
 	position: absolute;
 	visibility: hidden;
@@ -246,7 +246,7 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div#forms
+	div.forms
 	{
 		height: 81%;
 		top: 13%;
