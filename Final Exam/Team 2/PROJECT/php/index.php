@@ -78,7 +78,7 @@
 					<img src="../img/hero1.png">
 				</div>
 				<div class="hero">
-					<img src="../img/hero2.png">
+					<img src="../img/hero1.png">
 				</div>
 				
 			</div>
