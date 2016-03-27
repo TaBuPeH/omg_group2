@@ -1,106 +1,98 @@
 
-div .battle
-{
-	float: right;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	
-	/*
-	width: 65%;
-	height: 50%;
-	left: 17,5%;
-	top: 37%;
-	*/
-}
-.heroes
+div#heroes
 {
 	position: absolute;
-	z-index: 200;
+	z-index: 200;  /*  !!!  */
+	width: 90%;
+	height: 40%;
 	bottom: 5%;
-	float: right;
+	left: 5%;
+	float: left;
 }
-.heroes img
+div#heroes .hero
 {
-	width: 70%;
-	height: auto%;
+	width: 50%;
+	height: 100%;
+	float: left;
+	
 }
-.heroes:first-of-type 
+div#heroes .hero img
 {
-	float: right;
+	position: relative;
+	width: 30%;
+	height: auto;
+	margin-top: 3%;
+	
 }
-.heroes:last-of-type
+div#heroes .hero:first-of-type img 
+{
+	float: left;
+}
+div#heroes .hero:last-of-type img
 {
 	float: right;
 }
 /*
-.heroes
-{
-	position: absolute;
-	width: 50%;
-	z-index: 200;
-	float: left;
-}
-.heroes img
-{
-	width: 35%;
-	height: auto;
-}
-.heroes img:first-of-type 
-{
-	left: 10%;
-    bottom: 5%;
-}
-.heroes img:last-of-type
-{
-	right: 10%;
-    bottom: 5%;
-}
-*/
 
+*/
 
 @media screen and (max-width: 1024px) 
 {
-	.heroes img
+	div#heroes
 	{
-		width: 70%;
+		bottom: 2%;
+	}
+	div#heroes .hero img
+	{
+		width: 60%;
 		height: auto;
-	}
-	/**/
-	.heroes:first-of-type 
-	{
-		left: 2%;
-		bottom: 6%;
-	}
-	.heroes:last-of-type
-	{
-		right: 2%;
-		bottom: 6%;
+		margin-top: 20%;
 	}
 	
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	div#heroes .hero img
+	{
+		width: 45%;
+		margin-top: 2%;
+	}
 	
 }
 
 @media screen and (max-width: 640px) 
 {
-    .heroes img
+	
+	div#heroes
 	{
-		width: 45%;
-		height: auto;
+		
+	}
+    div#heroes .hero
+	{
+		
+	}
+	div#heroes .hero img
+	{
+		width: 55%;
+		margin-top: 55%;
 	}
 	/**/
-	.heroes:first-of-type 
-	{
-		left: 3%;
-		bottom: 6%;
-	}
-	.heroes:last-of-type
-	{
-		right: 3%;
-		bottom: 6%;
-	}
 	
-	
-	/*  why aren't they there?  */
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{
+    div#heroes
+	{
+		bottom: 3%;
+	}
+    div#heroes .hero
+	{
+		
+	}
+	div#heroes .hero img
+	{
+		width: 35%;
+		margin-top: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
 	
 }

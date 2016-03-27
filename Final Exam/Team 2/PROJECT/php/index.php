@@ -68,24 +68,22 @@
 			</div>
 			
 			
-			<div id="battle">
-				
-				<?php
-				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-				?>
-				
-				<div class="heroes">
-				
+			<?php
+			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+			?>
+			
+			<div id="heroes">
+			
+				<div class="hero">
 					<img src="../img/hero1.png">
-					
 				</div>
-				<div class="heroes">
-					
-					<img src="../img/hero1.png">
-					
+				<div class="hero">
+					<img src="../img/hero2.png">
 				</div>
 				
 			</div>
+			
+		
 			
         </div>
 		

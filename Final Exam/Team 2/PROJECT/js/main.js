@@ -17,43 +17,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			borderRadius: "6px",
 		});
 		
+		$("h2").text("Login Here");
 		$("#forms").css('visibility','visible');
+		$("#loginForm").css('visibility','visible');
 	});
 
 	$("#heroButton").click(function()
 	{
-		$(".topButtons").css({
-			borderBottom : "2px solid #0099CC",
-			backgroundColor: "#0099CC",
-			borderRadius: "0px",
-		})/*;$(".topButtons:hoover").css({
-			borderBottom : "2px solid #75c1dd",
-		});*/
-		$(this).css({
-			borderBottom : "2px solid #75c1dd",
-			backgroundColor: "#75c1dd",
-			borderRadius: "6px",
-		});
 		
-		$("#forms").css('visibility','visible');
+		
+		
 	});
 	
 	$("#profButton").click(function()
 	{
-		$(".topButtons").css({
-			borderBottom : "2px solid #0099CC",
-			backgroundColor: "#0099CC",
-			borderRadius: "0px",
-		})/*;$(".topButtons:hoover").css({
-			borderBottom : "2px solid #75c1dd",
-		});*/
-		$(this).css({
-			borderBottom : "2px solid #75c1dd",
-			backgroundColor: "#75c1dd",
-			borderRadius: "6px",
-		});
 		
-		$("#forms").css('visibility','visible');
+		
+		
 	});
 	
 	$("img#closeButton").click(function()
