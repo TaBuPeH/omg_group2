@@ -5,7 +5,7 @@ require_once "db.class.php";
 
 if(!isset($_SESSION['logged_user']))
 {
-	//header("Location: login.php");
+	header("Location: login.php");
 }
 
 ?>
@@ -30,8 +30,7 @@ if(!isset($_SESSION['logged_user']))
 		
     </head>
 	
-<<<<<<< HEAD
-} 
+
 </style>
 </head>
 <body>
@@ -41,7 +40,6 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 <br>
 <a href="logout.php">Logout</a>
 <a href="heroes.php">Create Hero</a>
-=======
     <body>
 	
 	<header>
@@ -86,6 +84,6 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 	
 </html>
 
->>>>>>> 789a44c23ed01d1aeb219f63892af59f817ff6ca
+
 
 
