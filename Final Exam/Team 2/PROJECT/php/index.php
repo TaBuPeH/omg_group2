@@ -1,6 +1,7 @@
 <?php 
 	require_once "db.class.php";
 	require_once "login.php";
+	require_once "register.php";
 
 	if(!isset($_SESSION['logged_user']))
 	{

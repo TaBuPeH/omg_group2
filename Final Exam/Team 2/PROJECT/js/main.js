@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 		
 		$("h2").text("Login Here");
-		$(".forms").css('visibility','visible');
+		$("#lf").css('visibility','visible');
 		$("#loginForm").css('visibility','visible');
 	});
 	
@@ -31,18 +31,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			borderBottom : "2px solid #75c1dd",
 		});*/
 		
-		$(".forms").css('visibility','hidden');
+		$("#lf").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','hidden');
 	});
 	
-	$("#loginForm #loggingButton").click(function()
+	$("#loginForm .loginButton").click(function()
 	{
 		
 		
 		
 	});
-	$("#loginForm #registratingButton").click(function()
+	$("#loginForm .registrationButton").click(function()
 	{
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','visible');
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 	});
 	
-	$("#registerForm #loggingButton").click(function()
+	$("#registerForm .loginButton").click(function()
 	{
 		$("#registerForm").css('visibility','hidden');
 		$("#loginForm").css('visibility','visible');
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		
 	});
-	$("#loginForm #registratingButton").click(function()
+	$("#loginForm .registrationButton").click(function()
 	{
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','visible');
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		
 	});
-	$("#registerFormForm #registratingButton").click(function()
+	$("#registerFormForm .registrationButton").click(function()
 	{
 		
 		
