@@ -1,8 +1,10 @@
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+$(document).ready( function(event) { 
+	
 	
 	$("#logButton").click(function()
 	{
+
 		$(".topButtons").css({
 			borderBottom : "2px solid #0099CC",
 			backgroundColor: "#0099CC",
@@ -24,8 +26,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$("img#closeButton").click(function()
 	{
 		$(".topButtons").css({
-			borderBottom : "2px solid #0099CC",
-			backgroundColor: "#0099CC",
+			borderBottom : "",
+			backgroundColor: "#0099CC", /*  */
 			borderRadius: "0px",
 		})/*;$(".topButtons:hoover").css({
 			borderBottom : "2px solid #75c1dd",
@@ -36,12 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$("#registerForm").css('visibility','hidden');
 	});
 	
-	$("#loginForm .loginButton").click(function()
-	{
-		
-		
-		
-	});
+
 	$("#loginForm .registrationButton").click(function()
 	{
 		$("#loginForm").css('visibility','hidden');
@@ -74,6 +71,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 	
 	
+
+	$(document).on('click',"#loginForm .loginButton", function()
+	{
+		
+		$.post( "login_db.php", $('#loginForm').serialize() , function( data ) {
+			  alert( data );
+		});
+		
+	});
+
 	
 	
 
@@ -94,4 +101,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	/*	*/
 	
 });
-
