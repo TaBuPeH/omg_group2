@@ -1,6 +1,7 @@
 <?php 
 	require_once "db.class.php";
 	require_once "login.php";
+	require_once "register.php";
 
 <<<<<<< HEAD
 require_once "db.class.php";
@@ -39,6 +40,7 @@ if(!isset($_SESSION['logged_user']))
         <script src="../js/clouds.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/atack.js"></script>
+        <script src="../js/login.js"></script>
         <script src="../js/main.js"></script>
 		
 	<!-- 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
@@ -66,12 +68,6 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			<div id="topLine" >
 
 				<nav>
-					<!-- 
-					<a href="#">Profile</a>
-					<a href="heroes.php">Create Hero</a>
-					<a href="login.php">Login</a> 
-					-->
-					
 					<input type="submit" class="topButtons" id="profButton" value="Profile">
 					<input type="submit" class="topButtons" id="heroButton" value="Create Hero">
 					<input type="submit" class="topButtons" id="logButton" value="Login"> <!--  -->

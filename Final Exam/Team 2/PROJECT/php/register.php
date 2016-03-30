@@ -1,49 +1,53 @@
 
-<!--  vsichko e v login.php, tova ne go polzvam  -->
-<!--  moje da trqbva da prenasochish neshto v bazata danni  -->
-
-
-
 <html> 
 	<head>
-		<link rel="stylesheet" href="../css/main.css" />
+		<script src="../js/main.js"></script>
 	</head>
 	
 	<body>
 		
-		<h1> Register in our site for FREE!</h1>
+		<div id="lf">
+	
+			<!-- -->
+			<img src="../img/closeButton.png" id="closeButton"> 
+			
+			<h2> </h2>
+			
+			<form id="registerForm" method="post" action="login_db.php">
+				
+				<form method="post" action="register_db.php">
+			
+				<label>
+					<span>Username:</span>
+					<input type="text" name="username" >
+				</label>
+				
+				<label>
+					<span>Password: </span>
+					<input type="password" name="password" >
+				</label>
+				
+				<label>
+					<span>Repeat it:</span>
+					<input type="password" name="password_2" >
+				</label>
+				
+				<label>
+					<span>Email: </span>
+					<input type="email" name="email" >
+				</label>
 		
-		<form method="post" action="register_db.php">
+				
+				<input class="button loginButton" type="button" value="Back to login">
+				
+				<form action="register.php" >
 			
-			<label>
-				<span>Username:</span>
-				<input type="text" name="username" >
-			</label>
+					<input class="button registrationButton" onClick="onClick()" type="button" value="REGISTER" name="Submit" />
+					
+				</form>
 			
-			<label>
-				<span>Password: </span>
-				<input type="password" name="password" >
-			</label>
-			
-			<label>
-				<span>Repeat Password:</span>
-				<input type="password" name="password_2" >
-			</label>
-			
-			<label>
-				<span>Email: </span>
-				<input type="email" name="email" >
-			</label>
-			
-			
-			
-			
-			
-			<input id="regButton" type="submit" value="REGISTER">
-		</form>
-		<form action="login.php">
-				<input type="submit" value="Login" name="Submit" id="regButton" />
-		</form>
+		</div>
+		
 	</body>
 	
 </html>
