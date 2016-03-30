@@ -1,0 +1,98 @@
+
+div#heroes
+{
+	position: absolute;
+	z-index: 200;  /*  !!!  */
+	width: 90%;
+	height: 40%;
+	bottom: 5%;
+	left: 5%;
+	float: left;
+}
+div#heroes .hero
+{
+	width: 50%;
+	height: 100%;
+	float: left;
+	
+}
+div#heroes .hero img
+{
+	position: relative;
+	width: 30%;
+	height: auto;
+	margin-top: 3%;
+	
+}
+div#heroes .hero:first-of-type img 
+{
+	float: left;
+}
+div#heroes .hero:last-of-type img
+{
+	float: right;
+}
+/*
+
+*/
+
+@media screen and (max-width: 1024px) 
+{
+	div#heroes
+	{
+		bottom: 2%;
+	}
+	div#heroes .hero img
+	{
+		width: 60%;
+		height: auto;
+		margin-top: 20%;
+	}
+	
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	div#heroes .hero img
+	{
+		width: 45%;
+		margin-top: 2%;
+	}
+	
+}
+
+@media screen and (max-width: 640px) 
+{
+	
+	div#heroes
+	{
+		
+	}
+    div#heroes .hero
+	{
+		
+	}
+	div#heroes .hero img
+	{
+		width: 55%;
+		margin-top: 55%;
+	}
+	/**/
+	
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{
+    div#heroes
+	{
+		bottom: 3%;
+	}
+    div#heroes .hero
+	{
+		
+	}
+	div#heroes .hero img
+	{
+		width: 35%;
+		margin-top: 5%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	
+}

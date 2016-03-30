@@ -29,52 +29,53 @@ body
 	/*height: 80%;*/
 }
 
-
 #far-clouds 
 {
     background: transparent url("../img/far-clouds.png") 0 6% repeat-x;
 }
 #near-clouds 
 {
-    background: transparent url("../img/near-clouds.png") 0 24% repeat-x;
+    background: transparent url("../img/near-clouds.png") 0 15% repeat-x;
 }
 #ground 
 {
-	background: transparent url("../img/grass1.png") 0px 100% repeat-x;
+	background: transparent url("../img/grass3.png") 0px 100% repeat-x;
 	bottom: 0;
-}
-
-.hero
-{
-	position: absolute;
-	z-index: 200;
-	
 }
 
 
 @media screen and (max-width: 1024px) 
 {
-    .clouds
+	#far-clouds 
 	{
-		
+		background: transparent url("../img/mini-far-clouds.png") 0 5% repeat-x;
+	}
+    #near-clouds 
+	{
+		background: transparent url("../img/mini-near-clouds.png") 0 13% repeat-x;
 	}
 	#ground
 	{
-		
+		height: 25%;
+		background-size: cover;
+		background-position: center 0%; 
 	}
-
 }
 
 @media screen and (max-width: 640px) 
 {   
-	.clouds
-	{
-		
-	}
 	#ground
 	{
-		
+		height: 20%; 
+	}
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{ 
+	#near-clouds 
+	{
+		display: none;
+	}
+	#far-clouds 
+	{
+		top: 5.5%;
 	}
 }
-
-/*  */

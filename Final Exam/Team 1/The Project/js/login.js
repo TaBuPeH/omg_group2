@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+
 	if($( "#logShow" ).hide()){
 		$( "#log" ).click(function() {
 			$( "#logShow" ).show();
@@ -27,9 +28,5 @@ $(document).ready(function(){
 		$( "#logShow" ).hide();
 		$( "#signShow" ).show();
 	});
-    $('.carousel').carousel({
-        interval: 4000 //changes the speed
-    })
-   
-
+$('#carouselHacked').carousel();
 });

@@ -17,7 +17,8 @@
 
     <!-- Custom CSS -->
     <link href="css/half-slider.css" rel="stylesheet"> 
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">  
     <link rel="stylesheet" href="css/nav.css">
 	  
 
@@ -68,7 +69,7 @@
                                 </ul>
                                     <span id='hello' href='#'>Hello, ".$_SESSION['logged_user']['username_sign']."</span>
                                 <div class='loginButtons'>
-                                    <a href='logout.php'><img class='loginButtons' src='img/logout.png' ></a>
+                                    <a href='php/logout.php'><img class='loginButtons' src='img/logout.png' ></a>
                                     <img class='loginButtons' src='img/profile.png' >
                                 </div>
                         </div>
@@ -82,5 +83,13 @@
         </div>
         <!-- /.container -->
     </nav>
+
+    <div class="gamebg">
+        <img src="../img/stadium.jpg">
+        <div class="gameButtons">
+            <input class="btn btn-danger" type="submit" value="Play">
+            <input class="btn btn-danger" type="submit" value="Instructions">
+        </div>
+    </div>
   </body>
 </html>

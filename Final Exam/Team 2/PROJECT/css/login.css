@@ -1,0 +1,297 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div#forms
+{
+	position: absolute;
+	width: 90%;
+	height: 85%;
+	left: 5%;
+	top: 10%;
+	z-index: 300;
+	background: rgba(0,0,0,0.3);
+	
+	border-radius: 1px;
+
+	visibility: hidden;
+}
+img#closeButton
+{
+	width: 1.5%;
+	position: absolute;
+	right: -0.5%;
+	top: -1%;
+}
+#forms #loginForm
+{
+	position: absolute;
+
+	
+}
+#forms #registerForm
+{
+	position: absolute;
+	visibility: hidden;
+	
+}
+h2
+{
+	display: block;
+	width: 100%;
+	font-size: 3.5vw;
+	margin: 2%;
+	margin-top: 5%;
+	text-align: center;
+}
+form
+{
+	display: block;
+	width: 100%;
+	float: left;
+}
+label
+{
+	display: block;
+	width: 90%;
+	margin: 1%;
+	float: left;
+}
+label span
+{
+	float: left;
+	font-size: 1.5vw;
+	display: block;
+	width: 35%;
+	margin: 1%;
+	text-align: right;
+	margin-right: 3%;
+}
+label input,
+label select
+{
+	float: left;
+	width: 40%;
+	margin: 1%;
+	display: block;
+	border-radius: 2px;
+	font-size: 18px;
+	border: 1px solid #0099CC;
+}
+.button
+{
+	float: left;
+	width: 15%;
+	margin: 2%;
+	position: relative;
+	border-radius: 4px;
+	line-height: 150%;
+	border: 1px solid #e7e7e7;
+	background-color: #e7e7e7;
+	opacity: 0.8;
+}
+.button:hover 
+{
+    /*box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 3px 4px 0 rgba(0,0,0,0.1);*/
+	opacity: 1;
+}
+#loggingButton
+{
+	margin-left: 37%;
+}
+#registratingButton
+{
+	margin-left: 4%;
+}
+
+
+@media screen and (max-width: 1024px) and (orientation : portrait)
+{
+	img#closeButton
+	{
+		width: 2.5%;
+		right: -0.5%;
+		top: -0.5%;
+	}
+	h2
+	{
+		font-size: 5vw;
+		margin-top: 15%;
+		margin-bottom: 7%;
+	}
+	
+	label
+	{
+		margin: 1.5%;
+	}
+	label input,
+	label select
+	{
+		width: 70%;
+		margin-bottom: 2%;
+	}
+	label span
+	{
+		font-size: 2.5vw;
+		width: 23%;
+	}
+	.button
+	{
+		width: 35%;
+		margin: 3%;
+		margin-left: 17%;
+	}
+	
+	#loggingButton
+	{
+		margin-left: 40%;
+	}
+	#registratingButton
+	{
+		margin-left: 40%;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	h2
+	{
+		font-size: 6vw;
+		margin-bottom: 6%;
+	}
+	label
+	{
+		
+	}
+	label input,
+	label select
+	{
+		width: 60%;
+	}
+	label span
+	{
+		font-size: 2vw;
+		width: 23%;
+	}
+	.button
+	{
+		width: 20%;
+		margin: 2%;
+		line-height: 175%;
+	}
+	#loggingButton
+	{
+		margin-left: 30%;
+	}
+	#registratingButton
+	{
+		margin-left: 4%;
+	}
+
+}
+
+@media screen and (max-width: 640px) and (orientation : portrait)
+{
+	img#closeButton
+	{
+		width: 4%;
+	}
+	h2
+	{
+		font-size: 8vw;
+		margin-top: 20%;
+		margin-bottom: 10%;
+	}
+	form
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+	label
+	{
+		width: 100%;
+		margin: 4%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+	label input,
+	label select
+	{
+		float: none;
+		font-size: 18px;
+		margin: 4%;
+		margin-left: 10%;
+	}
+	label span
+	{
+		visibility: hidden;
+		width: 0;
+	}
+	.button
+	{
+		width: 70%;
+		margin-left: 17%;
+		
+	}
+	#loggingButton
+	{
+		margin-left: 14%;
+	}
+	#registratingButton
+	{
+		margin-left: 14%;
+	}
+}
+	@media screen and (max-width: 640px) and (orientation : landscape)
+{
+	div#forms
+	{
+		height: 81%;
+		top: 13%;
+	}
+	h2
+	{
+		font-size: 6vw;
+		margin-bottom: 3%;
+	}
+	img#closeButton
+	{
+		width: 3.5%;
+	}
+	label
+	{
+		width: 100%;
+		margin: 4%;
+		margin-top: 0%;
+		margin-bottom: 1%;
+	}
+	label span
+	{
+		width: 20%;
+		font-size: 3vw;
+		line-height: 100%;
+		margin-top: 0;
+	}
+	label input,
+	label select
+	{
+		margin: 0.5%;
+		line-height: 100%;
+		width: 60%
+	}
+	.button
+	{
+		width: 24%;
+	}
+	#loggingButton
+	{
+		margin-left: 31%;
+	}
+	#registratingButton
+	{
+		margin-left: 4%;
+	}
+}
+

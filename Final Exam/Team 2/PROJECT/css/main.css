@@ -1,52 +1,3 @@
-h1
-{
-	display: block;
-	width: 30%;
-	float: left;
-	margin-left: 35%;
-	text-align: center;
-}
-form
-{
-	display: block;
-	width: 30%;
-	float: left;
-	margin-left: 35%;
-}
-label
-{
-	display: block;
-	width: 100%;
-	float: left;
-	margin: 10px 0px;
-}
-label input,
-label select
-{
-	display: block;
-	width: 70%;
-	float: left;
-	border-radius: 2px;
-	font-size: 18px;
-	border: 1px solid #0000FF;
-}
-label span
-{
-	display: block;
-	width: 30%;
-	float: left;
-}
-#logButton{
-	width:100%;
-}
-#regButton{
-	width:100%;
-}
-
-
-
-
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -92,75 +43,97 @@ table {
 }
 /* HTML5 display-role reset for older browsers */
 
-.mainContainer
-{
-	width: 65%;
-}
+
 #topLine
 {
 	width: 100%;
 	position: absolute;
 	background-color: #0099CC;
-	opacity: 0.3;
+	opacity: 0.5;
 	float: left;
+	z-index: 500;
 }
-nav
+#topLine nav
 {
 	float: left;
-	width: 57.266%;
+	width: 100%;
 }
-#topLine nav a 
+#topLine nav input
 {
-    box-sizing: border-box;
-    color: #fff;
-    display: block;
-    float: left;
-    font-family: Verdana;
-    font-size: 1.1vw;
-    padding: 4.2% 1%;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #444;
+	float: left;
+	width: 10%;
+	margin: 0.3%;
+	margin-left: 1.5%;
+	margin-bottom: 0%;
+	text-decoration: none;
     text-transform: uppercase;
-    margin: 0px 1%;
-	z-index: 300;
-}
-nav a:hover
-{
-	border-bottom: 1px solid #f8e1b4;
-}
-
-.heroes
-{
-	position: absolute;
-	z-index: 200;
-}
-.heroes:first-of-type 
-{
-
-}
-.heroes:last-of-type
-{
+	font-size: 1vw;
+	text-align: center;
+	font-family: Verdana;
+	background-color: #0099CC;
+	border: 2px solid #0099CC;
 	
 }
-
-
-
-@media screen and (max-width: 1024px) 
+#topLine nav input:hover
 {
-    #topLine
+	border-bottom: 2px solid #75c1dd; 
 }
 
-@media screen and (max-width: 640px) 
+.content
 {
-    
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*  the heroes aren't where they should be  */
+
+@media screen and (max-width: 1024px)
+{
+	#topLine nav input
+	{
+		width: 20%;
+		margin: 1%;
+		font-size: 2vw;
+	}
+	#topLine nav input:hover
+	{
+		border-bottom: none;
+		background: #5eb5d9;
+		border-radius: 8px;		
+	}
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		margin: 0.3%;
+		font-size: 1.5vw;
+		
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	
+	#topLine nav input
+	{
+		width: 33%;
+		margin-left: 0.1%;
+		margin-right: 0.1%;
+		font-size: 3.7vw;
+	}
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		font-size: 2.5vw;
+	}
 }
 
 @media screen and (max-width: 320px) 
 {
-	
     div
     {
     	display:none;
     }
-    
 }

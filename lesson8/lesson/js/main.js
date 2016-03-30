@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	ourButton.addEventListener( "mouseover" , function(){
 		
-		if(numberOfJumps < 3)
+		if(numberOfJumps < 6)
 		{	
 						// 0-79.9999999 %
 			var newX = Math.random()*80+"%";
