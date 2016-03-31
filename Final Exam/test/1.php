@@ -1,4 +1,31 @@
-<?php session_start(); ?>
+<?php  
+
+
+
+require_once('db.class.php');
+
+$query = 'select * from teams';
+
+$teams = $db->fetchArray($query);
+
+
+$query = 'select * from teams where id='.$_POST['team_1_id'];
+
+$team1 = $db->fetchArray($query);
+
+$query = 'select * from teams where id='.$_POST['team_2_id'];
+
+$team2 = $db->fetchArray($query);
+
+
+//$team1 = array(0 => array('id'=>'','Name','att','def','mid'));
+//$team2 = array(0 => array('id'=>'','Name','att','def','mid'));
+/*
+if($team1[0]['MID'] > $team2[0]['mid'] )
+{
+	
+}*/
+?>
 <!DOCTYPE html>
 <html>
 	
@@ -14,20 +41,68 @@
 	
                  <form method="post" action="teams.php">
 					<select id='select' name="team1">
-                        <option class='changeImg' value="1" data-href='img/1.png' href='ATT:81 MID:79 DEF:76' selected>Arsenal</option>
-                        <option class='changeImg' value="2" data-href='img/3.png'  href='ATT:77 MID:77 DEF:79'>Liverpool</option>
-                        <option class='changeImg' value="3" data-href='img/4.png'  href='ATT:81 MID:81 DEF:81'>Manchester City</option>
-                        <option class='changeImg' value="4" data-href='img/2.png'  href='ATT:83 MID:82 DEF:81'>Chelsea</option>
+                     
+                     <?php 
+                     
+                     
+                     foreach($teams as $key=>$team)
+					 {
+					 	if($key == 0)
+						{
+							$isSelected = " selected ";
+						}	
+						else
+						{
+							$isSelected = '';
+						}
+					 ?>
+                     
+                        <option class='changeImg' value="<?php echo $team['id']?>" data-href='img/<?php echo $team['id']?>.png' data-att='<?php echo $team['ATT']?>' data-mid='<?php echo $team['MID']?>' data-def='<?php echo $team['DEF']?>' <?php echo $isSelected?> > <?php echo $team['Name']?></option>
+                    
+					 <?php
+					 
+					 }
+					 
+					 ?>
+                    
+                   
                     </select>
+                   
+                   	<script>
+                   		
+                   		alert($("#select option:selected").attr('data-att'));
+                   		alert($("#select option:selected").attr('data-def'));
+                   		
+                   		
+                   	</script>
                     <input type='submit' name='submit' value'Get team1'>
                   </form>
                   <form method="post" action="teams.php">
                      <select id='select1' name='team2'>
-                        <option class='changeImg1' value="1" data-href='img/1.png' href='ATT:81 MID:79 DEF:76'>Arsenal</option>
-                        <option class='changeImg1' value="2" data-href='img/3.png' href='ATT:77 MID:77 DEF:79' selected>Liverpool</option>
-                        <option class='changeImg1' value="3" data-href='img/4.png' href='ATT:81 MID:81 DEF:81'>Manchester City</option>
-                        <option class='changeImg1' value="4" data-href='img/2.png' href='ATT:83 MID:82 DEF:81'>Chelsea</option>
-                    </select>  
+                      <?php 
+                     
+                     
+                     foreach($teams as $key=>$team)
+					 {
+					 	if($key == 0)
+						{
+							$isSelected = " selected ";
+						}	
+						else
+						{
+							$isSelected = '';
+						}
+					 ?>
+                     
+                        <option class='changeImg1' value="<?php echo $team['id']?>" data-href='img/<?php echo $team['id']?>.png' data-att='<?php echo $team['ATT']?>' data-mid='<?php echo $team['MID']?>' data-def='<?php echo $team['DEF']?>' <?php echo $isSelected?> > <?php echo $team['Name']?></option>
+                    
+					 <?php
+					 
+					 }
+					 
+					 ?>
+                       
+                     </select>  
                     <input type='submit' name='submit' value'Get team2'>
                     </form>
                     <br>

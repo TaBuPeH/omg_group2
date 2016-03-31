@@ -1,5 +1,8 @@
 <?php
 
+
+
+/*
 class team 
 { 
 	protected $ATT;
@@ -81,5 +84,5 @@ $Chelsea = new team(83,82,81);
 
 		}
 
-echo "<pre>";
+echo "<pre>";*/
 ?>
