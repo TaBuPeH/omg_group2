@@ -1,5 +1,5 @@
 
-div#lf
+div#rf
 {
 	position: absolute;
 	width: 90%;
@@ -20,13 +20,13 @@ img#closeButton
 	right: -0.5%;
 	top: -1%;
 }
-#lf #loginForm
+#rf #loginForm
 {
 	position: absolute;
 	visibility: hidden;
 	
 }
-#lf #registerForm
+#rf #registerForm
 {
 	position: absolute;
 	visibility: hidden;
@@ -241,7 +241,7 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div#lf
+	div#rf
 	{
 		height: 81%;
 		top: 13%;
@@ -289,21 +289,3 @@ label select
 		margin-left: 4%;
 	}
 }
-/*    */
-@media screen and (max-width: 200px) and (orientation : landscape)
-{
-	.button
-	{
-		width: 28%;
-	}
-	.loginButton
-	{
-		margin-left: 20%;
-	}
-	.registrationButton
-	{
-		margin-left: 4%;
-	}
-}
-
-

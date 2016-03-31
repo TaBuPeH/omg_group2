@@ -49,32 +49,34 @@ table {
 	width: 100%;
 	position: absolute;
 	background-color: #0099CC;
-	opacity: 0.3;
+	opacity: 0.5;
 	float: left;
+	z-index: 500;
 }
 #topLine nav
 {
 	float: left;
 	width: 100%;
 }
-#topLine nav a 
+#topLine nav input
 {
-    box-sizing: border-box;
-    color: #fff;
-    display: block;
-    float: left;
-    font-family: Verdana;
-    font-size: 1vw;
-    margin: 0.6% 3%;
+	float: left;
 	width: 10%;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #444;
+	margin: 0.3%;
+	margin-left: 1.5%;
+	margin-bottom: 0%;
+	text-decoration: none;
     text-transform: uppercase;
-	z-index: 300; /*  ?  */
+	font-size: 1vw;
+	text-align: center;
+	font-family: Verdana;
+	background-color: #0099CC;
+	border: 2px solid #0099CC;
+	
 }
-#topLine nav a:hover
+#topLine nav input:hover
 {
-	border-bottom:  1px solid #91c5a9; /*  ?  */
+	border-bottom: 2px solid #75c1dd; 
 }
 
 .content
@@ -84,27 +86,47 @@ table {
 	height: 100%;
 }
 
+/*  the heroes aren't where they should be  */
 
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 1024px)
 {
-	#topLine nav a 
+	#topLine nav input
 	{
+		width: 20%;
+		margin: 1%;
 		font-size: 2vw;
-		margin: 0.5% 3%;
-		width: 15%;
-		text-align: center;
 	}
-	
+	#topLine nav input:hover
+	{
+		border-bottom: none;
+		background: #5eb5d9;
+		border-radius: 8px;		
+	}
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		margin: 0.3%;
+		font-size: 1.5vw;
+		
+	}
 }
 
-@media screen and (max-width: 640px) 
+@media screen and (max-width: 640px)
 {
-    #topLine nav a 
+	
+	#topLine nav input
 	{
-		font-size: 4vw;
-		width: 33.3%;
-		padding: 1% 0%;
-		margin: 0 0%;
+		width: 33%;
+		margin-left: 0.1%;
+		margin-right: 0.1%;
+		font-size: 3.7vw;
+	}
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{
+	#topLine nav input
+	{
+		font-size: 2.5vw;
 	}
 }
 

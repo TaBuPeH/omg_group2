@@ -1,11 +1,23 @@
 <?php 
 	require_once "db.class.php";
-	//require_once "login.php";
+	require_once "login.php";
+	require_once "register.php";
+
+
+require_once "db.class.php";
+
+
+if(!isset($_SESSION['logged_user']))
+{
+	header("Location: login.php");
+}
+
 
 	if(!isset($_SESSION['logged_user']))
 	{
 		//header("Location: login.php");
 	}
+
 ?>
 
 <!doctype html>
@@ -27,9 +39,28 @@
         <script src="../js/jquery.min.js"></script>
         <script src="../js/clouds.js"></script>
         <script src="../js/app.js"></script>
+        <script src="../js/atack.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="../js/main.js"></script>
+		
+	<!-- 	 -->
 		
     </head>
+<<<<<<< HEAD
+	
 
+</style>
+</head>
+<body>
+<?php
+echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+?>
+<br>
+<a href="logout.php">Logout</a>
+<a href="heroes.php">Create Hero</a>
+=======
+
+>>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
     <body>
 	
 		<header>
@@ -37,9 +68,10 @@
 			<div id="topLine" >
 
 				<nav>
-					<a href="#">Profile</a>
-					<a href="heroes.php">Create Hero</a>
-					<a href="login.php">Login</a>
+					<input type="submit" class="topButtons" id="profButton" value="Profile">
+					<input type="submit" class="topButtons" id="heroButton" value="Create Hero">
+					<input type="submit" class="topButtons" id="logButton" value="Login"> <!--  -->
+					<!-- should change to "Logout" on logging -->
 				</nav>
 				
 			</div>
@@ -57,24 +89,38 @@
 			</div>
 			
 			
-			<div id="battle">
-				
-				<?php
-				//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-				?>
-				
-				<div class="heroes">
-				
-					<img src="../img/hero1.png">
-					
+			<?php
+			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+			?>
+			
+			<div id="heroes">
+			
+			<!--    
+				<div class="actions">
+					<img src="../img/.png">
+					<img src="../img/.png">
+					<img src="../img/.png">
 				</div>
-				<div class="heroes">
-					
+			-->
+				<div class="hero">
 					<img src="../img/hero1.png">
-					
+				</div>
+				
+				
+			<!--    
+				<div class="actions">
+					<img src="../img/.png">
+					<img src="../img/.png">
+					<img src="../img/.png">
+				</div>
+			-->
+				<div class="hero">
+					<img src="../img/hero1.png">
 				</div>
 				
 			</div>
+			
+		
 			
         </div>
 		
@@ -82,4 +128,9 @@
 	
 </html>
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
 

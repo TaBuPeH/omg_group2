@@ -29,7 +29,6 @@ body
 	/*height: 80%;*/
 }
 
-
 #far-clouds 
 {
     background: transparent url("../img/far-clouds.png") 0 6% repeat-x;
@@ -40,14 +39,8 @@ body
 }
 #ground 
 {
-	background: transparent url("../img/grass3.png") 0px 100% repeat-x;
+	background: transparent url("../img/grass.png") 0px 100% repeat-x;
 	bottom: 0;
-}
-
-.hero
-{
-	position: absolute;
-	z-index: 200;
 }
 
 
@@ -64,23 +57,25 @@ body
 	#ground
 	{
 		height: 25%;
-		background-size: cover;  /*  ...  */
+		background-size: cover;
+		background-position: center 0%; 
 	}
-
 }
 
 @media screen and (max-width: 640px) 
 {   
-	/*  on rotation?  */
+	#ground
+	{
+		height: 20%; 
+	}
+}@media screen and (max-width: 640px) and (orientation : landscape)
+{ 
 	#near-clouds 
 	{
 		display: none;
 	}
-	#ground
+	#far-clouds 
 	{
-		height: 20%;
-		background-size: cover; /*  sucks in landscape view  */
+		top: 5.5%;
 	}
 }
-
-/*  how to change the properties when the device rotats?  */

@@ -16,14 +16,17 @@ if(!empty($result))
 	if($result[0]['password'] == md5($data['password']))
 	{	
 		$_SESSION['logged_user'] = $result[0];
-		header('Location: index.php');
-		
+		//header('Location: index.php');
+		echo 'success';
 		
 	}
 	else{
-		header('Location: login.php');
+	//	header('Location: login.php');
+	echo 'error';
 	}
 }
 else{
-		header('Location: login.php');
+		//header('Location: login.php');
+		
+		echo 'error';
 	}
