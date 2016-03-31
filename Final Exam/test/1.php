@@ -1,7 +1,25 @@
 <?php  
 
-
-
+/*
+ * 
+ * 
+ * 
+ * 
+ * 
+SELECT matches.id, matches.team_1_id, matches.team_2_id, team1.name as team1_name, team2.name as team2_name, minutes.minute, actions.name as action_name, teams.name as action_team_name FROM `matches`  
+inner join teams as team1 on matches.team_1_id = team1.id
+inner join teams as team2 on matches.team_2_id = team2.id
+inner join `minutes` on minutes.match_id = matches.id
+inner join actions on minutes.action_id = actions.id
+left join `teams` on minutes.team_id = teams.id
+ * 
+ * 
+ * 
+ * 
+ * 
+ * /
+ * 
+ * 
 require_once('db.class.php');
 
 $query = 'select * from teams';
