@@ -23,6 +23,7 @@
 	  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript"></script>
   
 
     
@@ -34,6 +35,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/game.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar  navbar-fixed-top navbar-default" role="navigation" >
@@ -85,11 +87,46 @@
     </nav>
 
     <div class="gamebg">
-        <img src="../img/stadium.jpg">
-        <div class="gameButtons">
-            <input class="btn btn-danger" type="submit" value="Play">
-            <input class="btn btn-danger" type="submit" value="Instructions">
+        <!--Game menu-->
+        <div class="menu">
+            <img src="../img/stadium.jpg">
+            <div class="gameButtons">
+                <input id="play" class="btn btn-danger" type="submit" value="Play">
+                <input id="" class="btn btn-danger" type="submit" value="Instructions">
+            </div>
         </div>
+        <!--Team selection-->
+        <div>
+            <div class='teamSelection'>
+                <div class='yourTeam'>
+                    <div class='teamImg'>
+                       <img src="img/1.png" name="image-swap">
+                    </div>
+                    <select class='select' onchange="setImage(this);">
+                        <option value="img/1.png" >Arsenal</option>
+                        <option value="img/3.png" >Liverpool</option>
+                        <option value="img/4.png" >Man City</option>
+                        <option value="img/2.png" >Chelsea</option>
+                    </select>
+                </div>   
+                <div class='opponent'>
+                    <div class='teamImg1'>
+                       <img src="img/3.png" name="image-swap1">
+                    </div>
+                    <select class='select' onchange="setImage1(this);">
+                        <option value="img/1.png" >Arsenal</option>
+                        <option value="img/3.png" selected >Liverpool</option>
+                        <option value="img/4.png" >Man City</option>
+                        <option value="img/2.png" >Chelsea</option>
+                    </select>    
+                </div> 
+                <div class="bottomButtons">
+                    <input id="backToMenu" class="btn btn-danger" type="submit" value="Menu">
+                    <input id="" class="btn btn-danger" type="submit" value="Start!">
+                </div>  
+            </div>
+        </div>
+
     </div>
   </body>
 </html>
