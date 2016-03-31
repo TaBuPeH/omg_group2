@@ -42,7 +42,7 @@
 				
 				<form action="register.php" >
 			
-					<input class="button registrationButton" onClick="onClick()" type="button" value="REGISTER" name="Submit" />
+					<input class="button registrationButton" type="button" value="REGISTER" name="Submit" />
 					
 				</form>
 			

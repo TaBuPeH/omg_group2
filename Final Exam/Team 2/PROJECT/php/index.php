@@ -70,9 +70,25 @@
 			
 			<div id="heroes">
 			
+			<!--    
+				<div class="actions">
+					<img src="../img/.png">
+					<img src="../img/.png">
+					<img src="../img/.png">
+				</div>
+			-->
 				<div class="hero">
 					<img src="../img/hero1.png">
 				</div>
+				
+				
+			<!--    
+				<div class="actions">
+					<img src="../img/.png">
+					<img src="../img/.png">
+					<img src="../img/.png">
+				</div>
+			-->
 				<div class="hero">
 					<img src="../img/hero1.png">
 				</div>

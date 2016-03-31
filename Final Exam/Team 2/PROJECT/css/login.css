@@ -289,8 +289,8 @@ label select
 		margin-left: 4%;
 	}
 }
-/*    
-@media screen and (max-width: 0px) and (orientation : landscape)
+/*    */
+@media screen and (max-width: 200px) and (orientation : landscape)
 {
 	.button
 	{
@@ -305,5 +305,5 @@ label select
 		margin-left: 4%;
 	}
 }
-*/
+
 

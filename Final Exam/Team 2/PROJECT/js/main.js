@@ -27,7 +27,7 @@ $(document).ready( function(event) {
 	{
 		$(".topButtons").css({
 			borderBottom : "",
-			backgroundColor: "#0099CC", /*  */
+			backgroundColor: "", /*  */
 			borderRadius: "0px",
 		})/*;$(".topButtons:hoover").css({
 			borderBottom : "2px solid #75c1dd",
