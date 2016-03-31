@@ -71,14 +71,16 @@ table {
 	text-align: center;
 	font-family: Verdana;
 	background-color: #0099CC;
-	border: 2px solid #0099CC;
+	border: 0;
+	border-radius: 2px;
 	
 }
+/*
 #topLine nav input:hover
 {
 	border-bottom: 2px solid #75c1dd; 
 }
-
+*/
 .content
 {
 	position: absolute;

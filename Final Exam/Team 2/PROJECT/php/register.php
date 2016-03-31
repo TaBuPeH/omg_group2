@@ -6,12 +6,9 @@
 	
 	<body>
 		
-		<div id="lf">
-	
-			<!-- -->
-			<img src="../img/closeButton.png" id="closeButton"> 
+		<div class="lf">
 			
-			<h2> </h2>
+			<h2> </h2> <!-- i don't really write sth in it -->
 			
 			<form id="registerForm" method="post" action="login_db.php">
 				

@@ -1,5 +1,5 @@
 
-div#lf
+div.lf
 {
 	position: absolute;
 	width: 90%;
@@ -9,7 +9,7 @@ div#lf
 	z-index: 300;
 	background: rgba(0,0,0,0.3);
 	
-	border-radius: 1px;
+	border-radius: 4px;
 
 	visibility: hidden;
 }
@@ -20,13 +20,13 @@ img#closeButton
 	right: -0.5%;
 	top: -1%;
 }
-#lf #loginForm
+.lf #loginForm
 {
 	position: absolute;
 	visibility: hidden;
 	
 }
-#lf #registerForm
+.lf #registerForm
 {
 	position: absolute;
 	visibility: hidden;
@@ -241,7 +241,7 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div#lf
+	div.lf
 	{
 		height: 81%;
 		top: 13%;
@@ -290,7 +290,7 @@ label select
 	}
 }
 /*    */
-@media screen and (max-width: 200px) and (orientation : landscape)
+@media screen and (max-width: 480px) and (orientation : landscape)
 {
 	.button
 	{
@@ -298,11 +298,11 @@ label select
 	}
 	.loginButton
 	{
-		margin-left: 20%;
+		margin-left: 29%;
 	}
 	.registrationButton
 	{
-		margin-left: 4%;
+		margin-left: 1%;
 	}
 }
 

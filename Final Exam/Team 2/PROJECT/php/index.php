@@ -9,15 +9,8 @@ require_once "db.class.php";
 
 if(!isset($_SESSION['logged_user']))
 {
-	header("Location: login.php");
+	//header("Location: login.php");
 }
-
-
-	if(!isset($_SESSION['logged_user']))
-	{
-		//header("Location: login.php");
-	}
-
 ?>
 
 <!doctype html>
@@ -45,22 +38,12 @@ if(!isset($_SESSION['logged_user']))
 		
 	<!-- 	 -->
 		
-    </head>
-<<<<<<< HEAD
-	
+    </head>	
 
-</style>
-</head>
 <body>
-<?php
-echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-?>
-<br>
-<a href="logout.php">Logout</a>
-<a href="heroes.php">Create Hero</a>
-=======
-
->>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
+	<?php
+	//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+	?>
     <body>
 	
 		<header>
@@ -95,26 +78,29 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			
 			<div id="heroes">
 			
-			<!--    
-				<div class="actions">
-					<img src="../img/.png">
-					<img src="../img/.png">
-					<img src="../img/.png">
-				</div>
-			-->
+			
+			
 				<div class="hero">
+				<!--    
+					<div class="actions">
+						<img src="../img/attack.png">
+						<img src="../img/superAttack.png">
+						<img src="../img/defence.png">
+						<img src="../img/heal.png">
+					</div>
+				-->
 					<img src="../img/hero1.png">
 				</div>
-				
-				
-			<!--    
-				<div class="actions">
-					<img src="../img/.png">
-					<img src="../img/.png">
-					<img src="../img/.png">
-				</div>
-			-->
+			
 				<div class="hero">
+				<!--    
+					<div class="actions">
+						<img src="../img/attack.png">
+						<img src="../img/superAttack.png">
+						<img src="../img/defence.png">
+						<img src="../img/heal.png">
+					</div>
+				-->
 					<img src="../img/hero1.png">
 				</div>
 				
@@ -127,10 +113,3 @@ echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
     </body>
 	
 </html>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
-
