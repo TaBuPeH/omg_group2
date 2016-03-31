@@ -3,7 +3,7 @@
 	require_once "login.php";
 	require_once "register.php";
 
-<<<<<<< HEAD
+
 require_once "db.class.php";
 
 
@@ -12,12 +12,12 @@ if(!isset($_SESSION['logged_user']))
 	header("Location: login.php");
 }
 
-=======
+
 	if(!isset($_SESSION['logged_user']))
 	{
 		//header("Location: login.php");
 	}
->>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
+
 ?>
 
 <!doctype html>
