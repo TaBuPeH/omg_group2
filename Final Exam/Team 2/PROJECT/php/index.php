@@ -3,10 +3,21 @@
 	require_once "login.php";
 	require_once "register.php";
 
+
+require_once "db.class.php";
+
+
+if(!isset($_SESSION['logged_user']))
+{
+	header("Location: login.php");
+}
+
+
 	if(!isset($_SESSION['logged_user']))
 	{
 		//header("Location: login.php");
 	}
+
 ?>
 
 <!doctype html>
@@ -35,7 +46,21 @@
 	<!-- 	 -->
 		
     </head>
+<<<<<<< HEAD
+	
 
+</style>
+</head>
+<body>
+<?php
+echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+?>
+<br>
+<a href="logout.php">Logout</a>
+<a href="heroes.php">Create Hero</a>
+=======
+
+>>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
     <body>
 	
 		<header>
@@ -103,4 +128,9 @@
 	
 </html>
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 35e350e9e11ed68cba31714339e23273cc3d67f0
 
