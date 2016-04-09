@@ -7,7 +7,7 @@
 
 	<body>
 		
-		<div id="lf">
+		<div class="lf">
 	
 			<!-- -->
 			<img src="../img/closeButton.png" id="closeButton"> 

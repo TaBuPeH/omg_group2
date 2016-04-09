@@ -4,46 +4,41 @@ $(document).ready( function(event) {
 	
 	$("#logButton").click(function()
 	{
-
 		$(".topButtons").css({
-			borderBottom : "2px solid #0099CC",
-			backgroundColor: "#0099CC",
-			borderRadius: "0px",
-		})/*;$(".topButtons:hoover").css({
-			borderBottom : "2px solid #75c1dd",
-		});*/
+			backgroundColor: "",
+		})
 		$(this).css({
-			borderBottom : "2px solid #75c1dd",
 			backgroundColor: "#75c1dd",
-			borderRadius: "6px",
 		});
 		
 		$("h2").text("Login Here");
-		$("#lf").css('visibility','visible');
+		$(".lf:first-of-type").css('visibility','visible');
 		$("#loginForm").css('visibility','visible');
 	});
 	
 	$("img#closeButton").click(function()
 	{
 		$(".topButtons").css({
-			borderBottom : "",
-			backgroundColor: "", /*  */
-			borderRadius: "0px",
-		})/*;$(".topButtons:hoover").css({
-			borderBottom : "2px solid #75c1dd",
-		});*/
+			backgroundColor: "",
+		})
 		
-		$("#lf").css('visibility','hidden');
+		$(".lf").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','hidden');
 	});
-	
 
 	$("#loginForm .registrationButton").click(function()
 	{
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','visible');
 		$("h2").text("Register Here");
+	});
+	$(document).on('click',"#loginForm .loginButton", function()
+	{
+		$.post( "login_db.php", $('#loginForm').serialize() , function( data ) {
+			alert( data );
+		});
+		
 		
 		
 	});
@@ -53,47 +48,54 @@ $(document).ready( function(event) {
 		$("#registerForm").css('visibility','hidden');
 		$("#loginForm").css('visibility','visible');
 		$("h2").text("Login Here");
-		
-		
 	});
-	$("#loginForm .registrationButton").click(function()
+	$(document).on('click',"#registerForm .registrationButton", function()
 	{
-		$("#loginForm").css('visibility','hidden');
-		$("#registerForm").css('visibility','visible');
-		$("h2").text("Register Here");
-		
-		
-	});
-	$("#registerFormForm .registrationButton").click(function()
-	{
-		
-		
-	});
-	
-	
-
-	$(document).on('click',"#loginForm .loginButton", function()
-	{
-		
-		$.post( "login_db.php", $('#loginForm').serialize() , function( data ) {
-			  alert( data );
+		$.post( "register_db.php", $('#registerForm').serialize() , function( data ) {
+			alert( data );
 		});
 		
+		
+		
 	});
+	
 
 	
 	
+	
+	
+	/*	*/
 
 	$("#heroButton").click(function()
 	{
+		$(".topButtons").css({
+			backgroundColor: "",
+		})
+		$(this).css({
+			backgroundColor: "#75c1dd",
+		});
 		
+		$("#loginForm").css('visibility','hidden');
+		$("h2").text("Create a hero");
+		$(".lf:first-of-type").css('visibility','visible')
 		
 		
 	});
 	
+	/*	*/
+	
 	$("#profButton").click(function()
 	{
+		$(".topButtons").css({
+			backgroundColor: "",
+		})
+		$(this).css({
+			backgroundColor: "#75c1dd",
+		});
 		
+		$("#loginForm").css('visibility','hidden');
+		$("h2").text("Your profile");
+		$(".lf:first-of-type").css('visibility','visible')
 		
 		
 	});

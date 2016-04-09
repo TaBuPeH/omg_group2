@@ -1,37 +1,4 @@
 
-div#rf
-{
-	position: absolute;
-	width: 90%;
-	height: 85%;
-	left: 5%;
-	top: 10%;
-	z-index: 300;
-	background: rgba(0,0,0,0.3);
-	
-	border-radius: 1px;
-
-	visibility: hidden;
-}
-img#closeButton
-{
-	width: 1.5%;
-	position: absolute;
-	right: -0.5%;
-	top: -1%;
-}
-#rf #loginForm
-{
-	position: absolute;
-	visibility: hidden;
-	
-}
-#rf #registerForm
-{
-	position: absolute;
-	visibility: hidden;
-	
-}
 h2
 {
 	display: block;
@@ -104,12 +71,6 @@ label select
 
 @media screen and (max-width: 1024px) and (orientation : portrait)
 {
-	img#closeButton
-	{
-		width: 2.5%;
-		right: -0.5%;
-		top: -0.5%;
-	}
 	h2
 	{
 		font-size: 5vw;
@@ -189,10 +150,6 @@ label select
 
 @media screen and (max-width: 640px) and (orientation : portrait)
 {
-	img#closeButton
-	{
-		width: 4%;
-	}
 	h2
 	{
 		font-size: 8vw;
@@ -241,19 +198,10 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div#rf
-	{
-		height: 81%;
-		top: 13%;
-	}
 	h2
 	{
 		font-size: 6vw;
 		margin-bottom: 3%;
-	}
-	img#closeButton
-	{
-		width: 3.5%;
 	}
 	label
 	{
