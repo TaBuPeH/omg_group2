@@ -9,14 +9,11 @@ require_once "db.class.php";
 
 if(!isset($_SESSION['logged_user']))
 {
-	header("Location: login.php");
+	//header("Location: login.php");
 }
 
 
-	if(!isset($_SESSION['logged_user']))
-	{
-		//header("Location: login.php");
-	}
+	
 
 ?>
 
