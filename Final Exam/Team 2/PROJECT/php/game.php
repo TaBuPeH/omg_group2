@@ -5,15 +5,11 @@ class lifeform
 {
 	protected $hp;
 	protected $dmg;
-	protected $str;
-	protected $dex;
-	protected $vit;
-	protected $int_;
-	protected $critChance;
+	//protected $critChance;
 	
 	public function attack(&$target)
 	{
-		$critModifier = 1;
+		//$critModifier = 1;
 		
 		// if( rand(0,100) < $this->critChance)
 		// {
@@ -23,8 +19,8 @@ class lifeform
 		// {
 			// $critModifier = 10;
 		// }
-		$remaining = $target->getHP() - $this->dmg*$critModifier ;
-		$target->setHP($remaining);		
+		//$remaining = $target->getHP() - $this->dmg*$critModifier ;
+		//$target->setHP($remaining);		
 	}
 	
 	// public function setCritChance($c)
@@ -55,45 +51,95 @@ class lifeform
 }
 
 
-// class human extends lifeform
-// {
-	// protected $utilityDamage;
+ class warrior extends lifeform
+ {
+	 protected $powerHit;
 	
-	// public function setUtilityDamage($s)
-	// {
-		// $this->utilityDamage = $s;
-	// }
+	 public function setPowerHit($s)
+	 {
+		 $this->powerHit = $s;
+	 }
 	
-	// public function getUtilityDamage()
-	// {
-		// return $this->utilityDamage;
-	// }
+	 public function getPowerHit()
+	 {
+		 return $this->powerHit;
+	 }
 	
-	// public function useBelt()
-	// {
-		// $this->dmg = $this->dmg*$this->utilityDamage;
-	// }
-// }
+	 public function usePowerHit()
+	 {
+		 $this->dmg = $this->dmg*$this->powerHit;
+	 }
+ }
+class healer extends lifeform
+ {
+	 protected $restoreHp;
+	
+	 public function setRestoreHp($s)
+	 {
+		 $this->restoreHp = $s;
+	 }
+	
+	 public function getRestoreHp()
+	 {
+		 return $this->restoreHp;
+	 }
+	
+	 public function useRestoreHp()
+	 {
+		 $this->hp = $this->hp + $this->restoreHp;
+	 }
+ }
+ class tanker extends lifeform
+ {
+	 protected $buildArmor;
+	
+	 public function setBuildArmor($s)
+	 {
+		 $this->buildArmor = $s;
+	 }
+	
+	 public function getBuildArmor()
+	 {
+		 return $this->buildArmor;
+	 }
+	
+	 public function useBuildArmor(&$target)
+	 {
+		 $target->dmg = $target->dmg * 0.9 ;
+		 
+	 }
+ }
 
-// class kryptonian extends lifeform
-// {
-	// protected $heatRay;
-	
-	// public function setHeatRay($h)
-	// {
-		// $this->heatRay = $h;
-	// }
-	
-	// public function getHeatRay()
-	// {
-		// return $this->heatRay;
-	// }
-	
-	// public function useHeatRay(&$target)
-	// {
-		// $remaining = $target->getHP() - $this->heatRay ;
-		// $target->setHP($remaining);		
-	// }
-// }
+ 
+ $warrior = new warrior(100,10);
+$warrior->setPowerHit(1.4);
 
+
+$healer = new healer(120,8); 
+$healer->setRestoreHp(20);
+
+
+$warrior->attack($healer);
+$healer->attack($warrior);
+
+$healer->useRestoreHp();
+$warrior->usePowerHit($healer);
+echo "<pre>";
+print_r($healer);
+print_r($warrior);
+//$superman->useHeatRay($batman);
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 ?>
