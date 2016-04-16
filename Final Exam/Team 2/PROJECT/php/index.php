@@ -11,6 +11,13 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
+<<<<<<< HEAD
+
+
+	
+
+=======
+>>>>>>> 3db8c018b5b5914b380f01df6907affeff734b87
 ?>
 
 <!doctype html>
