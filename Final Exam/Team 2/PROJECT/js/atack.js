@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		easing: 'swing' //easeInOutQuint
 	};
 	
+	var heroWidth = $(".hero img").width();
+	var actionWidth = heroWidth/4;
+	/*
 	var offset = $("#heroes").offset();
 	//alert(offset.left);
     
-	/*
+
 	$(".hero img").click(function()
 	{
 		var hero = $(this);
@@ -38,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$( ".before" ).append($attackImg, $superAttackImg, $defenceImg, $healImg);
 	/*$('head').append('<style>.action{width:5% !important;}</style>');*/
 	
-	$(".action").css({width: "7%", position: "absolute", display:"inline", zIndex: "400", bottom: "15%"}); //
+	$(".action").css({width: actionWidth, position: "absolute", display:"inline", zIndex: "400", bottom: "15%"}); //
 	
 	$(".action:nth-of-type(1)").css({marginLeft: "0%", marginRight: "18%"});
 	$(".action:nth-of-type(2)").css({marginLeft: "6%", marginRight: "12%"});
@@ -46,15 +49,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$(".action:nth-of-type(4)").css({marginLeft: "19%", marginRight: "-1%"});
 	
 
-	
-	
-	/*$(".action").click(function(){
-		$(".action").animate({left: '+=0%', opacity: '0'}, options);
-		$(".action").delay("1500").animate({left: '+=0%', opacity: '1'}, options);
-		
-		
-	});
-	*/
 	
 	$(".attack").click(function()
 	{	
@@ -81,11 +75,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		$(this).parent().parent().fadeOut(600).delay(10).fadeIn(600);
 		$(this).parent().parent().fadeOut(600).delay(10).fadeIn(600);
 		$(this).parent().parent().fadeOut(600).delay(10).fadeIn(600);
-		
-		
-		//.animate({left: '-=0%', opacity: '0.4'}, options);
 	});
-	
 	
 	
 });
