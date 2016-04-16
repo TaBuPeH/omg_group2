@@ -4,95 +4,104 @@ div#heroes
 	position: absolute;
 	z-index: 200;  /*  !!!  */
 	width: 90%;
-	height: 40%;
+	height: 35%;
 	bottom: 5%;
 	left: 5%;
 	float: left;
 }
+
 div#heroes .hero
 {
+	position: absolute;
 	width: 50%;
-	height: 100%;
 	float: left;
-	
 }
+div#heroes .hero:nth-of-type(1)
+{
+	left: 0;
+}
+div#heroes .hero:nth-of-type(2)
+{
+	right: 0;
+} 
 div#heroes .hero img
 {
-	position: relative;
+	position: absolute;
 	width: 30%;
-	height: auto;
-	margin-top: 3%;
-	
+	/*height: auto;*/
 }
-div#heroes .hero:first-of-type img 
+div#heroes .hero:nth-of-type(1) img 
 {
-	float: left;
+	left: 0;
 }
-div#heroes .hero:last-of-type img
+div#heroes .hero:nth-of-type(2) img
 {
-	float: right;
+	right: 0;
 }
-/*
 
-*/
 
 @media screen and (max-width: 1024px) 
 {
 	div#heroes
 	{
-		bottom: 2%;
+		height: 26%;
 	}
 	div#heroes .hero img
 	{
 		width: 60%;
 		height: auto;
-		margin-top: 20%;
 	}
-	
+
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
+	div#heroes
+	{
+		height: 37%;
+	}
 	div#heroes .hero img
 	{
-		width: 45%;
-		margin-top: 2%;
+		width: 30%;
 	}
 	
 }
-
 @media screen and (max-width: 640px) 
 {
-	
 	div#heroes
 	{
-		
-	}
-    div#heroes .hero
-	{
-		
+		height: 24%;
 	}
 	div#heroes .hero img
 	{
-		width: 55%;
-		margin-top: 55%;
+		width: 70%;
+		height: auto;
+		
 	}
-	/**/
+	
 	
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
-    div#heroes
+	div#heroes
 	{
-		bottom: 3%;
-	}
-    div#heroes .hero
-	{
-		
+		height: 15%;
 	}
 	div#heroes .hero img
 	{
-		width: 35%;
-		margin-top: 5%;
-		margin-left: 5%;
-		margin-right: 5%;
+		width: 50%;
 	}
 	
+}
+@media screen and (max-width: 320px)  and (orientation : landscape)
+{
+    div#heroes
+	{
+		height: 40%;
+	}
+	div#heroes .actions
+	{
+		height: 20%;
+	}
+	div#heroes .actions img
+	{
+		width: 10%;
+	}
 }

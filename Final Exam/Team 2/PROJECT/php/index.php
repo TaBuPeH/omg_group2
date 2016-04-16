@@ -61,48 +61,48 @@ if(!isset($_SESSION['logged_user']))
 			
 		</header>
 	
+	
+		<div id="background">		
+			<div id="far-clouds" class="stage clouds"></div>
+			<div id="near-clouds" class="stage clouds"></div>
+			<div id="ground" class="stage"></div>
+		</div>
+			
 		<div class="content">
 		
-			<div id="background">
-			
-				<div id="far-clouds" class="stage clouds"></div>
-				<div id="near-clouds" class="stage clouds"></div>
-				<div id="ground" class="stage"></div>
-				
-			</div>
-			
-			
 			<?php
 			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			?>
 			
 			<div id="heroes">
 			
-			
-			
-				<div class="hero">
-				<!--    
-					<div class="actions">
+				<!-- 
+				<div class="actions">
+					<div>
+						<img src='../img/attack.png'>
+						<img src='../img/superAttack.png'>
+						<img src='../img/defence.png'>
+						<img src='../img/heal.png'>
+					</div>
+				</div>
+				<div class="actions">
+					<div>
 						<img src="../img/attack.png">
 						<img src="../img/superAttack.png">
 						<img src="../img/defence.png">
 						<img src="../img/heal.png">
 					</div>
-				-->
-					<img src="../img/hero1.png">
 				</div>
-			
+				-->
+				
 				<div class="hero">
-				<!--    
-					<div class="actions">
-						<img src="../img/attack.png">
-						<img src="../img/superAttack.png">
-						<img src="../img/defence.png">
-						<img src="../img/heal.png">
-					</div>
-				-->
 					<img src="../img/hero1.png">
 				</div>
+				<div class="hero">
+					<img src="../img/hero1.png">
+				</div>
+				   
+				
 				
 			</div>
 			
