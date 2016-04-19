@@ -75,6 +75,16 @@ if(!isset($_SESSION['logged_user']))
 
 			<!--  	-->
 			<div>
+				<div class="health">  
+					<div> Health: 100/100 </div>
+				</div>
+				
+				<div class="health">  
+					<div> Health: 100/100 </div>
+				</div>
+			</div>
+			
+			<div>
 			
 				<div class="actions">
 					<div>
