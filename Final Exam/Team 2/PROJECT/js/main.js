@@ -75,6 +75,7 @@ $(document).ready( function(event) {
 			backgroundColor: "#75c1dd",
 		});
 		
+		$("#registerForm").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("h2").text("Create a hero");
 		$(".lf:first-of-type").css('visibility','visible')
@@ -94,6 +95,7 @@ $(document).ready( function(event) {
 		});
 		
 		$("#loginForm").css('visibility','hidden');
+		$("#registerForm").css('visibility','hidden');
 		$("h2").text("Your profile");
 		$(".lf:first-of-type").css('visibility','visible')
 		

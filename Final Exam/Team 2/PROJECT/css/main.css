@@ -61,13 +61,13 @@ table {
 #topLine nav input
 {
 	float: left;
-	width: 10%;
+	width: 13%;
 	margin: 0.3%;
-	margin-left: 1.5%;
+	margin-left: 5%;
 	margin-bottom: 0%;
 	text-decoration: none;
     text-transform: uppercase;
-	font-size: 1vw;
+	font-size: 1.4vw;
 	text-align: center;
 	font-family: Verdana;
 	background-color: #0099CC;
@@ -75,67 +75,59 @@ table {
 	border-radius: 2px;
 	
 }
-/*
-#topLine nav input:hover
-{
-	border-bottom: 2px solid #75c1dd; 
-}
-*/
-.content
-{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
 
-/*  the heroes aren't where they should be  */
+
 
 @media screen and (max-width: 1024px)
 {
 	#topLine nav input
 	{
-		width: 20%;
+		width: 30%;
 		margin: 1%;
-		font-size: 2vw;
-	}
-	#topLine nav input:hover
-	{
-		border-bottom: none;
-		background: #5eb5d9;
-		border-radius: 8px;		
+		margin-left: 2.2%;
+		margin-bottom: 0%;
+		font-size: 2vw; /* ??? */
 	}
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
 	#topLine nav input
 	{
-		margin: 0.3%;
+		width: 15%;
+		margin: 0.5%;
+		margin-left: 5%;
+		margin-bottom: 0;
 		font-size: 1.5vw;
-		
+	}
+}
+@media screen and (max-width: 700px)
+{
+	#topLine nav input
+	{
+		font-size: 1.5vw; /* ??? */
 	}
 }
 
 @media screen and (max-width: 640px)
 {
-	
 	#topLine nav input
 	{
-		width: 33%;
-		margin-left: 0.1%;
-		margin-right: 0.1%;
-		font-size: 3.7vw;
+		font-size: 3.5vw; /* ??? */
 	}
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
 	#topLine nav input
 	{
+		width: 20%;
 		font-size: 2.5vw;
 	}
 }
 
-@media screen and (max-width: 320px) 
+/*
+@media screen and (max-width: 320px) and (orientation : portrait)
 {
     div
     {
     	display:none;
     }
 }
+*/
