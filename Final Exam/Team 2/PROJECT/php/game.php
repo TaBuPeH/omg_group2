@@ -1,145 +1,150 @@
-<?php
-require_once "db.class.php";
+ <?php
+ require_once "db.class.php";
 
-class lifeform
+ class lifeform
 {
-	protected $hp;
-	protected $dmg;
-	//protected $critChance;
+	 protected $hp;
+	 protected $dmg;
+	 //protected $critChance;
 	
-	public function attack(&$target)
-	{
-		//$critModifier = 1;
+	 public function attack(&$target)
+	 {
+		 $critModifier = 1;
 		
-		// if( rand(0,100) < $this->critChance)
-		// {
-			// $critModifier = 2;
-		// }
-		// if( rand(0,1000) == 666)
-		// {
-			// $critModifier = 10;
-		// }
-		//$remaining = $target->getHP() - $this->dmg*$critModifier ;
-		//$target->setHP($remaining);		
-	}
-	
-	// public function setCritChance($c)
-	// {
-		// $this->critChance = $c;
-	// }
-	
-	// public function getCritChance()
-	// {
-		// return $this->critChance;
-	// }
-	
-	public function getHP()
-	{
-		return $this->hp;
-	}
-
-	public function setHP($h)
-	{
-		$this->hp = $h;
-	}
-	
-	public function __construct($a, $b)
-	{
-		$this->hp = $a;
-		$this->dmg = $b;
-	}
-}
-
-
- class warrior extends lifeform
- {
-	 protected $powerHit;
-	
-	 public function setPowerHit($s)
-	 {
-		 $this->powerHit = $s;
+		 // if( rand(0,100) < $this->critChance)
+		 // {
+			// // $critModifier = 2;
+		 // }
+		 // if( rand(0,1000) == 666)
+		 // {
+			// // $critModifier = 10;
+		 // }
+		 $remaining = $target->getHP() - $this->dmg*$critModifier ;
+		 $target->setHP($remaining);		
 	 }
 	
-	 public function getPowerHit()
+	 // public function setCritChance($c)
+	 // {
+		 // $this->critChance = $c;
+	 // }
+	
+	 // public function getCritChance()
+	 // {
+		 // return $this->critChance;
+	 // }
+	
+	 public function getHP()
 	 {
-		 return $this->powerHit;
+		 return $this->hp;
+	 }
+
+	 public function setHP($h)
+	 {
+		 $this->hp = $h;
 	 }
 	
-	 public function usePowerHit()
+	 public function __construct($a, $b)
 	 {
-		 $this->dmg = $this->dmg*$this->powerHit;
+		 $this->hp = $a;
+		 $this->dmg = $b;
 	 }
  }
-class healer extends lifeform
- {
-	 protected $restoreHp;
+
+
+  class warrior extends lifeform
+  {
+	  protected $powerHit;
 	
-	 public function setRestoreHp($s)
-	 {
-		 $this->restoreHp = $s;
-	 }
+	  public function setPowerHit($s)
+	  {
+		  $this->powerHit = $s;
+	  }
 	
-	 public function getRestoreHp()
-	 {
-		 return $this->restoreHp;
-	 }
+	  public function getPowerHit()
+	  {
+		  return $this->powerHit;
+	  }
 	
-	 public function useRestoreHp()
-	 {
-		 $this->hp = $this->hp + $this->restoreHp;
-	 }
- }
- class tanker extends lifeform
- {
-	 protected $buildArmor;
+	  public function usePowerHit()
+	  {
+		  $this->dmg = $this->dmg*$this->powerHit;
+	  }
+  }
+ class healer extends lifeform
+  {
+	  protected $restoreHp;
 	
-	 public function setBuildArmor($s)
-	 {
-		 $this->buildArmor = $s;
-	 }
+	  public function setRestoreHp($s)
+	  {
+		  $this->restoreHp = $s;
+	  }
 	
-	 public function getBuildArmor()
-	 {
-		 return $this->buildArmor;
-	 }
+	  public function getRestoreHp()
+	  {
+		  return $this->restoreHp;
+	  }
 	
-	 public function useBuildArmor(&$target)
-	 {
-		 $target->dmg = $target->dmg * 0.9 ;
+	  public function useRestoreHp()
+	  {
+		  $this->hp = $this->hp + $this->restoreHp;
+	  }
+  }
+  class tanker extends lifeform
+  {
+	  protected $buildArmor;
+	
+	  public function setBuildArmor($s)
+	  {
+		  $this->buildArmor = $s;
+	  }
+	
+	  public function getBuildArmor()
+	  {
+		  return $this->buildArmor;
+	  }
+	
+	  public function useBuildArmor(&$target)
+	  {
+		  $target->dmg = $target->dmg * 0.9 ;
 		 
-	 }
- }
+	  }
+  }
 
  
- $warrior = new warrior(100,10);
-$warrior->setPowerHit(1.4);
+  $warrior = new warrior(100,10);
+ $warrior->setPowerHit(1.4);
 
 
-$healer = new healer(120,8); 
-$healer->setRestoreHp(20);
+ $healer = new healer(120,8); 
+ $healer->setRestoreHp(20);
 
-
-$warrior->attack($healer);
-$healer->attack($warrior);
-
-$healer->useRestoreHp();
-$warrior->usePowerHit($healer);
 echo "<pre>";
-print_r($healer);
-print_r($warrior);
-//$superman->useHeatRay($batman);
+  print_r($healer);
+  print_r($warrior);
+  $warrior->attack($healer);
+  $healer->attack($warrior);
+echo "<pre>";
+  print_r($healer);
+  print_r($warrior);
+  $healer->useRestoreHp();
+  $warrior->usePowerHit($healer);
+  echo "<pre>";
+  print_r($healer);
+  print_r($warrior);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  //echo "You win";
+ ?>
+ 
+ 
+ 
+ 
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-?>
