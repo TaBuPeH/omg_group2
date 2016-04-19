@@ -67,45 +67,46 @@ if(!isset($_SESSION['logged_user']))
 			<div id="ground" class="stage"></div>
 		</div>
 			
-		<div class="content">
+		<div id="content">
 		
 			<?php
 			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			?>
+
+			<!--  	-->
+			<div>
 			
-			<div id="heroes">
-			
-				<!-- 
 				<div class="actions">
 					<div>
-						<img src='../img/attack.png'>
-						<img src='../img/superAttack.png'>
-						<img src='../img/defence.png'>
-						<img src='../img/heal.png'>
+						<img src='../img/attack.png' class='action attack'>
+						<img src='../img/rest.png' class='action rest'>
+						<img src='../img/specialAbility.png' class='action specialAbility'> 
+						<!-- <img src='../img/defence.png'>  	-->
 					</div>
 				</div>
+				
 				<div class="actions">
 					<div>
-						<img src="../img/attack.png">
-						<img src="../img/superAttack.png">
-						<img src="../img/defence.png">
-						<img src="../img/heal.png">
+						<img src='../img/attack.png' class='action attack'>
+						<img src='../img/rest.png' class='action rest'>
+						<img src='../img/specialAbility.png' class='action specialAbility'> 
+						<!-- <img src='../img/defence.png'>  	-->
 					</div>
 				</div>
-				-->
-				
-				<div class="hero">
-					<img src="../img/hero1.png">
-				</div>
-				<div class="hero">
-					<img src="../img/hero1.png">
-				</div>
-				   
-				
 				
 			</div>
 			
-		
+			<div>
+			
+				<div class="hero">
+					<img src="../img/hero1.png">
+				</div>
+				
+				<div class="hero">
+					<img src="../img/hero1.png">
+				</div>
+				
+			</div>
 			
         </div>
 		

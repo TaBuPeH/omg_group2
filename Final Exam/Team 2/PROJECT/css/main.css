@@ -61,13 +61,13 @@ table {
 #topLine nav input
 {
 	float: left;
-	width: 10%;
+	width: 13%;
 	margin: 0.3%;
 	margin-left: 5%;
 	margin-bottom: 0%;
 	text-decoration: none;
     text-transform: uppercase;
-	font-size: 1.2vw;
+	font-size: 1.4vw;
 	text-align: center;
 	font-family: Verdana;
 	background-color: #0099CC;
@@ -75,12 +75,7 @@ table {
 	border-radius: 2px;
 	
 }
-.content
-{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
+
 
 
 @media screen and (max-width: 1024px)
