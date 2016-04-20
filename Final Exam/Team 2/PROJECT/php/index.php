@@ -11,13 +11,7 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
-<<<<<<< HEAD
 
-
-	
-
-=======
->>>>>>> 3db8c018b5b5914b380f01df6907affeff734b87
 ?>
 
 <!doctype html>
@@ -44,7 +38,6 @@ if(!isset($_SESSION['logged_user']))
         <script src="../js/main.js"></script>
 		
 	<!-- 	 -->
-		
     </head>	
 
 <body>
@@ -68,52 +61,63 @@ if(!isset($_SESSION['logged_user']))
 			
 		</header>
 	
-		<div class="content">
+	
+		<div id="background">		
+			<div id="far-clouds" class="stage clouds"></div>
+			<div id="near-clouds" class="stage clouds"></div>
+			<div id="ground" class="stage"></div>
+		</div>
+			
+		<div id="content">
 		
-			<div id="background">
-			
-				<div id="far-clouds" class="stage clouds"></div>
-				<div id="near-clouds" class="stage clouds"></div>
-				<div id="ground" class="stage"></div>
-				
-			</div>
-			
-			
 			<?php
 			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 			?>
-			
-			<div id="heroes">
-			
-			
-			
-				<div class="hero">
-				<!--    
-					<div class="actions">
-						<img src="../img/attack.png">
-						<img src="../img/superAttack.png">
-						<img src="../img/defence.png">
-						<img src="../img/heal.png">
-					</div>
-				-->
-					<img src="../img/hero1.png">
+
+			<!--  	-->
+			<div>
+				<div class="health">  
+					<div> Health: 100/100 </div>
 				</div>
+				
+				<div class="health">  
+					<div> Health: 100/100 </div>
+				</div>
+			</div>
 			
-				<div class="hero">
-				<!--    
-					<div class="actions">
-						<img src="../img/attack.png">
-						<img src="../img/superAttack.png">
-						<img src="../img/defence.png">
-						<img src="../img/heal.png">
+			<div>
+			
+				<div class="actions">
+					<div>
+						<img src='../img/attack.png' class='action attack'>
+						<img src='../img/rest.png' class='action rest'>
+						<img src='../img/specialAbility.png' class='action specialAbility'> 
+						<!-- <img src='../img/defence.png'>  	-->
 					</div>
-				-->
-					<img src="../img/hero1.png">
+				</div>
+				
+				<div class="actions">
+					<div>
+						<img src='../img/attack.png' class='action attack'>
+						<img src='../img/rest.png' class='action rest'>
+						<img src='../img/specialAbility.png' class='action specialAbility'> 
+						<!-- <img src='../img/defence.png'>  	-->
+					</div>
 				</div>
 				
 			</div>
 			
-		
+			<div>
+			
+				<div class="hero">
+					<img src="../img/hero1.png">
+				</div>
+				
+				<div class="hero">
+					<img src="../img/hero1.png">
+				</div>
+				
+			</div>
 			
         </div>
 		

@@ -295,6 +295,7 @@ label select
 	.button
 	{
 		width: 28%;
+		font-size: 2.5vw;
 	}
 	.loginButton
 	{
@@ -304,6 +305,7 @@ label select
 	{
 		margin-left: 1%;
 	}
+	
 }
 
 

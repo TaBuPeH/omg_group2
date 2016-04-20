@@ -195,8 +195,7 @@ label select
 	{
 		margin-left: 14%;
 	}
-}
-	@media screen and (max-width: 640px) and (orientation : landscape)
+}@media screen and (max-width: 640px) and (orientation : landscape)
 {
 	h2
 	{

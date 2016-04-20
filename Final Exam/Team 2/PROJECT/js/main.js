@@ -14,6 +14,8 @@ $(document).ready( function(event) {
 		$("h2").text("Login Here");
 		$(".lf:first-of-type").css('visibility','visible');
 		$("#loginForm").css('visibility','visible');
+		
+		$("#content").css('visibility','hidden');
 	});
 	
 	$("img#closeButton").click(function()
@@ -25,8 +27,14 @@ $(document).ready( function(event) {
 		$(".lf").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("#registerForm").css('visibility','hidden');
+		
+		$("#content").css('visibility','visible');
 	});
 
+	
+	
+	
+	
 	$("#loginForm .registrationButton").click(function()
 	{
 		$("#loginForm").css('visibility','hidden');
@@ -38,7 +46,7 @@ $(document).ready( function(event) {
 		$.post( "login_db.php", $('#loginForm').serialize() , function( data ) {
 			alert( data );
 		});
-		
+		/* ??? */
 		
 		
 	});
@@ -54,12 +62,10 @@ $(document).ready( function(event) {
 		$.post( "register_db.php", $('#registerForm').serialize() , function( data ) {
 			alert( data );
 		});
-		
+		/* ??? */
 		
 		
 	});
-	
-
 	
 	
 	
@@ -75,11 +81,12 @@ $(document).ready( function(event) {
 			backgroundColor: "#75c1dd",
 		});
 		
+		$("#registerForm").css('visibility','hidden');
 		$("#loginForm").css('visibility','hidden');
 		$("h2").text("Create a hero");
 		$(".lf:first-of-type").css('visibility','visible')
 		
-		
+		$("#content").css('visibility','hidden');
 	});
 	
 	/*	*/
@@ -94,10 +101,11 @@ $(document).ready( function(event) {
 		});
 		
 		$("#loginForm").css('visibility','hidden');
+		$("#registerForm").css('visibility','hidden');
 		$("h2").text("Your profile");
 		$(".lf:first-of-type").css('visibility','visible')
 		
-		
+		$("#content").css('visibility','hidden');
 	});
 	
 	/*	*/
