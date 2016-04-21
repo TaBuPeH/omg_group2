@@ -12,6 +12,7 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
+<<<<<<< HEAD
 
 
 
@@ -20,6 +21,9 @@ if(!isset($_SESSION['logged_user']))
 
 
 
+=======
+
+>>>>>>> 5aefe9dcfdfa8ecc1761dd1ca49d3ba7d7f8d208
 ?>
 
 <!doctype html>
@@ -83,6 +87,16 @@ if(!isset($_SESSION['logged_user']))
 			?>
 
 			<!--  	-->
+			<div>
+				<div class="health">  
+					<div> Health: 100/100 </div>
+				</div>
+				
+				<div class="health">  
+					<div> Health: 100/100 </div>
+				</div>
+			</div>
+			
 			<div>
 			
 				<div class="actions">

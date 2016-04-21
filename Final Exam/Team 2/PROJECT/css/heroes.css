@@ -60,7 +60,7 @@ div#heroes
 	right: 0;
 }
 
-/**/
+/*************************/
 
 .actions
 {
@@ -96,7 +96,7 @@ div#heroes
 	right: 0;
 }
 
-/**/
+
 .actions img:nth-of-type(1)
 {
 	margin-left: 0%;
@@ -111,6 +111,45 @@ div#heroes
 {
 	margin-left: 20%; 
 	margin-right: 0%;
+}
+
+/*************************/
+
+.health
+{
+	position: absolute;
+	width: 48%;
+	height: 10%; /**/
+	bottom: 0%; /**/
+	
+	display: inline;
+}
+.health:nth-of-type(1)
+{
+	left: 2%;
+}
+.health:nth-of-type(2)
+{
+	right: 2%;
+} 
+
+.health div
+{
+	position: absolute;
+	width: 30%;
+	z-index: 700;
+	font-size: 1.5vw;
+	bottom: 20%;
+}
+.health:nth-of-type(1) div 
+{
+	left: 0;
+	text-align: left;
+}
+.health:nth-of-type(2) div
+{
+	right: 0;
+	text-align: right;
 }
 
 
