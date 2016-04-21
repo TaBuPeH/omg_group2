@@ -1,4 +1,7 @@
+<!-- this file is useless  -->
 
+
+<!--
 <html> 
 	<head>
 		<script src="../js/main.js"></script>
@@ -8,7 +11,7 @@
 		
 		<div class="lf">
 			
-			<h2> </h2> <!-- i don't really write sth in it -->
+			<h2> </h2> 
 			
 			<form id="registerForm" method="post" action="login_db.php">
 				
@@ -48,3 +51,5 @@
 	</body>
 	
 </html>
+
+-->

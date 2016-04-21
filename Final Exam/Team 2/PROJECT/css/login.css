@@ -1,5 +1,5 @@
 
-div.lf
+div#forms
 {
 	position: absolute;
 	width: 90%;
@@ -20,13 +20,13 @@ img#closeButton
 	right: -0.5%;
 	top: -1%;
 }
-.lf #loginForm
+#forms #loginForm
 {
 	position: absolute;
 	visibility: hidden;
 	
 }
-.lf #registerForm
+#forms #registerForm
 {
 	position: absolute;
 	visibility: hidden;
@@ -241,7 +241,7 @@ label select
 }
 	@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div.lf
+	div#forms
 	{
 		height: 81%;
 		top: 13%;
