@@ -1,4 +1,14 @@
 <?php
+
+require_once("hero.class.php");
+require_once('db.class.php');
+
+
+$attacker = $_SESSION['heroes'][$_GET['attacker']];
+$defender = $_SESSION['heroes'][$_GET['defender']];
+
+ print_r($attacker);
+/*
 require_once "game.php";
 
 $warrior = new warrior(100,10);
@@ -11,28 +21,9 @@ echo "<pre>";
 print_r($healer);
 print_r($warrior);
 ?>
-<a href="#" onclick="$warrior->attack($healer)" class="actionbutton">Attack</a>
 <?php
 echo "<pre>";
 print_r($healer);
-print_r($warrior);
+print_r($warrior);*/
 ?>
-<button type="button">Click Me</button>
-<p></p>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
 
-            $.ajax({
-                type: 'POST',
-                url: 'game.php',
-                success: function(data) {
-                    alert(data);
-                    $("p").text(data);
-
-                }
-            });
-   });
-});
-
-</script>

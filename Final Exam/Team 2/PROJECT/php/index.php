@@ -1,5 +1,6 @@
 <?php 
 	require_once "db.class.php";
+	
 	require_once "login.php";
 	require_once "register.php";
 
@@ -11,7 +12,7 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
-<<<<<<< HEAD
+
 
 
 
@@ -19,8 +20,6 @@ if(!isset($_SESSION['logged_user']))
 
 
 
-=======
->>>>>>> d39abbf023ff60b03bb411670bae1e0a0a7cc8ed
 ?>
 
 <!doctype html>
@@ -87,7 +86,7 @@ if(!isset($_SESSION['logged_user']))
 			<div>
 			
 				<div class="actions">
-					<div>
+					<div class='hero_0_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
@@ -96,7 +95,7 @@ if(!isset($_SESSION['logged_user']))
 				</div>
 				
 				<div class="actions">
-					<div>
+					<div  class='hero_1_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
