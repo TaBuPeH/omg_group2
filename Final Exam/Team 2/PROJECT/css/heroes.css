@@ -25,6 +25,8 @@ div#heroes
 	width: 100%;
 	height: 100%; /**/
 	float: left;
+
+	visibility: hidden;
 }
 .hero
 {
@@ -54,10 +56,12 @@ div#heroes
 .hero:nth-of-type(1) img 
 {
 	left: 0;
+	margin-left: 1%;
 }
 .hero:nth-of-type(2) img
 {
 	right: 0;
+	margin-right: 1%;
 }
 
 /*************************/
@@ -136,86 +140,176 @@ div#heroes
 .health div
 {
 	position: absolute;
-	width: 30%;
+	width: 40%;
 	z-index: 700;
-	font-size: 1.5vw;
+	font-size: 2vw;
 	bottom: 20%;
 }
 .health:nth-of-type(1) div 
 {
 	left: 0;
 	text-align: left;
+	margin-left: 2%;
 }
 .health:nth-of-type(2) div
 {
 	right: 0;
 	text-align: right;
+	margin-right: 2%;
 }
 
 
 
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 1024px) and (orientation: portrait)
 {
-	div#heroes
+	.hero
 	{
-		height: 26%;
+		height: 35%; 
 	}
-	div#heroes .hero img
+	.actions
 	{
-		width: 60%;
-		height: auto;
+		height: 65%; 
 	}
 
-}@media screen and (max-width: 1024px) and (orientation : landscape)
-{
-	div#heroes
+
+	.hero img
 	{
-		height: 37%;
+		width: 55%;
+		margin-top: 5%;
 	}
-	div#heroes .hero img
+
+	.actions img
 	{
-		width: 30%;
+		
+		width: 20%;
 	}
-	
-}
-@media screen and (max-width: 640px) 
-{
-	div#heroes
+
+	.actions img:nth-of-type(1)
 	{
-		height: 24%;
+		margin-left: 0%;
+		margin-right: 40%;
 	}
-	div#heroes .hero img
+	.actions img:nth-of-type(2)
+	{
+		margin-left: 20%; 
+		margin-right: 20%;
+	}
+	.actions img:nth-of-type(3)
+	{
+		margin-left: 40%; 
+		margin-right: 0%;
+	}
+	.health div
 	{
 		width: 70%;
-		height: auto;
-		
+		font-size: 3.4vw;
 	}
 	
+}@media screen and (max-width: 1024px) and (orientation : landscape)
+{
+	.hero
+	{
+		height: 50%; 
+	}
+	.actions
+	{
+		height: 50%; 
+	}
+
+
+	.hero img
+	{
+		width: 35%;/*40*/
+		margin-top: 0%; /*7*/
+	}
+
+	.actions img
+	{
+		width: 13%;
+	}
+
+	.actions img:nth-of-type(1)
+	{
+		margin-left: 0%;
+		margin-right: 30%;
+	}
+	.actions img:nth-of-type(2)
+	{
+		margin-left: 15%; 
+		margin-right: 15%;
+	}
+	.actions img:nth-of-type(3)
+	{
+		margin-left: 30%; 
+		margin-right: 0%;
+	}
+	.health div
+	{
+		width: 50%;
+		font-size: 2.7vw;
+	}
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait)
+{
+	
+	
+}@media screen and (max-width: 800px) and (orientation : landscape)
+{
+	
+
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait)
+{
+	.hero
+	{
+		height: 30%; 
+	}
+	.actions
+	{
+		height: 70%; 
+	}
+
+	.health div
+	{
+		width: 50%;
+		font-size: 5.5vw;
+	}
+	.health:nth-of-type(1) div 
+	{
+		margin-left: 10%;
+	}
+	.health:nth-of-type(2) div
+	{
+		margin-right: 10%;
+	}
+	span
+	{
+		display: none;
+	}
 	
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	div#heroes
+	.hero
 	{
-		height: 45%;
+		height: 48%; 
 	}
-	div#heroes .hero img
+	.actions
 	{
-		width: 50%;
+		height: 52%; 
+	}
+	.hero img
+	{
+		width: 40%;
+		margin-top: 0%;
 	}
 	
 }
 @media screen and (max-width: 480px)  and (orientation : landscape) /*320*/
 {
-    div#heroes
+   .hero img
 	{
-		height: 40%;
-	}
-	div#heroes .actions
-	{
-		height: 20%;
-	}
-	div#heroes .actions img
-	{
-		width: 10%;
+		margin-top: 6%;
 	}
 }
