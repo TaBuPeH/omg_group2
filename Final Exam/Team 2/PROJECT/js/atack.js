@@ -2,9 +2,15 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	
 	var options = {
-		duration: 1000,
-		easing: 'swing' //easeInOutQuint
+		duration: 1400,
+		easing: 'swing' 
+		//easing: 'easeInOutQuint'
+		//easeInOutQuint/easeInOutCubic
 	};
+
+	var isAnimating = false;
+
+
 	/*
 	//var heroWidth = $(".hero img").width();
 	var width = $(window).width();
@@ -37,44 +43,92 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	$(".action:nth-of-type(4)").css({marginLeft: "19%", marginRight: "-1%"});
 	
 */
-	
-	$(".attack").click(function()
-	{	
-		$(this).fadeOut(1000).delay(800).fadeIn(1000);
-	
-		$(".hero:nth-of-type(1) img").animate({left: '+=80%', opacity: '0.5'}, options);
-		$(".hero:nth-of-type(2) img").animate({left: '-=80%', opacity: '0.5'}, options);
-		
-		$(".hero:nth-of-type(1) img").animate({left: '-=80%', opacity: '1'}, options);
-		$(".hero:nth-of-type(2) img").animate({left: '+=80%', opacity: '1'}, options);
+
+	$(".actions:nth-of-type(1) .attack").click(function()
+	{
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
+		}
 	});
+	$(".actions:nth-of-type(2) .attack").click(function()
+	{
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
+		}
+	});
+
 	$(".actions:nth-of-type(1) .rest").click(function()
 	{
-		$(this).fadeOut(1000).delay(2300).fadeIn(1000);
-		
-		$(".hero:nth-of-type(1) img").fadeOut(600).delay(10).fadeIn(600);
-		$(".hero:nth-of-type(1) img").fadeOut(600).delay(10).fadeIn(600);
-		$(".hero:nth-of-type(1) img").fadeOut(600).delay(10).fadeIn(600);
+		if(isAnimating == false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
+			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
+			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
+		}
 		
 	});
 	$(".actions:nth-of-type(2) .rest").click(function()
 	{
-		$(this).fadeOut(1000).delay(2300).fadeIn(1000);
-		
-		$(".hero:nth-of-type(2) img").fadeOut(600).delay(10).fadeIn(600);
-		$(".hero:nth-of-type(2) img").fadeOut(600).delay(10).fadeIn(600);
-		$(".hero:nth-of-type(2) img").fadeOut(600).delay(10).fadeIn(600);
-		
+		if(isAnimating == false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+		}
+
 	});
-	$(".specialAbility").click(function()
+
+	$(".actions:nth-of-type(1) .specialAbility").click(function()
 	{
-		$(this).fadeOut(1000).delay(800).fadeIn(1000);
-		
-		$(".hero:nth-of-type(1) img").animate({left: '+=80%', opacity: '0.5'}, options);
-		$(".hero:nth-of-type(2) img").animate({left: '-=80%', opacity: '0.5'}, options);
-		
-		$(".hero:nth-of-type(1) img").animate({left: '-=80%', opacity: '1'}, options);
-		$(".hero:nth-of-type(2) img").animate({left: '+=80%', opacity: '1'}, options);
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
+		}
+	});
+	$(".actions:nth-of-type(2) .specialAbility").click(function()
+	{
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=160%'}, options);
+		}
 	});
 	
 	
@@ -82,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	/*
 	$(".defence").click(function()
 	{
-		$(this).parent().parent().fadeOut(700).delay(1400).fadeIn(700);
+		$(this).parent().parent().fadeOut(500).delay(1400).fadeIn(500);
 	});
 	*/
 });

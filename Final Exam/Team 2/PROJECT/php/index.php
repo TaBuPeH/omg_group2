@@ -30,14 +30,15 @@ if(!isset($_SESSION['logged_user']))
         <link rel="stylesheet" href="../css/heroes.css" />
         <link rel="stylesheet" href="../css/login.css" />
 
-        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    	<script src="../js/jquery.min.js"></script>
         <script src="../js/clouds.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/atack.js"></script>
         <script src="../js/login.js"></script>
         <script src="../js/main.js"></script>
-		
-	<!-- 	 -->
+		<!--   -->
+	 	 
     </head>	
 
 <body>
