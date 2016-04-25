@@ -1,0 +1,220 @@
+html { 
+	width: 100%; 
+	height:100%; 
+	
+}
+.gamebg {
+	background-image: url('../img/stadium.jpg'); 
+	background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% auto;
+    margin-top:5%;
+  	z-index:10px; 
+}
+.menuImg{
+	position:absolute;
+	margin-top:4%;
+	margin-left:7%;
+	z-index:15px;
+
+}
+.menuImg1{
+	position:absolute;
+	margin-top:4%;
+	margin-left:70%;
+	z-index: 15px;
+}
+.menuImg img{
+	width:70%
+}
+.menuImg1 img{
+	width:95%	
+}
+.gameButtons{
+	position:relative;
+	width:25%;
+	margin-left:37.5%;	
+	padding-top:24%;
+	padding-bottom:14%;
+	z-index:25px;
+}
+.gameButtons .btn{
+	margin-bottom:3%;
+}
+.teamSelection{
+	display:none;
+	position:relative;
+	width:60%;
+	margin-left:20%;
+	padding-bottom:6%;
+	padding-top:5%;
+}
+.yourTeam{
+	width:30%;
+	display:inline-block;
+	float:left;
+	padding-top:5%;
+}
+.opponent{
+	width:30%;
+	display:inline-block;		
+	float:right;
+	padding-top:5%;
+}  
+.teamImg img{
+	width:40%;
+	margin-left:11%;
+	margin-top:5%;
+}
+.teamImg{
+	text-align:left;
+	position:absolute;
+	width:50%;
+}
+.select{
+	margin-top:100%;
+	display:inline-block;
+}
+.teamImg1 img{
+	width:40%;
+	margin-left:11%;
+	margin-top:5%;
+}
+.teamImg1{
+	text-align:left;
+	position:absolute;
+	width:50%;
+}
+.bottomButtons{
+	position:relative;
+	width:30%;
+	margin-top:12%;
+	margin-left:35.5%;	
+	padding-top:31%;
+	z-index:25px;
+}
+.bottomButtons .btn{
+	margin-top:3%;
+}
+.change{
+	text-align:center;
+	color:rgba(217, 29, 29, 1);
+	margin-top:4%;
+}
+.instructions{
+	display:none;
+	margin-top:5%;
+}
+.insButton{
+	position:relative;
+	width:25%;
+	margin-left:37.5%;
+	padding-top:33%;
+	padding-bottom:7%;
+}
+.board{
+	background: rgba(212, 63, 58, 0.7);
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	width:60%;
+	color:white;
+	margin-left:20%;
+	position:absolute;
+	margin-top:6%;
+}
+.textIns{
+	text-align:center;
+	font-size:2vw;
+	padding:2%;
+}
+@media screen and (max-width: 1000px) {
+
+	.gameButtons{
+		position:relative;
+		width:40%;
+		margin-left:30%;	
+		padding-top:17%;
+		padding-bottom:12%;
+		z-index:25px;
+	}
+	.gamebg{
+		margin-top:8%;
+	}
+	.change{
+		font-size:1.7vw;
+	}
+	.bottomButtons{
+		padding-top:22%;
+		padding-bottom:9%;
+	}
+	.textIns{
+	text-align:center;
+	font-size:5vw;
+	padding:2%;
+}
+.insButton{
+	position:relative;
+	width:25%;
+	margin-left:37.5%;
+	padding-top:130%;
+	padding-bottom:7%;
+}
+.change{
+	font-size: 4vw;
+}
+.gamebg {
+    margin-top:10%;
+}
+}
+@media screen and (max-width: 1024px) {
+   
+.loginButtons{
+  margin-top:0.7%;
+  float:right;
+}
+}
+@media screen and (max-width: 767px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -8%;
+  float:right;
+  
+
+}
+}
+@media screen and (max-width: 600px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -11%;
+  float:right;
+  
+
+}
+}
+@media screen and (max-width: 450px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -13%;
+  margin-left: 5%;
+  float:right;
+  
+
+}
+}
+@media screen and (max-width: 380px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -15%;
+  margin-right: -10%;
+  float:right;
+  
+
+}
+}
