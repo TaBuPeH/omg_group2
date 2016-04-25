@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	$(".actions:nth-of-type(1) .attack").click(function()
 	{
+<<<<<<< HEAD
 		if(isAnimating==false)
 		{
 			isAnimating = true;
@@ -102,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
 
 			if($(this).closest('.hero_0_actions').length)
+=======
+		
+		if($(this).closest('.hero_0_actions').length)
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 		 {
 			 
 			 
@@ -122,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		 });
 		 
+<<<<<<< HEAD
 			
 			
 			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
@@ -131,6 +137,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 	$(".actions:nth-of-type(2) .attack").click(function()
 	{
+=======
+
+
+
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 		if(isAnimating==false)
 		{
 			isAnimating = true;
@@ -138,10 +149,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
+<<<<<<< HEAD
  
 			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
 
+=======
+
+			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
+		}
+	});
+	$(".actions:nth-of-type(2) .attack").click(function()
+	{
+		
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 			if($(this).closest('.hero_0_actions').length)
 		 {
 			 
@@ -163,10 +185,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			  document.getElementById("hero1").innerHTML = "Health: "+response+"/100";
 		
 		 });
+<<<<<<< HEAD
 			
 			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
  
+=======
+
+
+
+
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 		}
 
 	});
@@ -247,6 +284,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	$(".actions:nth-of-type(1) .specialAbility").click(function()
 	{
+<<<<<<< HEAD
 		if(isAnimating==false)
 		{
 			isAnimating = true;
@@ -270,6 +308,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
  
 		}
+=======
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 		if($(this).closest('.hero_0_actions').length)
 		 {
 			 
@@ -290,6 +330,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
 		
 		 });
+
+
+
+
+		 if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
+		}
 		
 	});
 	$(".actions:nth-of-type(2) .specialAbility").click(function()
@@ -306,7 +361,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 // {
 			 // var url= "warrior_specialAttack.php?attacker=1&defender=0";
 			
+<<<<<<< HEAD
  
+=======
+ 		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%'}, options);
@@ -324,15 +388,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		
 		
 		
-		
-		
- if(isAnimating==false)
-		 {
-			 isAnimating = true;
-			 $(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
-					 isAnimating = false;	
-				 });
-			 if($(this).closest('.hero_0_actions').length)
+		if($(this).closest('.hero_0_actions').length)
 		 {
 			 
 			 
@@ -352,6 +408,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
 		
 		 });
+<<<<<<< HEAD
 			 
 			 $(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			 $(".hero:nth-of-type(2) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
@@ -366,6 +423,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 }
 		 }
  
+=======
+		 
+>>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 	});
 	
 	
