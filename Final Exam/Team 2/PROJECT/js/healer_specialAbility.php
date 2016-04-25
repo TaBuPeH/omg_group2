@@ -1,4 +1,4 @@
-// <?php
+ <?php
 
 
 require_once("hero.class.php");

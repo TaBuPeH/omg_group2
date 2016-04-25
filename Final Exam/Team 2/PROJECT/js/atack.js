@@ -97,10 +97,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-<<<<<<< HEAD
+
 			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
-=======
+
 			if($(this).closest('.hero_0_actions').length)
 		 {
 			 
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			
 			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
->>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
+ 
 		}
 	});
 	$(".actions:nth-of-type(2) .attack").click(function()
@@ -138,10 +138,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-<<<<<<< HEAD
+ 
 			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
-=======
+
 			if($(this).closest('.hero_0_actions').length)
 		 {
 			 
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			
 			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
->>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
+ 
 		}
 
 	});
@@ -254,11 +254,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-<<<<<<< HEAD
+ 
 			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
-=======
+
 			
 			
 			
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
->>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
+ 
 		}
 		if($(this).closest('.hero_0_actions').length)
 		 {
@@ -306,12 +306,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		 // {
 			 // var url= "warrior_specialAttack.php?attacker=1&defender=0";
 			
-<<<<<<< HEAD
+ 
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%'}, options);
 		}
-=======
+
 		 // }
 		 // $.get(url,function(response){
 			
@@ -363,9 +363,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			
 			
 			
-			
 		 }
->>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
+		 }
+ 
 	});
 	
 	
