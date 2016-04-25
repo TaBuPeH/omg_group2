@@ -4,6 +4,7 @@ require_once "db.class.php";
 
 $data = $_POST;
 
+print_r($data);
 
 $data['username'] = mysqli_real_escape_string($db->dbHandle, $data['username']);
 
@@ -16,17 +17,19 @@ if(!empty($result))
 	if($result[0]['password'] == md5($data['password']))
 	{	
 		$_SESSION['logged_user'] = $result[0];
-		//header('Location: index.php');
+		header('Location: index1.php?success=1');
 		echo 'success';
 		
 	}
-	else{
-	//	header('Location: login.php');
-	echo 'error';
-	}
-}
-else{
-		//header('Location: login.php');
-		
+	else
+	{
+			header('Location: index.php');
 		echo 'error';
 	}
+}
+else
+{
+	header('Location: index.php');
+	
+	echo 'error';
+}

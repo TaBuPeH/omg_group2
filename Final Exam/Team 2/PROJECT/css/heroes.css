@@ -1,98 +1,463 @@
-
+/*
 div#heroes
 {
 	position: absolute;
-	z-index: 200;  /*  !!!  */
+	z-index: 200;    !!!  
 	width: 90%;
-	height: 40%;
+	height: 35%;
 	bottom: 5%;
 	left: 5%;
 	float: left;
-}
-div#heroes .hero
-{
-	width: 50%;
-	height: 100%;
-	float: left;
-	
-}
-div#heroes .hero img
-{
-	position: relative;
-	width: 30%;
-	height: auto;
-	margin-top: 3%;
-	
-}
-div#heroes .hero:first-of-type img 
-{
-	float: left;
-}
-div#heroes .hero:last-of-type img
-{
-	float: right;
-}
-/*
+}*/
 
-*/
-
-@media screen and (max-width: 1024px) 
+#content
 {
-	div#heroes
+	/*makes the page unscrollable*/
+	overflow:auto; 
+	position:absolute; 
+	top: 0px; 
+	left:0px; 
+	right:0px; 
+	bottom:0px;
+	
+	position: fixed;
+	z-index: 200; 
+	width: 100%;
+	height: 100%; /**/
+	float: left;
+
+	visibility: hidden;
+}
+.hero
+{
+	position: absolute;
+	width: 48%; /**/
+	height: 40%;/**/
+	bottom: 0%;/**/
+	
+	display: inline;
+	/*float:left;*/
+}
+.hero:nth-of-type(1)
+{
+	left: 6%;
+}
+.hero:nth-of-type(2)
+{
+	right: 6%;
+} 
+.hero img
+{
+	position: absolute;
+	width: 25%;
+	z-index: 500;
+	top: 0%;
+}
+.hero:nth-of-type(1) img 
+{
+	left: 0;
+	margin-left: 5%;
+}
+.hero:nth-of-type(2) img
+{
+	right: 0;
+	margin-right: 5%;
+}
+
+/*************************/
+
+.actions
+{
+	position: absolute;
+	width: 48%;
+	height: 60%; /**/
+	top: 0%; /**/
+	
+	display: inline;
+	/*float: left;*/
+}
+.actions:nth-of-type(1)
+{
+	left: 8%;
+}
+.actions:nth-of-type(2)
+{
+	right: 8%;
+} 
+.actions img
+{
+	position: absolute;
+	width: 10%;
+	z-index: 600;
+	bottom: 0%;
+}
+.actions:nth-of-type(1) img 
+{
+	left: 0;
+}
+.actions:nth-of-type(2) img
+{
+	right: 0;
+}
+
+
+.actions img:nth-of-type(1)
+{
+	margin-left: 0%;
+	margin-right: 20%;
+}
+.actions img:nth-of-type(2)
+{
+	margin-left: 10%; 
+	margin-right: 10%;
+}
+.actions img:nth-of-type(3)
+{
+	margin-left: 20%; 
+	margin-right: 0%;
+}
+
+/*************************/
+
+.health
+{
+	position: absolute;
+	width: 48%;
+	height: 10%; /**/
+	bottom: 0%; /**/
+	
+	display: inline;
+}
+.health:nth-of-type(1)
+{
+	left: 8%;
+}
+.health:nth-of-type(2)
+{
+	right: 8%;
+} 
+
+.health div
+{
+	position: absolute;
+	width: 40%;
+	z-index: 700;
+	font-size: 2vw;
+	bottom: 20%;
+}
+.health:nth-of-type(1) div 
+{
+	left: 0;
+	text-align: left;
+	margin-left: 2%;
+}
+.health:nth-of-type(2) div
+{
+	right: 0;
+	text-align: right;
+	margin-right: 2%;
+}
+
+/*************************/
+
+.nekuvDiv
+{
+	position: absolute;
+	width: 48%;
+	height: 100%; /**/
+	bottom: 0%; /**/
+	
+	display: inline;
+}
+.nekuvDiv:nth-of-type(1)
+{
+	left: 0%;
+}
+.nekuvDiv:nth-of-type(2)
+{
+	right: 0%;
+} 
+
+.nekuvDiv div
+{
+	position: absolute;
+	width: 16%;
+	z-index: 700;
+	font-size: 1.2vw;
+	bottom: 20%;
+
+	background-color: #0099CC;
+	border: 1px solid #e7e7e7;
+}
+.nekuvDiv:nth-of-type(1) div 
+{
+	left: 0;
+	text-align: left;
+	margin-left: 2%;
+}
+.nekuvDiv:nth-of-type(2) div
+{
+	right: 0;
+	text-align: right;
+	margin-right: 2%;
+}
+
+.nekuvDiv div:nth-of-type(1)
+{
+	margin-bottom: 31%;
+}
+.nekuvDiv div:nth-of-type(2)
+{
+	margin-bottom: 21%;
+}
+.nekuvDiv div:nth-of-type(3)
+{
+	margin-bottom: 11%;
+}
+
+/*************************/
+
+@media screen and (max-width: 1024px) and (orientation: portrait)
+{
+	.hero
 	{
-		bottom: 2%;
+		height: 35%; 
 	}
-	div#heroes .hero img
+	.hero img
 	{
-		width: 60%;
-		height: auto;
-		margin-top: 20%;
+		width: 55%;
+		margin-top: 5%;
+	}
+	.hero:nth-of-type(1)
+	{
+		left: 1%;
+	}
+	.hero:nth-of-type(2)
+	{
+		right: 1%;
+	} 
+
+
+	.actions
+	{
+		height: 65%; 
+	}
+	.actions img
+	{
+		width: 20%;
+	}
+	.actions:nth-of-type(1)
+	{
+		left: 2%;
+	}
+	.actions:nth-of-type(2)
+	{
+		right: 2%;
+	}
+
+	.actions img:nth-of-type(1)
+	{
+		margin-left: 0%;
+		margin-right: 40%;
+	}
+	.actions img:nth-of-type(2)
+	{
+		margin-left: 20%; 
+		margin-right: 20%;
+	}
+	.actions img:nth-of-type(3)
+	{
+		margin-left: 40%; 
+		margin-right: 0%;
+	}
+
+	.health div
+	{
+		width: 70%;
+		font-size: 3.4vw;
+	}
+	.health:nth-of-type(1)
+	{
+		left: 2%;
+	}
+	.health:nth-of-type(2)
+	{
+		right: 2%;
+	} 
+
+
+	/*************************/
+
+	.nekuvDiv:nth-of-type(1)
+	{
+		left: 3%;
+	}
+	.nekuvDiv:nth-of-type(2)
+	{
+		right: 3%;
+	} 
+
+	.nekuvDiv div
+	{
+		position: absolute;
+		width: 16%;
+		z-index: 700;
+		font-size: 2vw;
+		bottom: 43%;
+
+		background-color: #0099CC;
+		border: 1px solid #e7e7e7;
+	}
+	.nekuvDiv:nth-of-type(1) div 
+	{
+		left: 0;
+		text-align: left;
+		margin-left: 2%;
+	}
+	.nekuvDiv:nth-of-type(2) div
+	{
+		right: 0;
+		text-align: right;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+
+	.nekuvDiv div:nth-of-type(1)
+	{
+		margin-bottom: 0%;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+	.nekuvDiv div:nth-of-type(2)
+	{
+		margin-bottom: 0%;
+		margin-right: 22%;
+		margin-left: 22%;
+		
+	}
+	.nekuvDiv div:nth-of-type(3)
+	{
+		margin-bottom: 0%;
+		margin-right: 42%;
+		margin-left: 42%;
+	}
+
+	.nekuvDiv span
+	{
+		display: none;
 	}
 	
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
-	div#heroes .hero img
+	.hero
 	{
-		width: 45%;
-		margin-top: 2%;
+		height: 50%; 
 	}
-	
+	.actions
+	{
+		height: 50%; 
+	}
+
+
+	.hero img
+	{
+		width: 35%;/*40*/
+		margin-top: 0%; /*7*/
+	}
+
+	.actions img
+	{
+		width: 13%;
+	}
+
+	.actions img:nth-of-type(1)
+	{
+		margin-left: 0%;
+		margin-right: 30%;
+	}
+	.actions img:nth-of-type(2)
+	{
+		margin-left: 15%; 
+		margin-right: 15%;
+	}
+	.actions img:nth-of-type(3)
+	{
+		margin-left: 30%; 
+		margin-right: 0%;
+	}
+	.health div
+	{
+		width: 50%;
+		font-size: 2.7vw;
+	}
 }
 
-@media screen and (max-width: 640px) 
+@media screen and (max-width: 800px) and (orientation: portrait)
 {
 	
-	div#heroes
+	
+}@media screen and (max-width: 800px) and (orientation : landscape)
+{
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait)
+{
+	.hero
 	{
-		
+		height: 30%; 
 	}
-    div#heroes .hero
+	.actions
 	{
-		
+		height: 70%; 
 	}
-	div#heroes .hero img
+
+	.health div
 	{
-		width: 55%;
-		margin-top: 55%;
+		width: 50%;
+		font-size: 5.5vw;
 	}
-	/**/
+	.health:nth-of-type(1) div 
+	{
+		margin-left: 10%;
+	}
+	.health:nth-of-type(2) div
+	{
+		margin-right: 10%;
+	}
+	span
+	{
+		display: none;
+	}
+
+	/*************************/
+
+	.nekuvDiv
+	{
+		display: none;
+	}
+	
 	
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
-    div#heroes
+	.hero
 	{
-		bottom: 3%;
+		height: 48%; 
 	}
-    div#heroes .hero
+	.actions
 	{
-		
+		height: 52%; 
 	}
-	div#heroes .hero img
+	.hero img
 	{
-		width: 35%;
-		margin-top: 5%;
-		margin-left: 5%;
-		margin-right: 5%;
+		width: 40%;
+		margin-top: 0%;
 	}
 	
+}
+@media screen and (max-width: 480px)  and (orientation : landscape) /*320*/
+{
+   .hero img
+	{
+		margin-top: 6%;
+	}
 }
