@@ -86,7 +86,7 @@ table {
 		margin: 1%;
 		margin-left: 2.2%;
 		margin-bottom: 0%;
-		font-size: 2vw; /* ??? */
+		font-size: 2.5vw; 
 	}
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
@@ -96,29 +96,32 @@ table {
 		margin: 0.5%;
 		margin-left: 5%;
 		margin-bottom: 0;
-		font-size: 1.5vw;
-	}
-}
-@media screen and (max-width: 700px)
-{
-	#topLine nav input
-	{
-		font-size: 1.5vw; /* ??? */
+		font-size: 2vw;
 	}
 }
 
-@media screen and (max-width: 640px)
+@media screen and (max-width: 820px)
 {
 	#topLine nav input
 	{
-		font-size: 3.5vw; /* ??? */
+		width: 25%;
+		font-size: 3vw;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	#topLine nav input
+	{
+		width: 46%;
+		font-size: 5vw;
 	}
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
 	#topLine nav input
 	{
-		width: 20%;
-		font-size: 2.5vw;
+		width: 25%;
+		font-size: 3vw;
 	}
 }
 

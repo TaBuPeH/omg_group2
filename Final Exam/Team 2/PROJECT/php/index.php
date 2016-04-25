@@ -38,14 +38,15 @@ if(!isset($_SESSION['logged_user']))
         <link rel="stylesheet" href="../css/heroes.css" />
         <link rel="stylesheet" href="../css/login.css" />
 
-        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    	<script src="../js/jquery.min.js"></script>
         <script src="../js/clouds.js"></script>
         <script src="../js/app.js"></script>
         <script src="../js/atack.js"></script>
         <script src="../js/login.js"></script>
         <script src="../js/main.js"></script>
-		
-	<!-- 	 -->
+		<!--   -->
+	 	 
     </head>	
 
 <body>
@@ -59,9 +60,10 @@ if(!isset($_SESSION['logged_user']))
 			<div id="topLine" >
 
 				<nav>
-					<input type="submit" class="topButtons" id="profButton" value="Profile">
-					<input type="submit" class="topButtons" id="heroButton" value="Create Hero">
-					<input type="submit" class="topButtons" id="logButton" value="Login"> <!--  -->
+					<!--  <input type="submit" class="topButtons" id="profButton" value="Profile">  -->
+					<input type="submit" class="topButtons" id="logButton" value="Login"> 
+					<input type="submit" class="topButtons" id="heroButton" value="New Game">
+					<!--  -->
 					<!-- should change to "Logout" on logging -->
 				</nav>
 				
@@ -85,11 +87,19 @@ if(!isset($_SESSION['logged_user']))
 			<!--  	-->
 			<div>
 				<div class="health">  
+<<<<<<< HEAD
 					<div id="hero1"> Health: /<?php print_r($warrior->getHP()); ?> </div>
 				</div>
 				
 				<div class="health">  
 					<div id="hero2"> Health: /<?php print_r($healer->getHP()); ?> </div>
+=======
+					<div> <span>Health:</span> 100/100 </div>
+				</div>
+				
+				<div class="health">  
+					<div> <span>Health:</span> 100/100 </div>
+>>>>>>> d3ee13355514b2ecd4ecd0a045e7227aae51b1aa
 				</div>
 				
 			</div>
