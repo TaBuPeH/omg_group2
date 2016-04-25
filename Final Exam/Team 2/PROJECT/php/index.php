@@ -80,26 +80,20 @@ if(!isset($_SESSION['logged_user']))
 			
 		<div id="content">
 		
-			<?php
-			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-			?>
+		
 
 			<!--  	-->
 			<div>
+				 
+				
 				<div class="health">  
-<<<<<<< HEAD
-					<div id="hero1"> Health: /<?php print_r($warrior->getHP()); ?> </div>
+					
+					<div id="hero1"> <span>Health:</span> 100/100 </div>
 				</div>
 				
 				<div class="health">  
-					<div id="hero2"> Health: /<?php print_r($healer->getHP()); ?> </div>
-=======
-					<div> <span>Health:</span> 100/100 </div>
-				</div>
-				
-				<div class="health">  
-					<div> <span>Health:</span> 100/100 </div>
->>>>>>> d3ee13355514b2ecd4ecd0a045e7227aae51b1aa
+					<div id="hero2"> <span>Health:</span> 120/120 </div>
+
 				</div>
 				
 			</div>
@@ -129,11 +123,11 @@ if(!isset($_SESSION['logged_user']))
 			<div>
 			
 				<div class="hero">
-					<img src="../img/hero1.png">
+					<img src="../img/hero3.png">
 				</div>
 				
 				<div class="hero">
-					<img src="../img/hero1.png">
+					<img src="../img/hero2.png">
 				</div>
 				
 			</div>

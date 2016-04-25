@@ -48,6 +48,11 @@
 		 $this->hp = $a;
 		 $this->dmg = $b;
 	 }
+	 
+	 public function rest()
+	 {
+		 $this->hp+=5;
+	 }
  }
 
 
@@ -65,9 +70,11 @@
 		  return $this->powerHit;
 	  }
 	
-	  public function usePowerHit()
+	  public function usePowerHit(&$target)
 	  {
-		  $this->dmg = $this->dmg*$this->powerHit;
+		  $remaining = $target->getHP() - $this->dmg*1.6 ;
+		$target->setHP($remaining);	
+		  
 	  }
   }
  class healer extends lifeform
