@@ -1,6 +1,7 @@
 <?php 
 	require_once "db.class.php";
-	
+	//require_once "play.php";
+	require_once "game.php";
 	require_once "login.php";
 	require_once "register.php";
 
@@ -12,18 +13,13 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
-<<<<<<< HEAD
+
 
 
 
 
 	
 
-
-
-=======
-
->>>>>>> 5aefe9dcfdfa8ecc1761dd1ca49d3ba7d7f8d208
 ?>
 
 <!doctype html>
@@ -89,12 +85,13 @@ if(!isset($_SESSION['logged_user']))
 			<!--  	-->
 			<div>
 				<div class="health">  
-					<div> Health: 100/100 </div>
+					<div id="hero1"> Health: /<?php print_r($warrior->getHP()); ?> </div>
 				</div>
 				
 				<div class="health">  
-					<div> Health: 100/100 </div>
+					<div id="hero2"> Health: /<?php print_r($healer->getHP()); ?> </div>
 				</div>
+				
 			</div>
 			
 			<div>
