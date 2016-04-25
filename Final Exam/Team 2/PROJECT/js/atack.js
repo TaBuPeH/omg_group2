@@ -2,13 +2,57 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	
 	var options = {
-		duration: 1400,
+
+		duration: 1000,
 		easing: 'swing' 
-		//easing: 'easeInOutQuint'
-		//easeInOutQuint/easeInOutCubic
 	};
 
-	var isAnimating = false;
+	// $(".attack").click(function()
+	// {	
+		
+		// $(this).fadeOut(1000).delay(800).fadeIn(1000);
+	
+		// $(".hero:nth-of-type(1) img").animate({left: '+=80%', opacity: '0.5'}, options);
+		// $(".hero:nth-of-type(2) img").animate({left: '-=80%', opacity: '0.5'}, options);
+		
+		
+		// if($(this).closest('.hero_0_actions').length)
+		// {
+			// $( "$(this).closest('.hero_0_actions').span;" ).addClass( "hero1" );
+			// //var url_warr= "warrior_attack.php?warrior=0&healer=1";
+			// var url= "play.php?warrior=0&healer=1";
+			// //document.getElementById("hero1").innerHTML = response+"/";
+		// }	
+		// else
+		// {
+			// var url= "play.php?warrior=1&healer=0";
+			// //var url_heal= "healer_attack.php?attacker=0&defender=1";
+			// //var url_warr= "defender.php?attacker=1&defender=0";
+			// //var url_heal= "defender.php?attacker=0&defender=1";
+			// //document.getElementById("hero2").innerHTML = response;
+			
+		// }
+		// $.get(url,function(response){
+			
+			// console.log(response);
+			
+			
+			 // document.getElementByClassName("hero1").innerHTML = response;
+			 // document.getElementByClassName("hero2").innerHTML = response;
+		// });
+		 
+
+			
+		// $(".hero:nth-of-type(1) img").animate({left: '-=80%', opacity: '1'}, options);
+		// $(".hero:nth-of-type(2) img").animate({left: '+=80%', opacity: '1'}, options);
+
+		// duration: 1400,
+		// easing: 'swing';
+		// //easing: 'easeInOutQuint'
+		// //easeInOutQuint/easeInOutCubic
+	// };
+
+	 var isAnimating = false;
 
 
 	/*
@@ -53,8 +97,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
+<<<<<<< HEAD
 			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
+=======
+			if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "normalAttack.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "normalAttack.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+		
+		 });
+		 
+			
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
+>>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
 		}
 	});
 	$(".actions:nth-of-type(2) .attack").click(function()
@@ -66,9 +138,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
+<<<<<<< HEAD
 			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
+=======
+			if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "normalAttack.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "normalAttack.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero1").innerHTML = "Health: "+response+"/100";
+		
+		 });
+			
+			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
+>>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
 		}
+
 	});
 
 	$(".actions:nth-of-type(1) .rest").click(function()
@@ -79,6 +179,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
 					isAnimating = false;	
 				});
+			
+			if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "rest.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "rest.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero1").innerHTML = "Health: "+response+"/100";
+		
+		 });
 			
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
@@ -94,6 +215,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
 					isAnimating = false;	
 				});
+			
+			if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "rest.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "rest.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+		
+		 });
+			
 			
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
@@ -111,34 +254,123 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
+<<<<<<< HEAD
 			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
+=======
+			
+			
+			
+			
+			
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
+>>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
 		}
+		if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "warrior_specialAttack.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "warrior_specialAttack.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+		
+		 });
+		
 	});
 	$(".actions:nth-of-type(2) .specialAbility").click(function()
 	{
-		if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
+		
+		// if($(this).closest('.hero_0_actions').length)
+		 // {
+			 
+			 
+			 // var url= "warrior_specialAttack.php?attacker=0&defender=1";
+			 
+		 // }	
+		 // else
+		 // {
+			 // var url= "warrior_specialAttack.php?attacker=1&defender=0";
 			
+<<<<<<< HEAD
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=140%'}, options);
 		}
+=======
+		 // }
+		 // $.get(url,function(response){
+			
+			 // console.log(response);
+			
+			  // //document.getElementById("hero1").innerHTML = response;
+			  // document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+		
+		 // });
+		
+		
+		
+		
+		
+ if(isAnimating==false)
+		 {
+			 isAnimating = true;
+			 $(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					 isAnimating = false;	
+				 });
+			 if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "healer_specialAttack.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "healer_specialAttack.php?attacker=1&defender=0";
+			
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+		
+		 });
+			 
+			 $(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			 $(".hero:nth-of-type(2) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			 $(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+			 $(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+			 $(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
+			
+			
+			
+			
+			
+			
+		 }
+>>>>>>> 68f05e321dd8a0ec774fc591aa173d1664ae42f3
 	});
 	
 	
 	
-	/*
-	$(".defence").click(function()
-	{
-		$(this).parent().parent().fadeOut(500).delay(1400).fadeIn(500);
-	});
-	*/
+
 });
 
 

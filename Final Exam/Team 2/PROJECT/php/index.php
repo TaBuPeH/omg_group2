@@ -1,5 +1,7 @@
 <?php 
 	require_once "db.class.php";
+	//require_once "play.php";
+	require_once "game.php";
 	require_once "login.php";
 	require_once "register.php";
 
@@ -11,6 +13,12 @@ if(!isset($_SESSION['logged_user']))
 {
 	//header("Location: login.php");
 }
+
+
+
+
+
+	
 
 ?>
 
@@ -71,26 +79,29 @@ if(!isset($_SESSION['logged_user']))
 			
 		<div id="content">
 		
-			<?php
-			//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-			?>
+		
 
 			<!--  	-->
 
 			<div>
+				 
+				
 				<div class="health">  
-					<div> <span>Health:</span> 100/100 </div>
+					
+					<div id="hero1"> <span>Health:</span> 100/100 </div>
 				</div>
 				
 				<div class="health">  
-					<div> <span>Health:</span> 100/100 </div>
+					<div id="hero2"> <span>Health:</span> 120/120 </div>
+
 				</div>
+				
 			</div>
 			
 			<div>
 			
 				<div class="actions">
-					<div>
+					<div class='hero_0_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
@@ -99,7 +110,7 @@ if(!isset($_SESSION['logged_user']))
 				</div>
 				
 				<div class="actions">
-					<div>
+					<div  class='hero_1_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
@@ -112,11 +123,11 @@ if(!isset($_SESSION['logged_user']))
 			<div>
 			
 				<div class="hero">
-					<img src="../img/hero1.png">
+					<img src="../img/hero3.png">
 				</div>
 				
 				<div class="hero">
-					<img src="../img/hero1.png">
+					<img src="../img/hero2.png">
 				</div>
 				
 			</div>
