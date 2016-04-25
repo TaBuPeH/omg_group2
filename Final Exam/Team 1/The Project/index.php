@@ -248,7 +248,7 @@ s
                         <option value="Leicester" >Leicester</option>
                     </select>
                     <div class="white_space" >
-                    <input class="validation" type="file" name="image">
+                    <input class="validation" type="file" name="image" required="required">
                     <label class="validation-info"></label>
                     </div>
                     <input class="btn btn-danger ivan" type="submit" value="Sign now!">
