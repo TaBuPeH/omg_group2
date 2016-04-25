@@ -53,8 +53,7 @@ if(!isset($_SESSION['logged_user']))
 
 				<nav>
 					<!--  <input type="submit" class="topButtons" id="profButton" value="Profile">  -->
-					<input type="submit" class="topButtons" id="logButton" value="Login"> 
-					<input type="submit" class="topButtons" id="heroButton" value="New Game">
+					<input type="submit" class="topButtons" id="logButton" value="Login">
 					<!--  -->
 					<!-- should change to "Logout" on logging -->
 				</nav>
@@ -77,6 +76,7 @@ if(!isset($_SESSION['logged_user']))
 			?>
 
 			<!--  	-->
+
 			<div>
 				<div class="health">  
 					<div> <span>Health:</span> 100/100 </div>

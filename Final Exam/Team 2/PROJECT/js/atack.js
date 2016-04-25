@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
 		}
 	});
 	$(".actions:nth-of-type(2) .attack").click(function()
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
 		}
 	});
 
@@ -111,9 +111,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
 		}
 	});
 	$(".actions:nth-of-type(2) .specialAbility").click(function()
@@ -125,9 +125,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-			$(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=160%'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=140%'}, options);
 		}
 	});
 	
