@@ -66,6 +66,14 @@ $(document).ready( function(event) {
 		
 	});
 
+	$("#logoutButton").click(function()
+	{
+		window.location="logout.php";
+		//location.reload();
+		
+		
+	});
+		
 	/*$(".opened#heroButton").click(function()
 	{
 		alert("shbugv");

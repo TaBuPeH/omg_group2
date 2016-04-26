@@ -50,7 +50,9 @@ if(!isset($_SESSION['logged_user']))
     </head>	
 
 <body>
-	
+	<?php
+	//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
+	?>
     <body>
 	
 		<header>
@@ -59,19 +61,14 @@ if(!isset($_SESSION['logged_user']))
 
 				<nav>
 					<!--  <input type="submit" class="topButtons" id="profButton" value="Profile">  -->
-					<input type="submit" class="topButtons" id="logoutButton" value="Logout"> 
+					<input type="submit" class="topButtons" id="logButton" value="Login"> 
 					<input type="submit" class="topButtons" id="heroButton" value="New Game">
-					<div id="welcome">
-					<?php
-						echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
-					?>
-					</div>
 					<!--  -->
 					<!-- should change to "Logout" on logging -->
 				</nav>
 				
 			</div>
-			
+			<h1>sdsadsa</h1>
 		</header>
 	
 	
@@ -83,41 +80,28 @@ if(!isset($_SESSION['logged_user']))
 			
 		<div id="content">
 		
-		<div id="currentTurn" class="currentTurn">
 		
-		
-			</div>
-		
-			<div id="divLeftHero" class="divLeftHero">
-		
-		
-			</div>
-			
-			<div id="divRightHero" class="divRightHero">
-		
-		
-			</div>
-		
+
 			<!--  	-->
 			<div>
 				 
 				
 				<div class="health">  
 					
-					<div id="hero1"> <span>Health:</span> 130/130 </div>
+					<div id="hero1"> <span>Health:</span> 100/100 </div>
 				</div>
 				
 				<div class="health">  
-					<div id="hero2"> <span>Health:</span> 150/150 </div>
+					<div id="hero2"> <span>Health:</span> 120/120 </div>
 
 				</div>
 				
 			</div>
 			
 			<div>
-		
+			
 				<div class="actions">
-					<div class='hero_0_actions' id="hero_0_actions">
+					<div class='hero_0_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
@@ -126,8 +110,8 @@ if(!isset($_SESSION['logged_user']))
 				</div>
 				
 				<div class="actions">
-					<div  class='hero_1_actions' name="hero_1_actions">
-						<img src='../img/attack.png' class='action attack'> 
+					<div  class='hero_1_actions'>
+						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
 						<!-- <img src='../img/defence.png'>  	-->
@@ -135,31 +119,7 @@ if(!isset($_SESSION['logged_user']))
 				</div>
 				
 			</div>
-			<div>
-				<div class="nekuvDiv"> 
-					<div> 
-						<span>Attack:</span></br> 10-13 damage
-					</div> 
-					<div> 
-						<span>Rest:</span></br> 5 health 
-					</div>
-					<div> 
-						<span>Power Hit:</span></br> 2-20 damage
-					</div>
-				</div>
-				
-				<div class="nekuvDiv">  
-					<div> 
-						<span>Attack:</span></br> 7-10 damage 
-					</div>
-					<div> 
-						<span>Rest:</span></br> 5 health 
-					</div>
-					<div> 
-						<span>God's Touch:</span></br> 5-15 health
-					</div>
-				</div>
-			</div>
+			
 			<div>
 			
 				<div class="hero">

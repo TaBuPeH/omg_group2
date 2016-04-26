@@ -23,13 +23,13 @@ if(!empty($result))
 	}
 	else
 	{
-			header('Location: index.php');
+			header('Location: index.php?error=1');
 		echo 'error';
 	}
 }
 else
 {
-	header('Location: index.php');
+	header('Location: index.php?error=1');
 	
 	echo 'error';
 }

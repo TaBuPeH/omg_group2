@@ -9,16 +9,36 @@ $defender = $_SESSION['heroes'][$_GET['defender']];
 
 //$warrHP = $_SESSION['heroes'][$_GET['warrHP']];
 //$healerHP = $_SESSION['heroes'][$_GET['healerHP']];
-if($attacker->getHP() && $defender->getHP() > 0)
-	{   
-		$winner=0;
+//
+$hp_beforeattack=$defender->getHP();
+if($hp_beforeattack >1){
+		
+
 		$attacker->attack($defender);
-		print_r($defender->getHP());
-	}
-else 
-	{
-		$winner=1;
-	}
+		
+		$hp_afterattack=$defender->getHP();
+		
+		$result= $hp_afterattack - $hp_beforeattack;
+		
+		$_SESSION['dmg_dealt'][0] = $result;
+		
+		
+		if($hp_afterattack <=0){
+			
+			echo "-100";
+		}else
+			{
+				
+				print_r($hp_afterattack);
+		
+			}
+}
+		else
+		{
+			
+			echo "-100";
+		
+		}
  
  //print_r($defender->getHP());
 

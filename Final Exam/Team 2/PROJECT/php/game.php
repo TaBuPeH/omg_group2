@@ -3,20 +3,19 @@
 
   require_once('hero.class.php');
  
-  $warrior = new warrior(100,10);
+  $warrior = new warrior(130,8);
   //$warrior = $_POST['warrior']
 
  $warrior->setPowerHit(1.4);
 
 
- $healer = new healer(120,8); 
- $healer->setRestoreHp(10);
+ $healer = new healer(150,5); 
+ 
  
  
  $_SESSION['heroes'][0] = $warrior;
  $_SESSION['heroes'][1] = $healer;
- $_SESSION['heroes'][2] = $warrior->getHP();
- $_SESSION['heroes'][3] = $healer->getHP();
+ 
  
  //echo"<pre>";
  //print_r($_SESSION);

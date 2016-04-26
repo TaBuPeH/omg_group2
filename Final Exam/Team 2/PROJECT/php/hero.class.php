@@ -9,7 +9,7 @@
 	
 	 public function attack(&$target)
 	 {
-		 $critModifier = 1;
+		
 		
 		 // if( rand(0,100) < $this->critChance)
 		 // {
@@ -19,19 +19,11 @@
 		 // {
 			// // $critModifier = 10;
 		 // }
-		 $remaining = $target->getHP() - $this->dmg*$critModifier ;
+		 
+		 $dmg_dealth=rand(2,5);
+		 $remaining = $target->getHP() - $dmg_dealth -$this->dmg;
 		 $target->setHP($remaining);		
 	 }
-	
-	 // public function setCritChance($c)
-	 // {
-		 // $this->critChance = $c;
-	 // }
-	
-	 // public function getCritChance()
-	 // {
-		 // return $this->critChance;
-	 // }
 	
 	 public function getHP()
 	 {
@@ -72,7 +64,9 @@
 	
 	  public function usePowerHit(&$target)
 	  {
-		  $remaining = $target->getHP() - $this->dmg*1.6 ;
+		  $dmg_dealth=rand(2,20);
+		 $remaining = $target->getHP() - $dmg_dealth;
+		  
 		$target->setHP($remaining);	
 		  
 	  }
@@ -81,40 +75,41 @@
   {
 	  protected $restoreHp;
 	
-	  public function setRestoreHp($s)
-	  {
-		  $this->restoreHp = $s;
-	  }
+	  // public function setRestoreHp($s)
+	  // {
+		  // $this->restoreHp = $s;
+	  // }
 	
-	  public function getRestoreHp()
-	  {
-		  return $this->restoreHp;
-	  }
+	  // public function getRestoreHp()
+	  // {
+		  // return $this->restoreHp;
+	  // }
 	
-	  public function useRestoreHp()
+	  public function RestoreHp()
 	  {
-		  $this->hp = $this->hp + $this->restoreHp;
+		  $health_restored=rand(5,15);
+		  $this->hp +=$health_restored;
 	  }
   }
-  class tanker extends lifeform
-  {
-	  protected $buildArmor;
+  // class tanker extends lifeform
+  // {
+	  // protected $buildArmor;
 	
-	  public function setBuildArmor($s)
-	  {
-		  $this->buildArmor = $s;
-	  }
+	  // public function setBuildArmor($s)
+	  // {
+		  // $this->buildArmor = $s;
+	  // }
 	
-	  public function getBuildArmor()
-	  {
-		  return $this->buildArmor;
-	  }
+	  // public function getBuildArmor()
+	  // {
+		  // return $this->buildArmor;
+	  // }
 	
-	  public function useBuildArmor(&$target)
-	  {
-		  $target->dmg = $target->dmg * 0.9 ;
+	  // public function useBuildArmor(&$target)
+	  // {
+		  // $target->dmg = $target->dmg * 0.9 ;
 		 
-	  }
-  }
+	  // }
+  // }
 
   ?>

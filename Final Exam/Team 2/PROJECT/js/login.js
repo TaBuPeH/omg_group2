@@ -33,7 +33,9 @@ $("#registerForm .registrationButton").click( function() {
 	
 	//alert( "clicked" );
 	$.post( "register_db.php", $('#registerForm').serialize() , function( data ) {
-		alert( data );
+		$("#registerForm").css('visibility','hidden');
+		$("#loginForm").css('visibility','visible');
+		$("h2").text("Login Here");
 		//$("#forms h2").html(data);
 	});
 

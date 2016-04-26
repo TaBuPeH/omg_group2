@@ -1,4 +1,5 @@
-<?php
+ <?php
+
 
 require_once("hero.class.php");
 require_once('db.class.php');
@@ -9,39 +10,26 @@ $defender = $_SESSION['heroes'][$_GET['defender']];
 
 //$warrHP = $_SESSION['heroes'][$_GET['warrHP']];
 //$healerHP = $_SESSION['heroes'][$_GET['healerHP']];
-  
-	$hp_beforeattack=$defender->getHP();
 
 		
-		
-		
-		$attacker->UsePowerHit($defender);
-		
- 
-		
-		
+		$hp_beforeHeal=$attacker->getHP();
 
-		$hp_afterattack=$defender->getHP();
 		
-		$result= $hp_afterattack - $hp_beforeattack;
+		$attacker->RestoreHp();
+		print_r($attacker->getHP());
+		$hp_afterHeal=$attacker->getHP();
 		
-		if($hp_afterattack <=0){
-			
-			echo "-100";
-		}else
-		{	
-			
-			
-				
-			print_r($hp_afterattack);
-			
-		}
+		$result= $hp_afterHeal - $hp_beforeHeal;
+		
 		
 		
 		$_SESSION['dmg_dealt'][0] = $result;
 		
 		
- //print_r($defender->getHP());
+		
+	
+ 
+ 
 
-?>
+ ?>
 

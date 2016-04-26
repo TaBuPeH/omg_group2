@@ -2,8 +2,8 @@
 
 	require_once "db.class.php";
 	
-	echo "<pre>";
-	print_r($_POST);
+	//echo "<pre>";
+	//print_r($_POST);
 
 
 	$data = $_POST;
@@ -45,10 +45,10 @@
 		unset($data['password_2']);
 		$data['password'] = md5($data['password']);
 		$db->saveArray('users', $data);
-		header('Location: login.php');
+		//header('Location: login.php');
 	}
 	else
 	{
-		header('Location: register.php');
+		//header('Location: register.php');
 	}
 ?>

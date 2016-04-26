@@ -51,7 +51,7 @@ div#heroes
 	position: absolute;
 	width: 25%;
 	z-index: 500;
-	top: 0%;
+	bottom: 20%;
 }
 .hero:nth-of-type(1) img 
 {
@@ -118,7 +118,51 @@ div#heroes
 }
 
 /*************************/
+.divRightHero{
+	
+	width: 10%;
+	height: 10%;
+	position:absolute;
+	left:80%;
+	top:38%;
+	font-size:2vw;
+	margin:auto;
+	margin-top:3%;
+	text-align:center;
+}
 
+#welcome{
+	
+	float:right;
+	margin-top:0.55%;
+	margin-right:2%;
+}
+ 
+.currentTurn{
+	
+	width: 25%;
+	height: 10%;
+	left:38%;
+	top:15%;
+	
+	position:absolute;
+	font-size: 3vw;
+	margin:auto;
+	text-align:center;
+}
+
+.divLeftHero {
+	
+	width: 10%;
+	height: 10%;
+	position:absolute;
+	left:10%;
+	top:38%;
+	font-size:2vw;
+	margin:auto;
+	margin-top:3%;
+	text-align:center;
+}
 .health
 {
 	position: absolute;
@@ -165,7 +209,8 @@ div#heroes
 	position: absolute;
 	width: 48%;
 	height: 100%; /**/
-	bottom: 0%; /**/
+	bottom: 0%; /*
+	z-index: 300;*/
 	
 	display: inline;
 }
@@ -184,10 +229,10 @@ div#heroes
 	width: 16%;
 	z-index: 700;
 	font-size: 1.2vw;
-	bottom: 20%;
+	bottom: 10%;
 
-	background-color: #0099CC;
-	border: 1px solid #e7e7e7;
+	background-color: rgba(0, 153, 204,0.5);;
+	border: 1px solid rgba(192,192,192,0.5);;
 }
 .nekuvDiv:nth-of-type(1) div 
 {
@@ -204,15 +249,15 @@ div#heroes
 
 .nekuvDiv div:nth-of-type(1)
 {
-	margin-bottom: 31%;
+	margin-bottom: 20%;
 }
 .nekuvDiv div:nth-of-type(2)
 {
-	margin-bottom: 21%;
+	margin-bottom: 10%;
 }
 .nekuvDiv div:nth-of-type(3)
 {
-	margin-bottom: 11%;
+	margin-bottom: 0%;
 }
 
 /*************************/
@@ -349,20 +394,10 @@ div#heroes
 	
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
-	.hero
-	{
-		height: 50%; 
-	}
-	.actions
-	{
-		height: 50%; 
-	}
-
 
 	.hero img
 	{
-		width: 35%;/*40*/
-		margin-top: 0%; /*7*/
+		width: 40%;
 	}
 
 	.actions img
@@ -390,15 +425,29 @@ div#heroes
 		width: 50%;
 		font-size: 2.7vw;
 	}
+
+
+
+	.nekuvDiv div
+	{
+		font-size: 1.8vw;
+		
+	}
+	.nekuvDiv div:nth-of-type(1)
+	{
+		margin-bottom: 30%;
+	}
+	.nekuvDiv div:nth-of-type(2)
+	{
+		margin-bottom: 15%;
+	}
+	.nekuvDiv div:nth-of-type(3)
+	{
+		margin-bottom: 0%;
+	}
+
 }
 
-@media screen and (max-width: 800px) and (orientation: portrait)
-{
-	
-	
-}@media screen and (max-width: 800px) and (orientation : landscape)
-{
-}
 
 @media screen and (max-width: 640px) and (orientation: portrait)
 {
@@ -441,11 +490,11 @@ div#heroes
 {
 	.hero
 	{
-		height: 48%; 
+		height: 50%; 
 	}
 	.actions
 	{
-		height: 52%; 
+		height: 50%; 
 	}
 	.hero img
 	{

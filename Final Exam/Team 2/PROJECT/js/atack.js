@@ -7,90 +7,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		easing: 'swing' 
 	};
 
-	// $(".attack").click(function()
-	// {	
-		
-		// $(this).fadeOut(1000).delay(800).fadeIn(1000);
 	
-		// $(".hero:nth-of-type(1) img").animate({left: '+=80%', opacity: '0.5'}, options);
-		// $(".hero:nth-of-type(2) img").animate({left: '-=80%', opacity: '0.5'}, options);
-		
-		
-		// if($(this).closest('.hero_0_actions').length)
-		// {
-			// $( "$(this).closest('.hero_0_actions').span;" ).addClass( "hero1" );
-			// //var url_warr= "warrior_attack.php?warrior=0&healer=1";
-			// var url= "play.php?warrior=0&healer=1";
-			// //document.getElementById("hero1").innerHTML = response+"/";
-		// }	
-		// else
-		// {
-			// var url= "play.php?warrior=1&healer=0";
-			// //var url_heal= "healer_attack.php?attacker=0&defender=1";
-			// //var url_warr= "defender.php?attacker=1&defender=0";
-			// //var url_heal= "defender.php?attacker=0&defender=1";
-			// //document.getElementById("hero2").innerHTML = response;
-			
-		// }
-		// $.get(url,function(response){
-			
-			// console.log(response);
-			
-			
-			 // document.getElementByClassName("hero1").innerHTML = response;
-			 // document.getElementByClassName("hero2").innerHTML = response;
-		// });
-		 
-
-			
-		// $(".hero:nth-of-type(1) img").animate({left: '-=80%', opacity: '1'}, options);
-		// $(".hero:nth-of-type(2) img").animate({left: '+=80%', opacity: '1'}, options);
-
-		// duration: 1400,
-		// easing: 'swing';
-		// //easing: 'easeInOutQuint'
-		// //easeInOutQuint/easeInOutCubic
-	// };
 
 	 var isAnimating = false;
+		
 
+	var nextTurn=1;
 
-	/*
-	//var heroWidth = $(".hero img").width();
-	var width = $(window).width();
-	//alert(width);
-	var beforeWidth = width/5;
-	if (width < 1024) beforeWidth = width/4;
-	if (width < 640) beforeWidth =  width/2;
-	var actionWidth = beforeWidth/5;
 	
-	
-	//var offset = $("#heroes").offset();
-	//alert(offset.left);
-	
-	
-	var $attackImg = $( "<img src='../img/attack.png' class='action attack'>");
-	var $specialAbilityImg = $("<img src='../img/specialAbility.png' class='action specialAbility'>");
-	var $defenceImg = $( "<img src='../img/defence.png' class='action defence'>");
-	var $restImg = $( "<img src='../img/rest.png' class='action rest'>");
-	
-	$( "div#heroes .hero img" ).before( "<div class='before'> </div>");
-	$( ".before" ).append($attackImg, $specialAbilityImg, $defenceImg, $restImg);
-	$( ".before" ).css({width: beforeWidth});
-	//$('head').append('<style>.action{width:5% !important;}</style>');
-	
-	$(".action").css({width: actionWidth, position: "absolute", display:"block", zIndex: "400", bottom: "15%"}); //
-	
-	$(".action:nth-of-type(1)").css({marginLeft: "0%", marginRight: "18%"});
-	$(".action:nth-of-type(2)").css({marginLeft: "6%", marginRight: "12%"});
-	$(".action:nth-of-type(3)").css({marginLeft: "12%", marginRight: "6%"});
-	$(".action:nth-of-type(4)").css({marginLeft: "19%", marginRight: "-1%"});
-	
-*/
-
 	$(".actions:nth-of-type(1) .attack").click(function()
-	{
-<<<<<<< HEAD
+	{	
+		
 		if(isAnimating==false)
 		{
 			isAnimating = true;
@@ -98,117 +25,55 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-
-			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
-
 			if($(this).closest('.hero_0_actions').length)
-=======
-		
-		if($(this).closest('.hero_0_actions').length)
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 		 {
 			 
 			 
 			 var url= "normalAttack.php?attacker=0&defender=1";
+			 var url1= "attackResult.php?dmg_dealt=0";
 			 
 		 }	
 		 else
 		 {
-			 var url= "normalAttack.php?attacker=1&defender=0";
+			 var url= "attackResult.php?dmg_dealth=1";
 			
 		 }
 		 $.get(url,function(response){
 			
 			 console.log(response);
 			
+			
 			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
-		
+			  if(parseFloat(response) == -100)
+				{
+				
+					document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";	
+				}
+				else{
+					document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+					setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
+  }, 2500);
+				}
+		 });
+		 $.get(url1,function(response){
+			
+			 console.log(response);
+			  document.getElementById("divRightHero").innerHTML =" "+response;
 		 });
 		 
-<<<<<<< HEAD
-			
-			
+		 
+
 			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
- 
+			
 		}
+	
 	});
-	$(".actions:nth-of-type(2) .attack").click(function()
-	{
-=======
-
-
-
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
-		if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
-			
-<<<<<<< HEAD
- 
-			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
-
-=======
-
-			$(".hero:nth-of-type(1) img").animate({left: '+=140%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=140%', opacity: '1'}, options);
-		}
-	});
-	$(".actions:nth-of-type(2) .attack").click(function()
-	{
-		
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
-			if($(this).closest('.hero_0_actions').length)
-		 {
-			 
-			 
-			 var url= "normalAttack.php?attacker=0&defender=1";
-			 
-		 }	
-		 else
-		 {
-			 var url= "normalAttack.php?attacker=1&defender=0";
-			
-		 }
-		 $.get(url,function(response){
-			
-			 console.log(response);
-			
-			
-			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero1").innerHTML = "Health: "+response+"/100";
-		
-		 });
-<<<<<<< HEAD
-			
-			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
- 
-=======
-
-
-
-
-		if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
-			$(".hero:nth-of-type(2) img").animate({left: '-=140%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=140%', opacity: '1'}, options);
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
-		}
-
-	});
-
-	$(".actions:nth-of-type(1) .rest").click(function()
+	
+$(".actions:nth-of-type(1) .rest").click(function()
 	{
 		if(isAnimating == false)
 		{
@@ -234,16 +99,171 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			 console.log(response);
 			
 			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero1").innerHTML = "Health: "+response+"/100";
+			  
+			  document.getElementById("divLeftHero").innerHTML ="  +5";
 		
+		
+		if(response != "over")
+				{
+					document.getElementById("hero1").innerHTML = "Health: "+response+"/130";
+				}
+				else{
+				document.getElementById("currentTurn").innerHTML = "RIGHT PLAYER WINS!";	
+				}
 		 });
+		 
 			
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 		}
-		
+		setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
+  }, 2500);
 	});
+
+
+	
+	$(".actions:nth-of-type(1) .specialAbility").click(function()
+	{
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			
+			
+			
+			
+			
+			
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
+		}
+		if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "warrior_specialAttack.php?attacker=0&defender=1";
+			 var url1= "attackResult.php?dmg_dealt=0";
+		 }	
+		 else
+		 {
+			 var url= "warrior_specialAttack.php?attacker=1&defender=0";
+			var url1= "attackResult.php?dmg_dealt=0";
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			if(parseFloat(response) == -100)
+				{
+				
+					document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";	
+				}
+				else{
+					document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+					setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
+  }, 2500);
+				}
+			  //document.getElementById("hero1").innerHTML = response;
+			  //document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+		
+		 });
+		$.get(url1,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("divRightHero").innerHTML =" "+response;
+		
+		 });
+		 setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
+  }, 2500);
+	});
+	
+	
+	
+	
+	
+	
+	$(".actions:nth-of-type(2) .attack").click(function()
+	{
+		if(isAnimating==false)
+		{
+			isAnimating = true;
+			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
+					isAnimating = false;	
+				});
+			
+			if($(this).closest('.hero_0_actions').length)
+		 {
+			 
+			 
+			 var url= "normalAttack.php?attacker=0&defender=1";
+			 
+		 }	
+		 else
+		 {
+			 var url= "normalAttack.php?attacker=1&defender=0";
+			var url1= "attackResult.php?dmg_dealt=0";
+		 }
+		 $.get(url,function(response){
+			
+			 console.log(response);
+			if(parseFloat(response) == -100)
+				{
+				
+					document.getElementById("currentTurn").innerHTML = "RIGHT PLAYER WINS!";	
+				}
+				else{
+					document.getElementById("hero1").innerHTML = "Health: "+response+"/150";
+					setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+  }, 2500);
+				}
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("hero1").innerHTML = "Health: "+response+"/130";
+		$.get(url1,function(response){
+			
+			
+			
+			 console.log(response);
+			  document.getElementById("divLeftHero").innerHTML =" "+response;
+		 });
+		
+		 });
+			
+			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
+		}
+setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+  }, 2500);
+	});
+	
+	
+	
+	
+
+
+	
+	
 	$(".actions:nth-of-type(2) .rest").click(function()
 	{
 		if(isAnimating == false)
@@ -270,7 +290,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			 console.log(response);
 			
 			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+			  document.getElementById("divRightHero").innerHTML =" +5";
 		
 		 });
 			
@@ -279,136 +300,63 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 		}
-
+		setTimeout(
+		  function() 
+		  {
+			document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+		  }, 2500);
 	});
-
-	$(".actions:nth-of-type(1) .specialAbility").click(function()
-	{
-<<<<<<< HEAD
-		if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
-			
- 
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
-
-			
-			
-			
-			
-			
-			
-			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=160%'}, options);
- 
-		}
-=======
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
-		if($(this).closest('.hero_0_actions').length)
-		 {
-			 
-			 
-			 var url= "warrior_specialAttack.php?attacker=0&defender=1";
-			 
-		 }	
-		 else
-		 {
-			 var url= "warrior_specialAttack.php?attacker=1&defender=0";
-			
-		 }
-		 $.get(url,function(response){
-			
-			 console.log(response);
-			
-			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
-		
-		 });
-
-
-
-
-		 if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
-			
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
-		}
-		
-	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	$(".actions:nth-of-type(2) .specialAbility").click(function()
 	{
 		
-		// if($(this).closest('.hero_0_actions').length)
-		 // {
+		
+		
+		
+ if(isAnimating==false)
+		 {
+			 isAnimating = true;
+			 $(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+					 isAnimating = false;	
+				 });
 			 
-			 
-			 // var url= "warrior_specialAttack.php?attacker=0&defender=1";
-			 
-		 // }	
-		 // else
-		 // {
-			 // var url= "warrior_specialAttack.php?attacker=1&defender=0";
-			
-<<<<<<< HEAD
- 
-=======
- 		if(isAnimating==false)
-		{
-			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
-					isAnimating = false;	
-				});
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
-			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '-=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=140%'}, options);
-		}
-
-		 // }
-		 // $.get(url,function(response){
-			
-			 // console.log(response);
-			
-			  // //document.getElementById("hero1").innerHTML = response;
-			  // document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
-		
-		 // });
-		
-		
-		
 		if($(this).closest('.hero_0_actions').length)
 		 {
 			 
 			 
-			 var url= "healer_specialAttack.php?attacker=0&defender=1";
-			 
+			 var url= "healer_specialAbility.php?attacker=0&defender=1";
+			 var url1= "attackResult.php?dmg_dealt=0";
 		 }	
 		 else
 		 {
-			 var url= "healer_specialAttack.php?attacker=1&defender=0";
-			
+			 var url= "healer_specialAbility.php?attacker=1&defender=0";
+			var url1= "attackResult.php?dmg_dealt=0";
 		 }
 		 $.get(url,function(response){
 			
 			 console.log(response);
 			
 			  //document.getElementById("hero1").innerHTML = response;
-			  document.getElementById("hero2").innerHTML = "Health: "+response+"/120";
+			  document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
 		
 		 });
-<<<<<<< HEAD
+		 $.get(url1,function(response){
+			
+			 console.log(response);
+			
+			  //document.getElementById("hero1").innerHTML = response;
+			  document.getElementById("divRightHero").innerHTML ="   +"+response;
+		
+		 });
 			 
 			 $(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
 			 $(".hero:nth-of-type(2) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
@@ -420,12 +368,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			
 			
 			
+			
 		 }
-		 }
- 
-=======
+		 setTimeout(
+  function() 
+  {
+    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+  }, 2500);
 		 
->>>>>>> ed0cacdf080d588b725e310f696928695f5aeefd
 	});
 	
 	
@@ -433,6 +383,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+// $.ajax({
 
+                // url:"attackResult.php",
+                // type:"GET",
+                // success:function(result){
+
+			 // $(".actions:nth-of-type(1) .attack").click(function(){
+					 // var val=1;
+			 
+					
+				 // });
+                  // if(val == 1)
+				  // {
+					  // alert(val);
+					// }   
+
+                // }
+				
+            // });
 	
 	
