@@ -1,3 +1,7 @@
+@font-face {
+	font-family: "Chalkboard";
+	src: url(../fonts/Chalkboard.ttf);
+}
 
 html { 
 	width: 100%; 
@@ -5,7 +9,8 @@ html {
 	
 }
 body {
-		background-image: url("../img/background1.png");
+	background-image: url("../img/dark_wood.png");
+	/*background-color: black;*/
     background-repeat: repeat;
     font-family:Fertigo;
     
@@ -66,8 +71,8 @@ select{
 	border: none;
 	outline: none;
 	padding: 3%;
-	font-size: 13px;
-	color: #d91d1d;
+	font-size: 18px;
+	color: #800000;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	border: 1px solid #d91d1d;
 	border-radius: 4px;
@@ -133,46 +138,214 @@ input:focus {
 }
 
 
-/*added by Toshko*/
+
 span.toggleRegister:hover
 {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
+input:focus{
+background-color: rgba(238, 9, 17, 0.6);
+color: white;
+}
+.correct:focus{
+background-color: rgba(46,230,25,0.4);
+color: white;
+border-color: white;
+}
+.team div{
+	float: left;
+	display: inline-block;
+	color: white; 
+}
+.wins label{
+	margin-left: 50%;
+	font-size: 2vw;
+}
+
+
+.float{
+float:left;
+
+}
+.footer{
+	color: white;
+	width: 40%;
+
+}
+.footer_image{
+	color: white;
+	width: 40%;
+}
+.footer_image a{
+float: left;	
+}
+.facebook{
+		background-image:url("../img/facebook.jpg" );
+		background-attachment: center;
+		background-position: center;
+    	background-repeat:no-repeat;
+    	background-size: cover; 
+		padding-left:6%;
+		margin-left: 2%;
+		border: 1px solid white;
+		border-radius: 30%;
+}
+.google{
+		background-image:url("../img/google.jpg");
+		background-attachment: center;
+		background-position: center;
+		background-repeat:no-repeat;
+		background-size: cover; 
+		padding-left:6%;
+		padding-bottom: 0px;
+		margin-left: 1%;
+		border: 1px solid white;
+		border-radius: 30%;
+}
+.instagram{
+		background-image:url("../img/instagram.jpg"); 
+		background-attachment: center;
+		background-position: center;
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding-left:6%;
+		padding-bottom: 0px;
+		margin-left: 1%;
+		border: 1px solid white;
+		border-radius: 30%;
+}
+.skype{
+		background-image:url("../img/skype.jpg"); 
+		background-attachment: center;
+		background-position: center;
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding-left:6%;
+		padding-bottom: 0px;
+		margin-left: 1%;
+		border: 1px solid white;
+		border-radius: 30%;
+}
+.youtube{
+		background-image:url("../img/youtube.jpg"); 
+		background-attachment: center;
+		background-position: center;
+		background-repeat:no-repeat;
+		background-size: cover;
+		padding-left:6%;
+		padding-bottom: 0px;
+		margin-left: 1%;
+		border: 1px solid white;
+		border-radius: 30%;
+}
+.facebook:hover,.skype:hover,.google:hover,.instagram:hover,.skype:hover,.youtube:hover{
+	padding-left: 8%;
+	padding-top: 2%;
+	transition:0.3s;
+}
+.rowtext{
+	font-size: 20px;
+}
+.white_space{
+	white-space:nowrap;
+}
+.white_space label{
+	color:#49FC96;
+}
+.scoreboard{
+ background: url("../img/blackboard.jpg") center center  no-repeat fixed;
+ padding-bottom: 3%;
+ font-family: Chalkboard;
+}
+.wins label{
+ margin-left: 3.5%;
+ color: white;
+ font-size: 7vw;
+ float:left;
+}
+.WLD label{ 
+ margin-left: 11%;
+}
+.stat label{
+ color: white;
+ margin-right: 20%;
+ margin-left: 15%;
+ font-size: 15vw;
+}
+.stati label{
+ color: white;
+ font-size: 15vw;
+ margin-right: 13%;
+}
+
+.lose{
+ margin-left: 5.9%;
+}
+.draw{
+ margin-left: 7.7%;
+}
+.goal{
+ margin-left: 10%;
+}
+.conGoal{
+ margin-left: 20%;
+}
+
+
+
+
+
 @media screen and (max-width: 1200px){
 	.rowFloat{
 	width:100%;
 	float:left;
 	text-align:center;
-}
-.rowFloata{
-	width:100%;
-	float:left;
-	text-align:center;
-}
-.rowText{
-	font-size:3vw;
+	}
+	.rowFloata{
+		width:100%;
+		float:left;
+		text-align:center;
+	}
+	.rowText{
+		font-size:3vw;
+		text-align:center;
+		color:#ffffff;
+	}
+	.log { 
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -12.5% 0 0 -12.5%;
+		width:40%;
+	}
+	.sign { 
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		margin: -12.5% 0 0 -12.5%;
+		width:40%;
+		height:25%;
+		z-index: 26;
+
+	}
+	.rowText {
+	font-size:4.5vw;
 	text-align:center;
 	color:#ffffff;
-}
-.log { 
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -12.5% 0 0 -12.5%;
-	width:40%;
-}
-.sign { 
-	position: absolute;
-	top: 35%;
-	left: 50%;
-	margin: -12.5% 0 0 -12.5%;
-	width:40%;
-	height:25%;
-	z-index: 26;
+	}
+	.header1{
+	font-size:5.5vw;
+	text-align:center;
+	color:#ffffff;
+	text-shadow: 4px 4px 4px #000000;
 
 }
+
+
+}
+
 @media screen and (max-width: 600px){
 .row img{
 	

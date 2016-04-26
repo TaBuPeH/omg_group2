@@ -1,0 +1,90 @@
+body 
+{
+	background-image: url("../img/dark_wood.png");
+    background-repeat: repeat;
+    font-family:Fertigo;
+    
+}
+.gamebg {
+	background-image: url('../img/stadium.jpg'); 
+	background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% auto;
+    margin-top:5%;
+  	z-index:10px; 
+  	text-shadow: 2px 2px 0px #000;
+}
+.teamSelection
+{
+	position:relative;
+	width:70%;
+	margin-left:15%;
+	padding-bottom:43%;
+}
+.yourTeam{
+	width:30%;
+	display:inline;
+	float:left;
+	padding-top:2%;
+}
+.result{
+	width:40%;
+	display:inline;
+	float:left;
+	text-align:center;
+	color:white;
+	font-size:2.3vw;
+	font-weight:bold;
+	margin-top:10%; 
+}
+.opponent{
+	width:30%;
+	display:inline;		
+	float:right;
+	padding-top:2%
+}  
+.teamImg img{
+	width:60%;
+}
+.teamImg{
+	text-align:center;
+	position:relative;
+}
+.teamImg1 img{
+	width:60%;
+}
+.teamImg1{
+	text-align:center;
+	position:relative;
+}
+.comments{
+	position:relative;
+	width:100%;
+	text-align:center;
+	color:white;
+	font-size:2.3vw;
+	font-weight:bold;
+	float:left;
+}
+.stats{
+	position:relative;
+	width:100%;
+	text-align:center;
+	color:white;
+	font-size:2.3vw;
+	font-weight:bold;
+	float:left;
+	margin-top:2%;
+}
+.teamStats{
+	width:30%;
+	float:left;
+	display:inline;
+}
+.stat{
+	width:40%;
+	float:left;
+	display:inline;
+}

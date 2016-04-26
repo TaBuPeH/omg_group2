@@ -25,28 +25,28 @@
 	z-index: 26;
 }
 
-  li {  
+  .navli {  
         color:#000;
         transition: background 0.4s linear;
 }
-li:hover { 
+.navli:hover { 
   background-color: #ca1c1c; 
   color:#fff;  
 }
-li:focus{
+.navli:focus{
   background-color: #ca1c1c; 
   color:#fff;  
 }
 .loginButtons{
   position: initial;
   padding-top:1%;
+  margin-left:9%;
   float:right;
-  width: 16%;
 }
 #hello{
   position:absolute;
   display:inline-block;
-  margin-left:52%;
+  margin-left:45%;
   margin-top:1.1%;
   text-decoration:none;
   color:white;
@@ -56,35 +56,284 @@ li:focus{
   margin-left:10%;
   margin-right:5%;
   
-  }
-
-.loginButtons > button {
-background-color:none;
-border-style:none;
-background-color:green;
-
 }
+
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  margin-top: 3.6%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  margin-top: 3.6%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  margin-top: 3.6%;
+  font-weight: bold;
+}
+
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  margin-top: 3.6%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  margin-top: 3.6%;
+  font-weight: bold;
+}
+
+.profile_arsenal>img,.profile_chelsea>img,.profile_liverpool>img,.profile_mancity>img,.profile_leicester>img{
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  border: white solid 3px;
+  width:25%;
+}
+
+.names{
+ display: inline;
+ margin-left: 2%;
+ font-size: 5vw;
+ font-weight: 250px;
+}
+.navbar-header{
+  width: 60%;
+  display: inline-block;
+}
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
    
 .loginButtons{
-  position: initial;
   margin-top:0.7%;
-  width: 20%;
   float:right;
+}
+#hello{
+  display: none;
+}
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
   
+  margin-top: 4.5%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  
+  margin-top: 4.5%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  
+  margin-top: 4.5%;
+  font-weight: bold;
+}
 
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  
+  margin-top: 4.5%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  
+  margin-top: 4.5%;
+  font-weight: bold;
+}
+}
+@media screen and (max-width: 800px) {
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
+  
+  margin-top: 8%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  
+  margin-top: 8%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  
+  margin-top: 8%;
+  font-weight: bold;
+}
+
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  
+  margin-top: 8%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  
+  margin-top: 8%;
+  font-weight: bold;
 }
 }
 @media screen and (max-width: 767px) {
-.navbar-toggle{
-}
+
 .loginButtons{
-  position: initial;
-  top:0.8%;
-  width:25%;
+  width:50%;
+  margin-top: -8%;
+  float:right;
+}
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
+  
+  margin-top: 9.6%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  
+  margin-top: 9.6%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  
+  margin-top: 9.6%;
+  font-weight: bold;
+}
+
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  
+  margin-top: 9.6%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  
+  margin-top: 9.6%;
+  font-weight: bold;
+}
+}
+@media screen and (max-width: 600px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -11%;
+  float:right;
+}
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
+  
+  margin-top: 14%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  
+  margin-top: 14%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  
+  margin-top: 14%;
+  font-weight: bold;
+}
+
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  
+  margin-top: 14%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  
+  margin-top: 14%;
+  font-weight: bold;
+}
+}
+@media screen and (max-width: 450px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -13%;
+  margin-left: 5%;
   float:right;
   
 
+}
+}
+@media screen and (max-width: 380px) {
+
+.loginButtons{
+  width:50%;
+  margin-top: -15%;
+  margin-right: -10%;
+  float:right;
+}
+.profile_arsenal{
+  background-image: url("../img/arsenal-stadium.jpg");
+  
+  margin-top: 18.4%;
+  font-weight: bold;
+}
+.profile_chelsea{
+  background-image: url("../img/chelsea-stadium.jpg");
+  
+  margin-top: 18.4%;
+  font-weight: bold;
+}
+.profile_liverpool{
+  background-image: url("../img/liverpool-stadium.jpg");
+  
+  margin-top: 18.4%;
+  font-weight: bold;
+}
+
+.profile_mancity{
+  background-image: url("../img/mancity-stadium.jpg");
+  
+  margin-top: 18.4%;
+  font-weight: bold;
+}
+.profile_leicester{
+  background-image: url("../img/leicester-stadium.jpg");
+  
+  margin-top: 18.4%;
+  font-weight: bold;
 }
 }
