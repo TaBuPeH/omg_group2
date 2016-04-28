@@ -4,21 +4,12 @@
 	require_once "game.php";
 	require_once "login.php";
 	require_once "register.php";
+	require_once "db.class.php";
 
-
-require_once "db.class.php";
-
-
-if(!isset($_SESSION['logged_user']))
-{
-	//header("Location: login.php");
-}
-
-
-
-
-
-	
+	if(!isset($_SESSION['logged_user']))
+	{
+		//header("Location: login.php");
+	}
 
 ?>
 
@@ -49,93 +40,71 @@ if(!isset($_SESSION['logged_user']))
 	 	 
     </head>	
 
-<body>
 	<?php
 	//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
 	?>
+
     <body>
 	
 		<header>
-			
 			<div id="topLine" >
-
 				<nav>
-					<!--  <input type="submit" class="topButtons" id="profButton" value="Profile">  -->
+					<!-- <input type="submit" class="topButtons" id="profButton" value="Profile"> -->
 					<input type="submit" class="topButtons" id="logButton" value="Login">
 					<!--  -->
 					<!-- should change to "Logout" on logging -->
 				</nav>
-				
 			</div>
-			
 		</header>
-	
 	
 		<div id="background">		
 			<div id="far-clouds" class="stage clouds"></div>
 			<div id="near-clouds" class="stage clouds"></div>
 			<div id="ground" class="stage"></div>
 		</div>
-			
-		<div id="content">
-		
-		
 
-			<!--  	-->
+		<!--
+		<div id="content">
 
 			<div>
-				 
-				
-				<div class="health">  
-					
+				<div class="health">
 					<div id="hero1"> <span>Health:</span> 100/100 </div>
 				</div>
-				
 				<div class="health">  
 					<div id="hero2"> <span>Health:</span> 120/120 </div>
-
 				</div>
-				
 			</div>
 			
 			<div>
-			
 				<div class="actions">
 					<div class='hero_0_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
-						<!-- <img src='../img/defence.png'>  	-->
+						<!-- <img src='../img/defence.png'>  
 					</div>
 				</div>
-				
 				<div class="actions">
 					<div  class='hero_1_actions'>
 						<img src='../img/attack.png' class='action attack'>
 						<img src='../img/rest.png' class='action rest'>
 						<img src='../img/specialAbility.png' class='action specialAbility'> 
-						<!-- <img src='../img/defence.png'>  	-->
+						<!-- <img src='../img/defence.png'>  
 					</div>
 				</div>
-				
 			</div>
 			
 			<div>
-			
 				<div class="hero">
 					<img src="../img/hero3.png">
 				</div>
-				
 				<div class="hero">
 					<img src="../img/hero2.png">
 				</div>
-				
 			</div>
-			
-        </div>
-		
+        </div> 
+        -->
     </body>
-	
 </html>
 
 

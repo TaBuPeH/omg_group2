@@ -28,40 +28,45 @@ div#heroes
 
 	visibility: hidden;
 }
+
 .hero
 {
 	position: absolute;
-	width: 48%; /**/
-	height: 40%;/**/
-	bottom: 0%;/**/
+	width: 50%;
+	height: 100%;
+	bottom: 0%;
 	
 	display: inline;
 	/*float:left;*/
 }
-.hero:nth-of-type(1)
+.hero:nth-of-type(1),
+.actions:nth-of-type(1),
+.health:nth-of-type(1)
 {
-	left: 6%;
+	left: 10%;
 }
-.hero:nth-of-type(2)
+.hero:nth-of-type(2),
+.actions:nth-of-type(2),
+.health:nth-of-type(2)
 {
-	right: 6%;
+	right: 10%;
 } 
 .hero img
 {
 	position: absolute;
 	width: 25%;
-	z-index: 500;
-	bottom: 20%;
+	z-index: 500; /**/
+	bottom: 7%;
 }
-.hero:nth-of-type(1) img 
+.hero:nth-of-type(1) img,
+.actions:nth-of-type(1) img
 {
 	left: 0;
-	margin-left: 5%;
 }
-.hero:nth-of-type(2) img
+.hero:nth-of-type(2) img,
+.actions:nth-of-type(2) img
 {
 	right: 0;
-	margin-right: 5%;
 }
 
 /*************************/
@@ -69,37 +74,20 @@ div#heroes
 .actions
 {
 	position: absolute;
-	width: 48%;
-	height: 60%; /**/
-	top: 0%; /**/
+	width: 40%;
+	height: 100%;
+	bottom: 0%;
 	
 	display: inline;
 	/*float: left;*/
 }
-.actions:nth-of-type(1)
-{
-	left: 8%;
-}
-.actions:nth-of-type(2)
-{
-	right: 8%;
-} 
 .actions img
 {
 	position: absolute;
 	width: 10%;
-	z-index: 600;
-	bottom: 0%;
+	z-index: 600; /**/
+	bottom: 43%;
 }
-.actions:nth-of-type(1) img 
-{
-	left: 0;
-}
-.actions:nth-of-type(2) img
-{
-	right: 0;
-}
-
 
 .actions img:nth-of-type(1)
 {
@@ -118,76 +106,23 @@ div#heroes
 }
 
 /*************************/
-.divRightHero{
-	
-	width: 10%;
-	height: 10%;
-	position:absolute;
-	left:80%;
-	top:38%;
-	font-size:2vw;
-	margin:auto;
-	margin-top:3%;
-	text-align:center;
-}
 
-#welcome{
-	
-	float:right;
-	margin-top:0.55%;
-	margin-right:2%;
-}
- 
-.currentTurn{
-	
-	width: 25%;
-	height: 10%;
-	left:38%;
-	top:15%;
-	
-	position:absolute;
-	font-size: 3vw;
-	margin:auto;
-	text-align:center;
-}
-
-.divLeftHero {
-	
-	width: 10%;
-	height: 10%;
-	position:absolute;
-	left:10%;
-	top:38%;
-	font-size:2vw;
-	margin:auto;
-	margin-top:3%;
-	text-align:center;
-}
 .health
 {
 	position: absolute;
-	width: 48%;
-	height: 10%; /**/
+	width: 40%;
+	height: 100%; /**/
 	bottom: 0%; /**/
 	
 	display: inline;
 }
-.health:nth-of-type(1)
-{
-	left: 8%;
-}
-.health:nth-of-type(2)
-{
-	right: 8%;
-} 
-
 .health div
 {
 	position: absolute;
 	width: 40%;
-	z-index: 700;
+	z-index: 700; /**/
 	font-size: 2vw;
-	bottom: 20%;
+	bottom: 2%;
 }
 .health:nth-of-type(1) div 
 {
@@ -207,7 +142,7 @@ div#heroes
 .nekuvDiv
 {
 	position: absolute;
-	width: 48%;
+	width: 40%;
 	height: 100%; /**/
 	bottom: 0%; /*
 	z-index: 300;*/
@@ -222,14 +157,13 @@ div#heroes
 {
 	right: 0%;
 } 
-
 .nekuvDiv div
 {
 	position: absolute;
-	width: 16%;
+	width: 20%;
 	z-index: 700;
 	font-size: 1.2vw;
-	bottom: 10%;
+	bottom: 11%;
 
 	background-color: rgba(0, 153, 204,0.5);;
 	border: 1px solid rgba(192,192,192,0.5);;
@@ -249,11 +183,11 @@ div#heroes
 
 .nekuvDiv div:nth-of-type(1)
 {
-	margin-bottom: 20%;
+	margin-bottom: 30%;
 }
 .nekuvDiv div:nth-of-type(2)
 {
-	margin-bottom: 10%;
+	margin-bottom: 15%;
 }
 .nekuvDiv div:nth-of-type(3)
 {
@@ -261,6 +195,54 @@ div#heroes
 }
 
 /*************************/
+
+.divRightHero
+{
+	width: 10%;
+	height: 10%;
+	position:absolute;
+	left:80%;
+	top:38%;
+	font-size:2vw;
+	margin:auto;
+	margin-top:3%;
+	text-align:center;
+}
+
+#welcome
+{
+	float:right;
+	margin-top:0.55%;
+	margin-right:2%;
+}
+ 
+.currentTurn
+{	
+	width: 25%;
+	height: 10%;
+	left:38%;
+	top:15%;
+	
+	position:absolute;
+	font-size: 3vw;
+	margin:auto;
+	text-align:center;
+}
+
+.divLeftHero
+{
+	width: 10%;
+	height: 10%;
+	position:absolute;
+	left:10%;
+	top:38%;
+	font-size:2vw;
+	margin:auto;
+	margin-top:3%;
+	text-align:center;
+}
+
+
 
 @media screen and (max-width: 1024px) and (orientation: portrait)
 {
@@ -394,8 +376,7 @@ div#heroes
 	
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
-
-	.hero img
+	/*.hero img
 	{
 		width: 40%;
 	}
@@ -445,7 +426,7 @@ div#heroes
 	{
 		margin-bottom: 0%;
 	}
-
+*/
 }
 
 
