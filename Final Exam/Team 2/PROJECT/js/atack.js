@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				isAnimating = false;	
 			});
 			
-			$(".hero:nth-of-type(1) img").animate({left: '+=160%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=160%', opacity: '1'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=130%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '-=130%', opacity: '1'}, options);
 
 
 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if(isAnimating == false)
 		{
 			isAnimating = true;
-			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
+			$(this).fadeOut(1000).delay(2100).fadeIn(1000, function(){
 					isAnimating = false;	
 				});
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
@@ -106,19 +106,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	});
 
-
-	
 	$(".actions:nth-of-type(1) .specialAbility").click(function(){
 
 		if(isAnimating==false)
 		{
 			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+			$(this).fadeOut(1000).delay(2000).fadeIn(1000, function(){
 					isAnimating = false;	
 				});
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '+=70%', top: '+=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(1) img").animate({left: '-=140%'}, options);
+			$(".hero:nth-of-type(1) img").animate({left: '+=110%', top: '-=10%', width: "+=10%", height: "+=10%"}, options).delay(300);
+			$(".hero:nth-of-type(1) img").animate({left: '-=110%', top: '+=10%', width: "-=10%", height: "-=10%"}, options);
 		}
 
 		if($(this).closest('.hero_0_actions').length)
@@ -165,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	});
 	
+
 	
 	
 	$(".actions:nth-of-type(2) .attack").click(function(){
@@ -176,8 +174,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					isAnimating = false;	
 				});
 			
-			$(".hero:nth-of-type(2) img").animate({left: '-=160%', opacity: '0.5'}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=160%', opacity: '1'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=130%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '+=130%', opacity: '1'}, options);
 
 
 			if($(this).closest('.hero_0_actions').length)
@@ -225,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		if(isAnimating == false)
 		{
 			isAnimating = true;
-			$(this).fadeOut(1000).delay(1900).fadeIn(1000, function(){
+			$(this).fadeOut(1000).delay(2100).fadeIn(1000, function(){
 				isAnimating = false;	
 			});
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
@@ -261,11 +259,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
  		if(isAnimating==false)
 		 {
 			isAnimating = true;
-			$(this).fadeOut(1000).delay(2800).fadeIn(1000, function(){
+			$(this).fadeOut(1000).delay(4800).fadeIn(1000, function(){
 				isAnimating = false;	
 			});
-			$(".hero:nth-of-type(2) img").animate({left: '-=80%', top: '-=100%', width: "toggle", height: "toggle"}, options);
-			$(".hero:nth-of-type(2) img").animate({left: '+=80%', top: '+=100%', width: "toggle", height: "toggle"}, options);
+			$(".hero:nth-of-type(2) img").animate({left: '-=60%', top: '-=30%', width: "toggle", height: "toggle"}, options).delay(700);
+			$(".hero:nth-of-type(2) img").animate({left: '+=60%', top: '+=30%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);

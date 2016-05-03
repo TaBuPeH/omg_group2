@@ -109,24 +109,24 @@ if(!isset($_SESSION['logged_user']))
 			<div>
 				<div class="nekuvDiv"> 
 					<div> 
-						<span>Attack:</span></br> 10-13 damage
+						<span>Attack:</span></br> 10-13 d<span>amage</span>
 					</div> 
 					<div> 
-						<span>Rest:</span></br> 5 health 
+						<span>Rest:</span></br> 5 h<span>ealth</span>
 					</div>
 					<div> 
-						<span>Power Hit:</span></br> 2-20 damage
+						<span>Power Hit:</span></br> 2-20 d<span>amage</span>
 					</div>
 				</div>
 				<div class="nekuvDiv">  
 					<div> 
-						<span>Attack:</span></br> 7-10 damage 
+						<span>Attack:</span></br> 7-10 d<span>amage</span> 
 					</div>
 					<div> 
-						<span>Rest:</span></br> 5 health 
+						<span>Rest:</span></br> 5 h<span>ealth</span>
 					</div>
 					<div> 
-						<span>God's Touch:</span></br> 5-15 health
+						<span>God's Touch:</span></br> 5-15 h<span>ealth</span>
 					</div>
 				</div>
 			</div>

@@ -119,7 +119,7 @@ div#heroes
 .health div
 {
 	position: absolute;
-	width: 40%;
+	width: 100%;
 	z-index: 700; /**/
 	font-size: 2vw;
 	bottom: 2%;
@@ -161,23 +161,23 @@ div#heroes
 {
 	position: absolute;
 	width: 20%;
+	bottom: 11%;
 	z-index: 700;
 	font-size: 1.2vw;
-	bottom: 11%;
+	text-align: center;
 
-	background-color: rgba(0, 153, 204,0.5);;
-	border: 1px solid rgba(192,192,192,0.5);;
+	background-color: rgba(0, 153, 204,0.5);
+	border: 1px solid rgba(192,192,192,0.5);
+	border-radius: 0.5em;
 }
 .nekuvDiv:nth-of-type(1) div 
 {
 	left: 0;
-	text-align: left;
 	margin-left: 2%;
 }
 .nekuvDiv:nth-of-type(2) div
 {
 	right: 0;
-	text-align: right;
 	margin-right: 2%;
 }
 
@@ -246,14 +246,9 @@ div#heroes
 
 @media screen and (max-width: 1024px) and (orientation: portrait)
 {
-	.hero
-	{
-		height: 35%; 
-	}
 	.hero img
 	{
-		width: 55%;
-		margin-top: 5%;
+		width: 50%;
 	}
 	.hero:nth-of-type(1)
 	{
@@ -263,15 +258,12 @@ div#heroes
 	{
 		right: 1%;
 	} 
+	/*************************/
 
-
-	.actions
-	{
-		height: 65%; 
-	}
 	.actions img
 	{
 		width: 20%;
+		bottom: 35%;
 	}
 	.actions:nth-of-type(1)
 	{
@@ -297,10 +289,10 @@ div#heroes
 		margin-left: 40%; 
 		margin-right: 0%;
 	}
+	/*************************/
 
 	.health div
 	{
-		width: 70%;
 		font-size: 3.4vw;
 	}
 	.health:nth-of-type(1)
@@ -311,43 +303,27 @@ div#heroes
 	{
 		right: 2%;
 	} 
-
-
 	/*************************/
 
 	.nekuvDiv:nth-of-type(1)
 	{
-		left: 3%;
+		left: 2%;
 	}
 	.nekuvDiv:nth-of-type(2)
 	{
-		right: 3%;
+		right: 2%;
 	} 
 
 	.nekuvDiv div
 	{
-		position: absolute;
+		font-size: 1.8vw;
+		bottom: 42%;
 		width: 16%;
-		z-index: 700;
-		font-size: 2vw;
-		bottom: 43%;
+		background-color: rgba(0, 153, 204,0.3);
+		line-height: 55%;
+		padding-bottom: 5px;
+	}
 
-		background-color: #0099CC;
-		border: 1px solid #e7e7e7;
-	}
-	.nekuvDiv:nth-of-type(1) div 
-	{
-		left: 0;
-		text-align: left;
-		margin-left: 2%;
-	}
-	.nekuvDiv:nth-of-type(2) div
-	{
-		right: 0;
-		text-align: right;
-		margin-right: 2%;
-		margin-left: 2%;
-	}
 
 	.nekuvDiv div:nth-of-type(1)
 	{
@@ -376,15 +352,16 @@ div#heroes
 	
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
-	/*.hero img
+	.hero img
 	{
-		width: 40%;
+		width: 35%;
 	}
 
 	.actions img
 	{
-		width: 13%;
+		width: 15%;
 	}
+	/*************************/
 
 	.actions img:nth-of-type(1)
 	{
@@ -401,93 +378,113 @@ div#heroes
 		margin-left: 30%; 
 		margin-right: 0%;
 	}
+	/*************************/
+
 	.health div
 	{
-		width: 50%;
-		font-size: 2.7vw;
+		font-size: 2.5vw;
 	}
-
-
+	/*************************/
 
 	.nekuvDiv div
 	{
-		font-size: 1.8vw;
-		
+		font-size: 1.5vw;
 	}
+	.nekuvDiv div span:nth-of-type(2)
+	{
+		display: none;
+	}
+
 	.nekuvDiv div:nth-of-type(1)
 	{
-		margin-bottom: 30%;
+		margin-bottom: 40%;
 	}
 	.nekuvDiv div:nth-of-type(2)
 	{
-		margin-bottom: 15%;
+		margin-bottom: 20%;
 	}
 	.nekuvDiv div:nth-of-type(3)
 	{
 		margin-bottom: 0%;
 	}
-*/
+/**/
 }
 
 
 @media screen and (max-width: 640px) and (orientation: portrait)
 {
-	.hero
+	.hero img
 	{
-		height: 30%; 
-	}
-	.actions
+		width: 70%;
+	}	
+	/*************************/
+
+	.actions img
 	{
-		height: 70%; 
+		width: 30%;
+		bottom: 35%;
 	}
+
+	.actions img:nth-of-type(1)
+	{
+		margin-left: 0%;
+		margin-right: 50%;
+	}
+	.actions img:nth-of-type(2)
+	{
+		margin-left: 25%; 
+		margin-right: 25%;
+	}
+	.actions img:nth-of-type(3)
+	{
+		margin-left: 50%; 
+		margin-right: 0%;
+	}
+	/*************************/
 
 	.health div
 	{
 		width: 50%;
-		font-size: 5.5vw;
+		font-size: 5vw;
 	}
-	.health:nth-of-type(1) div 
-	{
-		margin-left: 10%;
-	}
-	.health:nth-of-type(2) div
-	{
-		margin-right: 10%;
-	}
-	span
+	.health div span
 	{
 		display: none;
 	}
 
+	.health:nth-of-type(1) div 
+	{
+		margin-left: 20%;
+	}
+	.health:nth-of-type(2) div
+	{
+		margin-right: 20%;
+	}
 	/*************************/
 
 	.nekuvDiv
 	{
 		display: none;
 	}
-	
-	
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
-	.hero
+	.actions img
 	{
-		height: 50%; 
+		bottom: 51%;
 	}
-	.actions
-	{
-		height: 50%; 
-	}
-	.hero img
-	{
-		width: 40%;
-		margin-top: 0%;
-	}
-	
 }
-@media screen and (max-width: 480px)  and (orientation : landscape) /*320*/
+
+@media screen and (max-width: 480px)  and (orientation : portrait) /*320*/
 {
-   .hero img
+	.actions img
 	{
-		margin-top: 6%;
+		bottom: 40%;
+	}
+}@media screen and (max-width: 480px)  and (orientation : landscape) /*320*/
+{
+   .actions img
+	{
+		bottom: 47%;
 	}
 }
+
