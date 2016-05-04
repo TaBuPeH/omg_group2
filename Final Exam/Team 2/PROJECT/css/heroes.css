@@ -196,19 +196,6 @@ div#heroes
 
 /*************************/
 
-.divRightHero
-{
-	width: 10%;
-	height: 10%;
-	position:absolute;
-	left:80%;
-	top:38%;
-	font-size:2vw;
-	margin:auto;
-	margin-top:3%;
-	text-align:center;
-}
-
 #welcome
 {
 	float:right;
@@ -218,28 +205,30 @@ div#heroes
  
 .currentTurn
 {	
-	width: 25%;
-	height: 10%;
-	left:38%;
-	top:15%;
-	
-	position:absolute;
+	width: 100%;
+	top: 15%;
+	position: absolute;
 	font-size: 3vw;
-	margin:auto;
-	text-align:center;
+	text-align: center;
 }
 
 .divLeftHero
 {
 	width: 10%;
-	height: 10%;
-	position:absolute;
-	left:10%;
-	top:38%;
-	font-size:2vw;
-	margin:auto;
-	margin-top:3%;
-	text-align:center;
+	position: absolute;
+	left: 11%;
+	bottom: 55%;
+	font-size: 1.8vw;
+	text-align: center;
+}
+.divRightHero
+{
+	width: 10%;
+	position: absolute;
+	right: 11%;
+	bottom: 55%;
+	font-size: 1.8vw;
+	text-align: center;
 }
 
 
@@ -349,6 +338,27 @@ div#heroes
 	{
 		display: none;
 	}
+	/*************************/
+
+	.currentTurn
+	{	
+		font-size: 5vw;
+	}
+
+	.divLeftHero
+	{
+		width: 22%;
+		left: 3%;
+		bottom: 45%;
+		font-size: 2.5vw;
+	}
+	.divRightHero
+	{
+		width: 22%;
+		right: 3%;
+		bottom: 45%;
+		font-size: 2.5vw;
+	}
 	
 }@media screen and (max-width: 1024px) and (orientation : landscape)
 {
@@ -407,9 +417,23 @@ div#heroes
 	{
 		margin-bottom: 0%;
 	}
-/**/
-}
+	/*************************/
 
+	.divLeftHero
+	{
+		width: 16%;
+		right: 11%;
+		bottom: 55%;
+		font-size: 2.6vw;
+	}
+	.divRightHero
+	{
+		width: 16%;
+		right: 11%;
+		bottom: 55%;
+		font-size: 2.6vw;
+	}
+}
 
 @media screen and (max-width: 640px) and (orientation: portrait)
 {
@@ -466,11 +490,37 @@ div#heroes
 	{
 		display: none;
 	}
+	/*************************/
+
+	.divLeftHero
+	{
+		width: 26%;
+		left: 5%;
+		bottom: 50%;
+		font-size: 3vw;
+	}
+	.divRightHero
+	{
+		width: 26%;
+		right: 5%;
+		bottom: 50%;
+		font-size: 3vw;
+	}
 }@media screen and (max-width: 640px) and (orientation : landscape)
 {
 	.actions img
 	{
 		bottom: 51%;
+	}
+	/*************************/
+
+	.divLeftHero
+	{
+		bottom: 64%;
+	}
+	.divRightHero
+	{
+		bottom: 64%;
 	}
 }
 
@@ -485,6 +535,16 @@ div#heroes
    .actions img
 	{
 		bottom: 47%;
+	}
+	/*************************/
+
+	.divLeftHero
+	{
+		bottom: 60%;
+	}
+	.divRightHero
+	{
+		bottom: 60%;
 	}
 }
 

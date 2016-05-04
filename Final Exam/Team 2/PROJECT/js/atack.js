@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-			if($(this).closest('.hero_0_actions').length)
-			 {
-				 var url= "normalAttack.php?attacker=0&defender=1";
-				 var url1= "attackResult.php?dmg_dealt=0";
-			 }	
+			if($(this).closest('.hero_0_actions').length) // .length==1)  ???kakwo e uslowieto
+			{
+				var url= "normalAttack.php?attacker=0&defender=1";
+				var url1= "attackResult.php?dmg_dealt=0";
+			}	
 			else
 			{
-				 var url= "attackResult.php?dmg_dealth=1";
+				var url= "attackResult.php?dmg_dealth=1";
 			}
 
 			$.get(url, function(response){
@@ -40,19 +40,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				//document.getElementById("hero1").innerHTML = response;
 				if(parseFloat(response) == -100)
 				{
-					document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";	
+					document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";
+					// kato pobedi da spira igrata
 				}
 				else
 				{
-					document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+					document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
 					setTimeout(function(){
 						document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-					}, 2500);
+						//leviq da ne moje da pipa butonite
+					}, 2300);
 				}
-			 });
-			 $.get(url1,function(response){
+			});
+			$.get(url1,function(response){
 				console.log(response);
-				document.getElementById("divRightHero").innerHTML =" "+response;
+				document.getElementById("divRightHero").innerHTML = " " + response; // da izchezva sled 3000ms
 			});
 		}
 	});
@@ -85,24 +87,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				console.log(response);
 				
 				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("divLeftHero").innerHTML ="  +5";
+				document.getElementById("divLeftHero").innerHTML = " +5";
 			
 			
 				if(response != "over")
 				{
-					document.getElementById("hero1").innerHTML = "Health: "+response+"/130";
+					document.getElementById("hero1").innerHTML = "Health: " + response + "/130";
 				}
 				else
 				{
 					document.getElementById("currentTurn").innerHTML = "RIGHT PLAYER WINS!";	
 				}
 			});
-		 
 		}
 
 		setTimeout(function(){
     		document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-  		}, 2500);
+  		}, 3500);
 
 	});
 
@@ -112,11 +113,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		{
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(2000).fadeIn(1000, function(){
-					isAnimating = false;	
+				isAnimating = false;	
 				});
 			$(".hero:nth-of-type(1) img").animate({left: '+=110%', top: '-=10%', width: "+=10%", height: "+=10%"}, options).delay(300);
 			$(".hero:nth-of-type(1) img").animate({left: '-=110%', top: '+=10%', width: "-=10%", height: "-=10%"}, options);
 		}
+
+
 
 		if($(this).closest('.hero_0_actions').length)
 		{
@@ -139,30 +142,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 			else
 			{
-				document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
 				setTimeout(function(){
 				    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-				 }, 2500);
+				}, 2900);
 			}
 			//document.getElementById("hero1").innerHTML = response;
 			//document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
 		
-		 });
+		});
 		$.get(url1,function(response){
 			
 			console.log(response);
 			
 			//document.getElementById("hero1").innerHTML = response;
-			document.getElementById("divRightHero").innerHTML =" "+response;
+			document.getElementById("divRightHero").innerHTML = " " + response;
 		});
 
-		setTimeout(function(){
+		/*setTimeout(function(){
     		document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-  		}, 2500);
+  		}, 2500);*/
 
 	});
 	
 
+	/*************************/
 	
 	
 	$(".actions:nth-of-type(2) .attack").click(function(){
@@ -178,7 +182,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").animate({left: '+=130%', opacity: '1'}, options);
 
 
-			if($(this).closest('.hero_0_actions').length)
+
+			if($(this).closest('.hero_0_actions').length)  // .closest('.hero_1_actions').length==1)  ???
 			{
 				var url= "normalAttack.php?attacker=0&defender=1";
 			}	
@@ -197,26 +202,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				}
 				else
 				{
-					document.getElementById("hero1").innerHTML = "Health: "+response+"/150";
+					document.getElementById("hero1").innerHTML = "Health: " + response + "/150";
 					setTimeout(function(){
     					document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
 					}, 2500);
 				}
 			
 				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero1").innerHTML = "Health: "+response+"/130";
+				document.getElementById("hero1").innerHTML = "Health: " + response + "/130";
 				$.get(url1,function(response){
 
 					console.log(response);
-					document.getElementById("divLeftHero").innerHTML =" "+response;
+					document.getElementById("divLeftHero").innerHTML = " " + response;
 				});
 			});
 		}
-		setTimeout(function(){
-		    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		}, 2500);
+		//setTimeout(function(){
+		//    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+		//}, 2500);
 	});
-
 	
 	$(".actions:nth-of-type(2) .rest").click(function(){
 
@@ -243,16 +247,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				console.log(response);
 				
 				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
 				document.getElementById("divRightHero").innerHTML =" +5";
 			});
 		}
 
 		setTimeout(function(){
 			document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		}, 2500);
+		}, 3500);
 	});
-	
 	
 	$(".actions:nth-of-type(2) .specialAbility").click(function(){
 
@@ -283,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				console.log(response);
 				
 				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
+				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
 			
 			});
 			$.get(url1,function(response){
@@ -291,7 +294,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				console.log(response);
 				
 				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("divRightHero").innerHTML ="   +"+response;
+				document.getElementById("divRightHero").innerHTML = " +" + response;
 			
 			});	
 		}
@@ -299,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		setTimeout(function()
 		{
 		    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		}, 2500); 
+		}, 6500); 
 	});
 });
 

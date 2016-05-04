@@ -55,8 +55,8 @@ if(!isset($_SESSION['logged_user']))
 			<div id="topLine" >
 				<nav>
 					<!--  <input type="submit" class="topButtons" id="profButton" value="Profile">  -->
-					<input type="submit" class="topButtons" id="logoutButton" value="Logout"> 
 					<input type="submit" class="topButtons" id="heroButton" value="New Game">
+					<input type="submit" class="topButtons" id="logoutButton" value="Logout"> 
 					<div id="welcome">
 					<?php
 						//echo  "WELCOME TO OUR WEBSITE, ".$_SESSION['logged_user']['username'];
