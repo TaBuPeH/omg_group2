@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-			if($(this).closest('.hero_0_actions').length) // .length==1)  ???kakwo e uslowieto
+			if($(this).closest('.hero_0_actions').length) // .length==1)  zashto raboti??? kakwo e uslowieto
 			{
 				var url= "normalAttack.php?attacker=0&defender=1";
 				var url1= "attackResult.php?dmg_dealt=0";
@@ -34,31 +34,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 
 			$.get(url, function(response){
+				//console.log(response);
 				
-				console.log(response);
-				
-				//document.getElementById("hero1").innerHTML = response;
 				if(parseFloat(response) == -100)
 				{
-					document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";
+					$("#currentTurn").text("LEFT PLAYER WINS!");
 					// kato pobedi da spira igrata
 				}
 				else
 				{
-					document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
+					$("hero2").text("Health: " + response + "/150");
 					setTimeout(function(){
-						document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-						//leviq da ne moje da pipa butonite
+						$("#currentTurn").text("Right Player's Turn");
+						//leviq da ne moje da pipa butonite 
+						//nz dali ne e po-dobre obache da e w php-to
+						//moje da mu dobawqme id "hasMoved" i gore v if-a deto proverqva dali isAnimating e true da prowerqwame i za towa
 					}, 2300);
 				}
 			});
+
 			$.get(url1,function(response){
-				console.log(response);
-				document.getElementById("divRightHero").innerHTML = " " + response; // da izchezva sled 3000ms
+				$("#divRightHero").text(response).fadeIn(500).delay(3300).fadeOut(500);
 			});
 		}
 	});
-	
+
 
 	$(".actions:nth-of-type(1) .rest").click(function(){
 
@@ -83,29 +83,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				var url= "rest.php?attacker=1&defender=0";	
 			}
 			$.get(url,function(response){
+				//console.log(response);
 
-				console.log(response);
-				
-				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("divLeftHero").innerHTML = " +5";
-			
-			
 				if(response != "over")
 				{
-					document.getElementById("hero1").innerHTML = "Health: " + response + "/130";
+					$("#hero1").text("Health: " + response + "/130");
 				}
 				else
 				{
-					document.getElementById("currentTurn").innerHTML = "RIGHT PLAYER WINS!";	
+					$("#currentTurn").text("RIGHT PLAYER WINS!");	
 				}
 			});
+
+			setTimeout(function(){
+	    		$("#currentTurn").text("Right Player's Turn");
+	  		}, 3700);
+
+	  		$("#divLeftHero").text("+5").fadeIn(500).delay(3700).fadeOut(500);
 		}
-
-		setTimeout(function(){
-    		document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-  		}, 3500);
-
 	});
+
 
 	$(".actions:nth-of-type(1) .specialAbility").click(function(){
 
@@ -117,52 +114,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				});
 			$(".hero:nth-of-type(1) img").animate({left: '+=110%', top: '-=10%', width: "+=10%", height: "+=10%"}, options).delay(300);
 			$(".hero:nth-of-type(1) img").animate({left: '-=110%', top: '+=10%', width: "-=10%", height: "-=10%"}, options);
-		}
 
 
 
-		if($(this).closest('.hero_0_actions').length)
-		{
-			var url= "warrior_specialAttack.php?attacker=0&defender=1";
-			var url1= "attackResult.php?dmg_dealt=0";
-		}
-		else
-		{
-			var url= "warrior_specialAttack.php?attacker=1&defender=0";
-			var url1= "attackResult.php?dmg_dealt=0";
-		}
-
-		$.get(url,function(response){
-			
-			console.log(response);
-			if(parseFloat(response) == -100)
+			if($(this).closest('.hero_0_actions').length)
 			{
-			
-				document.getElementById("currentTurn").innerHTML = "LEFT PLAYER WINS!";	
+				var url= "warrior_specialAttack.php?attacker=0&defender=1";
+				var url1= "attackResult.php?dmg_dealt=0";
 			}
 			else
 			{
-				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
-				setTimeout(function(){
-				    document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-				}, 2900);
+				var url= "warrior_specialAttack.php?attacker=1&defender=0";
+				var url1= "attackResult.php?dmg_dealt=0";
 			}
-			//document.getElementById("hero1").innerHTML = response;
-			//document.getElementById("hero2").innerHTML = "Health: "+response+"/150";
-		
-		});
-		$.get(url1,function(response){
-			
-			console.log(response);
-			
-			//document.getElementById("hero1").innerHTML = response;
-			document.getElementById("divRightHero").innerHTML = " " + response;
-		});
 
-		/*setTimeout(function(){
-    		document.getElementById("currentTurn").innerHTML = "Right Player's Turn";
-  		}, 2500);*/
+			$.get(url,function(response){
+				//console.log(response);
 
+				if(parseFloat(response) == -100)
+				{
+					$("#currentTurn").text("LEFT PLAYER WINS!");	
+				}
+				else
+				{
+					$("#hero2").text("Health: " + response + "/150");
+					setTimeout(function(){
+					    $("#currentTurn").text("Right Player's Turn");
+					}, 2900);
+				}
+			
+			});
+
+			$.get(url1,function(response){
+				//console.log(response);
+				
+				$("#divRightHero").text(response).fadeIn(500).delay(3800).fadeOut(500);
+			});
+		}
 	});
 	
 
@@ -192,34 +180,33 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				var url= "normalAttack.php?attacker=1&defender=0";
 				var url1= "attackResult.php?dmg_dealt=0";
 			}
+
 			$.get(url,function(response){
-			
-				console.log(response);
+				//console.log(response);
+
 				if(parseFloat(response) == -100)
 				{
 				
-					document.getElementById("currentTurn").innerHTML = "RIGHT PLAYER WINS!";	
+					$("#currentTurn").text("RIGHT PLAYER WINS!");	
 				}
 				else
 				{
-					document.getElementById("hero1").innerHTML = "Health: " + response + "/150";
+					$("#hero1").text("Health: " + response + "/150");
+
 					setTimeout(function(){
-    					document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
+    					$("#currentTurn").text("Left Player's Turn");
 					}, 2500);
 				}
 			
-				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero1").innerHTML = "Health: " + response + "/130";
-				$.get(url1,function(response){
+				$("#hero1").text("Health: " + response + "/130");
 
-					console.log(response);
-					document.getElementById("divLeftHero").innerHTML = " " + response;
+				$.get(url1,function(response){
+					//console.log(response);
+
+					$("#divLeftHero").text(response).fadeIn(500).delay(3300).fadeOut(500);
 				});
 			});
 		}
-		//setTimeout(function(){
-		//    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		//}, 2500);
 	});
 	
 	$(".actions:nth-of-type(2) .rest").click(function(){
@@ -234,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			
+
 			if($(this).closest('.hero_0_actions').length)
 			{
 				var url= "rest.php?attacker=0&defender=1";
@@ -242,19 +230,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			{
 				var url= "rest.php?attacker=1&defender=0";
 			}
-			$.get(url,function(response){
-				
-				console.log(response);
-				
-				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
-				document.getElementById("divRightHero").innerHTML =" +5";
-			});
-		}
 
-		setTimeout(function(){
-			document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		}, 3500);
+			setTimeout(function(){
+				$("#currentTurn").text("Left Player's Turn");
+			}, 3500);
+
+			$.get(url,function(response){
+				//console.log(response);
+				
+				$("#hero2").text("Health: " + response + "/150");
+			});
+
+			$("#divRightHero").text("+5").fadeIn(1000).delay(3200).fadeOut(1000);
+		}
 	});
 	
 	$(".actions:nth-of-type(2) .specialAbility").click(function(){
@@ -262,10 +250,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
  		if(isAnimating==false)
 		 {
 			isAnimating = true;
-			$(this).fadeOut(1000).delay(4800).fadeIn(1000, function(){
+			$(this).fadeOut(1000).delay(5000).fadeIn(1000, function(){
 				isAnimating = false;	
 			});
-			$(".hero:nth-of-type(2) img").animate({left: '-=60%', top: '-=30%', width: "toggle", height: "toggle"}, options).delay(700);
+			$(".hero:nth-of-type(2) img").animate({left: '-=60%', top: '-=30%', width: "toggle", height: "toggle"}, options).delay(1000);
 			$(".hero:nth-of-type(2) img").animate({left: '+=60%', top: '+=30%', width: "toggle", height: "toggle"}, options);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
@@ -281,28 +269,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				var url= "healer_specialAbility.php?attacker=1&defender=0";
 				var url1= "attackResult.php?dmg_dealt=0";
 			}
+
 			$.get(url,function(response){
+				//console.log(response);
 				
-				console.log(response);
-				
-				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("hero2").innerHTML = "Health: " + response + "/150";
+				$("#hero2").text("Health: " + response + "/150");
 			
 			});
+
+			setTimeout(function()
+			{
+			    $("#currentTurn").text("Left Player's Turn");
+			}, 6500);
+
 			$.get(url1,function(response){
+				//console.log(response);
 				
-				console.log(response);
-				
-				//document.getElementById("hero1").innerHTML = response;
-				document.getElementById("divRightHero").innerHTML = " +" + response;
-			
+				$("#divRightHero").text("+" + response).fadeIn(1000).delay(6000).fadeOut(1000);
+				// mn rqdko ama se poluchawat chisla ot sorta na "+-9"
 			});	
 		}
-
-		setTimeout(function()
-		{
-		    document.getElementById("currentTurn").innerHTML = "Left Player's Turn";
-		}, 6500); 
 	});
 });
 
