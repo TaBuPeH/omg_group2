@@ -71,6 +71,8 @@ if(!isset($_SESSION['logged_user']))
 			<div id="ground" class="stage"></div>
 		</div>
 			
+		<div id="winner">..... PLAYER WINS!</div>
+
 		<div id="content">
 		
 			<div id="currentTurn" class="currentTurn"></div>

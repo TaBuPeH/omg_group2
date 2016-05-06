@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var isAnimating = false;
 	var nextTurn=1;
 
+	//random da generira koj e e na hod
+	//i drugiq da ne moje da igrae prez towa wreme
+	//i da moje da se igrae s klawieturata
+
 	
 	$(".actions:nth-of-type(1) .attack").click(function(){
 
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				isAnimating = false;	
 			});
 			
-			$(".hero:nth-of-type(1) img").animate({left: '+=130%', opacity: '0.5'}, options);
+			$(".hero:nth-of-type(1) img").delay(200).animate({left: '+=130%', opacity: '0.5'}, options).delay(200);
 			$(".hero:nth-of-type(1) img").animate({left: '-=130%', opacity: '1'}, options);
 
 
@@ -38,12 +42,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				
 				if(parseFloat(response) == -100)
 				{
-					$("#currentTurn").text("LEFT PLAYER WINS!");
-					// kato pobedi da spira igrata
+					$(".topButtons").css({
+						backgroundColor: "",
+					})
+					$("#content").css('visibility','hidden');
+
+					// resetwa jiwota im za nowa igra w html-a
+					//no ne i w bazata danni
+					$(".health #hero1").html("<span>Health:</span> 130/130");
+					$(".health #hero2").html("<span>Health:</span> 150/150");
+
+					$("#winner").css("visibility", "visible");
+					$("#winner").text("LEFT PLAYER WINS!");
 				}
 				else
 				{
-					$("hero2").text("Health: " + response + "/150");
+					$("#hero2").text("Health: " + response + "/150");
 					setTimeout(function(){
 						$("#currentTurn").text("Right Player's Turn");
 						//leviq da ne moje da pipa butonite 
@@ -91,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				}
 				else
 				{
-					$("#currentTurn").text("RIGHT PLAYER WINS!");	
+					$("#currentTurn").text("RIGHT PLAYER WINS!");	//nqma kak da swyrshi igrata, ne e nujno
 				}
 			});
 
@@ -133,7 +147,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 				if(parseFloat(response) == -100)
 				{
-					$("#currentTurn").text("LEFT PLAYER WINS!");	
+					$(".topButtons").css({
+						backgroundColor: "",
+					})
+					$("#content").css('visibility','hidden');
+
+					// resetwa jiwota im za nowa igra w html-a
+					//no ne i w bazata danni
+					$(".health #hero1").html("<span>Health:</span> 130/130");
+					$(".health #hero2").html("<span>Health:</span> 150/150");
+
+					$("#winner").css("visibility", "visible");
+					$("#winner").text("LEFT PLAYER WINS!");
 				}
 				else
 				{
@@ -186,8 +211,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 				if(parseFloat(response) == -100)
 				{
-				
-					$("#currentTurn").text("RIGHT PLAYER WINS!");	
+					$(".topButtons").css({
+						backgroundColor: "",
+					})
+					$("#content").css('visibility','hidden');
+					
+					// resetwa jiwota im za nowa igra w html-a
+					//no ne i w bazata danni
+					$(".health #hero1").html("<span>Health:</span> 130/130");
+					$(".health #hero2").html("<span>Health:</span> 150/150");
+
+					$("#winner").css("visibility", "visible");
+					$("#winner").text("RIGHT PLAYER WINS!");
 				}
 				else
 				{

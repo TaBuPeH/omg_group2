@@ -60,7 +60,7 @@ $(document).ready( function(event) {
 		$(this).css({
 			backgroundColor: "#75c1dd",
 		});
-		$(this).addClass('opened');
+		//$(this).attr('id', 'opened'); 
 		$("#content").css('visibility','visible');	
 
 		

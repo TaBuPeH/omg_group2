@@ -75,6 +75,19 @@ table {
 	border-radius: 0.1em;
 }
 
+div#winner
+{
+	position: absolute;
+	top: 30%;
+	width: 100%;
+
+	font-size: 8vw;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif; /* to si e default */
+
+	visibility: hidden;
+}
+
 
 @media screen and (max-width: 1024px)
 {
