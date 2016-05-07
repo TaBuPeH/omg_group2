@@ -78,10 +78,11 @@ table {
 div#winner
 {
 	position: absolute;
-	top: 30%;
+	top: 40%;
 	width: 100%;
+	z-index: 500;
 
-	font-size: 8vw;
+	font-size: 6vw;
 	text-align: center;
 	font-family: "Times New Roman", Times, serif; /* to si e default */
 

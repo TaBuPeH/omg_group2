@@ -32,15 +32,15 @@ body
 
 #far-clouds 
 {
-    background: transparent url("../img/far-clouds.png") 0 6% repeat-x;
+    background: transparent url("../img/far-clouds.png") 0 7% repeat-x;
 }
 #near-clouds 
 {
-    background: transparent url("../img/near-clouds.png") 0 15% repeat-x;
+    background: transparent url("../img/near-clouds.png") 0 17% repeat-x;
 }
 #ground 
 {
-	background: transparent url("../img/grass.png") 0px 100% repeat-x;
+	background: transparent url("../img/grass.png") 0 100% repeat-x;
 	bottom: 0;
 }
 

@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var isAnimating = false;
 	var nextTurn=1;
 
-	//random da generira koj e e na hod
+	//random da generira koj e e na hod purwiq put
 	//i drugiq da ne moje da igrae prez towa wreme
-	//i da moje da se igrae s klawieturata
+	//da ne moje da stanesh sus poweche ot maximalniq health
 
 	
 	$(".actions:nth-of-type(1) .attack").click(function(){
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").delay(200).animate({left: '+=130%', opacity: '0.5'}, options).delay(200);
 			$(".hero:nth-of-type(1) img").animate({left: '-=130%', opacity: '1'}, options);
 
+			$("#currentTurn").text("");
 
 
 			if($(this).closest('.hero_0_actions').length) // .length==1)  zashto raboti??? kakwo e uslowieto
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						backgroundColor: "",
 					})
 					$("#content").css('visibility','hidden');
+					$("#currentTurn").text("");
 
 					// resetwa jiwota im za nowa igra w html-a
 					//no ne i w bazata danni
@@ -86,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(1) img").fadeOut(500).delay(50).fadeIn(500);
 			
+			$("#currentTurn").text("");
 
 
 			if($(this).closest('.hero_0_actions').length)
@@ -129,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").animate({left: '+=110%', top: '-=10%', width: "+=10%", height: "+=10%"}, options).delay(300);
 			$(".hero:nth-of-type(1) img").animate({left: '-=110%', top: '+=10%', width: "-=10%", height: "-=10%"}, options);
 
+			$("#currentTurn").text("");
 
 
 			if($(this).closest('.hero_0_actions').length)
@@ -151,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						backgroundColor: "",
 					})
 					$("#content").css('visibility','hidden');
+					$("#currentTurn").text("");
 
 					// resetwa jiwota im za nowa igra w html-a
 					//no ne i w bazata danni
@@ -194,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").animate({left: '-=130%', opacity: '0.5'}, options);
 			$(".hero:nth-of-type(2) img").animate({left: '+=130%', opacity: '1'}, options);
 
+			$("#currentTurn").text("");
 
 
 			if($(this).closest('.hero_0_actions').length)  // .closest('.hero_1_actions').length==1)  ???
@@ -215,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						backgroundColor: "",
 					})
 					$("#content").css('visibility','hidden');
+					$("#currentTurn").text("");
 					
 					// resetwa jiwota im za nowa igra w html-a
 					//no ne i w bazata danni
@@ -256,6 +263,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			
+			$("#currentTurn").text("");
+
 
 			if($(this).closest('.hero_0_actions').length)
 			{
@@ -294,6 +303,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			$(".hero:nth-of-type(2) img").fadeOut(500).delay(50).fadeIn(500);
 			
+			$("#currentTurn").text("");
+
+
 			if($(this).closest('.hero_0_actions').length)
 			{
 				var url= "healer_specialAbility.php?attacker=0&defender=1";
