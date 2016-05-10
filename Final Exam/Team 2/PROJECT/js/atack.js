@@ -6,17 +6,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		easing: 'swing' 
 	};
 	var isAnimating = false;
-	var nextTurn=1;
+	var heroPlayed = Math.floor((Math.random() * 2) + 1);
 
-	//random da generira koj e e na hod purwiq put
-	//i drugiq da ne moje da igrae prez towa wreme
-	//da ne moje da stanesh sus poweche ot maximalniq health
+	setTimeout(function(){
+		if(heroPlayed==1)
+			$("#currentTurn").text("Right Player's Turn");
+		else
+			$("#currentTurn").text("Left Player's Turn");
+	}, 2300);
+
+
+	//da ne moje da stane sus poweche ot maximalniq health
+	//... player wins => restart the game
 
 	
 	$(".actions:nth-of-type(1) .attack").click(function(){
 
-		if(isAnimating==false)
+		if((isAnimating==false) && (heroPlayed==2))
 		{
+			heroPlayed = 1;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
 				isAnimating = false;	
@@ -39,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 
 			$.get(url, function(response){
-				//console.log(response);
 				
 				if(parseFloat(response) == -100)
 				{
@@ -62,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					$("#hero2").text("Health: " + response + "/150");
 					setTimeout(function(){
 						$("#currentTurn").text("Right Player's Turn");
-						//leviq da ne moje da pipa butonite 
-						//nz dali ne e po-dobre obache da e w php-to
-						//moje da mu dobawqme id "hasMoved" i gore v if-a deto proverqva dali isAnimating e true da prowerqwame i za towa
 					}, 2300);
 				}
 			});
@@ -78,8 +82,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	$(".actions:nth-of-type(1) .rest").click(function(){
 
-		if(isAnimating == false)
+		if((isAnimating==false) && (heroPlayed==2))
 		{
+			heroPlayed = 1;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(2100).fadeIn(1000, function(){
 					isAnimating = false;	
@@ -100,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				var url= "rest.php?attacker=1&defender=0";	
 			}
 			$.get(url,function(response){
-				//console.log(response);
 
 				if(response != "over")
 				{
@@ -123,8 +127,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	$(".actions:nth-of-type(1) .specialAbility").click(function(){
 
-		if(isAnimating==false)
+		if((isAnimating==false) && (heroPlayed==2))
 		{
+			heroPlayed = 1;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(2000).fadeIn(1000, function(){
 				isAnimating = false;	
@@ -133,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			$(".hero:nth-of-type(1) img").animate({left: '-=110%', top: '+=10%', width: "-=10%", height: "-=10%"}, options);
 
 			$("#currentTurn").text("");
-
 
 			if($(this).closest('.hero_0_actions').length)
 			{
@@ -147,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 
 			$.get(url,function(response){
-				//console.log(response);
 
 				if(parseFloat(response) == -100)
 				{
@@ -176,8 +179,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			});
 
 			$.get(url1,function(response){
-				//console.log(response);
-				
 				$("#divRightHero").text(response).fadeIn(500).delay(3800).fadeOut(500);
 			});
 		}
@@ -189,8 +190,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	$(".actions:nth-of-type(2) .attack").click(function(){
 
-		if(isAnimating==false)
+		if((isAnimating==false) && (heroPlayed==1))
 		{
+			heroPlayed = 2;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(1600).fadeIn(1000, function(){
 					isAnimating = false;	
@@ -243,8 +245,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				$("#hero1").text("Health: " + response + "/130");
 
 				$.get(url1,function(response){
-					//console.log(response);
-
 					$("#divLeftHero").text(response).fadeIn(500).delay(3300).fadeOut(500);
 				});
 			});
@@ -253,8 +253,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	$(".actions:nth-of-type(2) .rest").click(function(){
 
-		if(isAnimating == false)
+		if((isAnimating==false) && (heroPlayed==1))
 		{
+			heroPlayed = 2;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(2100).fadeIn(1000, function(){
 				isAnimating = false;	
@@ -280,8 +281,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}, 3500);
 
 			$.get(url,function(response){
-				//console.log(response);
-				
 				$("#hero2").text("Health: " + response + "/150");
 			});
 
@@ -291,8 +290,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	$(".actions:nth-of-type(2) .specialAbility").click(function(){
 
- 		if(isAnimating==false)
+ 		if((isAnimating==false) && (heroPlayed==1))
 		 {
+		 	heroPlayed = 2;
 			isAnimating = true;
 			$(this).fadeOut(1000).delay(5000).fadeIn(1000, function(){
 				isAnimating = false;	
@@ -318,10 +318,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}
 
 			$.get(url,function(response){
-				//console.log(response);
-				
 				$("#hero2").text("Health: " + response + "/150");
-			
 			});
 
 			setTimeout(function()
@@ -330,10 +327,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			}, 6500);
 
 			$.get(url1,function(response){
-				//console.log(response);
-				
 				$("#divRightHero").text("+" + response).fadeIn(1000).delay(6000).fadeOut(1000);
-				// mn rqdko ama se poluchawat chisla ot sorta na "+-9"
 			});	
 		}
 	});

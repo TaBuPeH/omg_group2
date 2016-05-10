@@ -61,9 +61,8 @@ $(document).ready( function(event) {
 			backgroundColor: "#75c1dd",
 		});
 		//$(this).attr('id', 'opened'); 
-		$("#content").css('visibility','visible');	
-
-		
+		$("#content").css('visibility','visible');
+		$("#winner").text("");
 	});
 
 	$("#logoutButton").click(function()
